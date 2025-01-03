@@ -1,0 +1,27 @@
+[user]
+  name = Daniel Mizsak
+  email = 62774880+daniel-mizsak@users.noreply.github.com
+
+[init]
+  defaultBranch = main
+
+# [commit]
+  # template = ~/.gitmessage
+
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = nvim
+  pager = ""
+
+[pull]
+  rebase = true
+
+[status]
+  short = true
+
+[alias]
+  lg = log --graph --decorate --oneline --all
+  diffs = diff --staged
+  oops = commit --amend --no-edit
+  uncommit = reset --soft HEAD~1
+  reignore = "!git rm -r --cached . && git add ."

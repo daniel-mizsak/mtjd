@@ -1,0 +1,7 @@
+# System
+.DS_Store
+
+# Environments
+.env
+.envrc
+.venv

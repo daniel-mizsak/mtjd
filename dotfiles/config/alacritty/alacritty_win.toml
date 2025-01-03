@@ -1,0 +1,17 @@
+[general]
+  import = ["%APPDATA%/alacritty/catppuccin-mocha.toml"]
+
+[env]
+  TERM = "xterm-256color"
+
+[window]
+  decorations = "full"
+  padding.x = 10
+  padding.y = 10
+
+[font]
+  size = 14
+  normal.family = "MesloLGS Nerd Font Mono"
+
+[terminal]
+  shell = "pwsh.exe"

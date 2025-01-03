@@ -1,0 +1,6 @@
+---
+exclude_paths:
+  - playbook.yml
+
+kinds:
+  - vars: "**/*_vars.yml"

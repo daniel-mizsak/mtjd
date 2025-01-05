@@ -30,6 +30,10 @@ New-Item -ItemType SymbolicLink `
     -Path $env:USERPROFILE\.gitconfig `
     -Target "$env:USERPROFILE\mtjd\dotfiles\git\.gitconfig" `
     -Force
+New-Item -ItemType SymbolicLink `
+    -Path $env:USERPROFILE\.gitignore_global `
+    -Target "$env:USERPROFILE\mtjd\dotfiles\git\.gitignore_global" `
+    -Force
 
 # Neovim
 New-Item -ItemType SymbolicLink `

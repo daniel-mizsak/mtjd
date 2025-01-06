@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     /etc/nixos/hardware-configuration.nix
   ];
@@ -45,7 +47,7 @@
   ### SSH
   services.openssh = {
     enable = true;
-    ports = [ 22 ];
+    ports = [22];
   };
 
   ### Users
@@ -69,11 +71,11 @@
   # No password for sudo
   security.sudo.extraRules = [
     {
-      users = [ "damz" ];
+      users = ["damz"];
       commands = [
         {
           command = "ALL";
-          options = [ "NOPASSWD" ];
+          options = ["NOPASSWD"];
         }
       ];
     }

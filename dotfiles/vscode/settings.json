@@ -191,7 +191,11 @@
     "${workspaceFolder}/.venv/bin/mypy",
   ],
   // Nix IDE
-  "nix.formatterPath": "nixfmt",
+  "[nix]": {
+    "editor.defaultFormatter": "kamadorueda.alejandra",
+    "editor.formatOnSave": true,
+  },
+  "alejandra.program": "alejandra",
   // PowerShell
   "[powershell]": {
     "editor.defaultFormatter": "ms-vscode.powershell",

@@ -5,8 +5,7 @@
 
 # pre-commit ci
 ci:
-  # nixfmt will not work until haskell is added to pre-commit ci: https://github.com/pre-commit-ci/issues/issues/239
-  skip: [nixfmt]
+  skip: [alejandra-system]
   autoupdate_schedule: monthly
 
 # pre-commit
@@ -28,8 +27,8 @@ repos:
     hooks:
       - id: gitleaks
 
-  # nixfmt
-  - repo: https://github.com/NixOS/nixfmt
-    rev: a463903
+  # alejandra
+  - repo: https://github.com/kamadorueda/alejandra
+    rev: 3.1.0
     hooks:
-      - id: nixfmt
+      - id: alejandra-system

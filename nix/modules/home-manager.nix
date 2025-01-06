@@ -2,15 +2,15 @@
   user,
   is-darwin,
   inputs,
-}:
-
-{ config, pkgs, ... }:
-let
+}: {
+  config,
+  pkgs,
+  ...
+}: let
   inherit (config.lib.file) mkOutOfStoreSymlink;
   inherit (pkgs.lib) mkMerge mkIf;
   repository = "mtjd";
-in
-{
+in {
   programs.home-manager.enable = true;
 
   programs.zsh = {
@@ -59,14 +59,12 @@ in
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/atuin/config.toml";
 
         # bat
-        ".config/bat/themes/Catppuccin Mocha.tmTheme".source =
-          "${config.home.homeDirectory}/${repository}/dotfiles/config/bat/themes/Catppuccin Mocha.tmTheme";
+        ".config/bat/themes/Catppuccin Mocha.tmTheme".source = "${config.home.homeDirectory}/${repository}/dotfiles/config/bat/themes/Catppuccin Mocha.tmTheme";
 
         # btop
         ".config/btop/btop.conf".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/btop/btop.conf";
-        ".config/btop/themes/catppuccin_mocha.theme".source =
-          "${config.home.homeDirectory}/${repository}/dotfiles/config/btop/themes/catppuccin_mocha.theme";
+        ".config/btop/themes/catppuccin_mocha.theme".source = "${config.home.homeDirectory}/${repository}/dotfiles/config/btop/themes/catppuccin_mocha.theme";
 
         # fastfetch
         ".config/fastfetch/config.jsonc".source =
@@ -113,8 +111,7 @@ in
 
       (mkIf is-darwin {
         # alacritty
-        ".config/alacritty/catppuccin-mocha.toml".source =
-          "${config.home.homeDirectory}/${repository}/dotfiles/config/alacritty/catppuccin-mocha.toml";
+        ".config/alacritty/catppuccin-mocha.toml".source = "${config.home.homeDirectory}/${repository}/dotfiles/config/alacritty/catppuccin-mocha.toml";
         ".config/alacritty/alacritty.toml".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/alacritty/alacritty.toml";
 

@@ -32,7 +32,7 @@ Run [`nix-darwin`](https://github.com/LnL7/nix-darwin):
 nix run nix-darwin -- switch --impure --flake ~/mtjd/nix#macbook
 ```
 
-Apply **manual settings** detailed [here](macos-manual-settings.md).
+Apply **manual settings** detailed [here](macos-manual.md).
 
 ## Additional commands
 

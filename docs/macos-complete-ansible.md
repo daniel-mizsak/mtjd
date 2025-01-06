@@ -33,4 +33,4 @@ Run the **macos setup** script:
 https://raw.githubusercontent.com/daniel-mizsak/mtjd/main/scripts/macos-setup.sh)"
 ```
 
-Apply **manual settings** detailed [here](macos-manual-settings.md).
+Apply **manual settings** detailed [here](macos-manual.md).

@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   # Fonts
   fonts.packages = with pkgs; [
     nerd-fonts.meslo-lg
@@ -16,10 +14,10 @@
     systemPackages = with pkgs; [
       # Terminal
       _1password-cli
+      alejandra
       atuin
       bat
       btop
-      cabal-install
       direnv
       eza
       fastfetch
@@ -27,7 +25,6 @@
       ffmpegthumbnailer
       fzf
       gcc
-      ghc
       git
       htop
       imagemagick
@@ -36,7 +33,6 @@
       lazydocker
       lazygit
       neovim
-      nixfmt-rfc-style
       oh-my-posh
       poppler
       pre-commit

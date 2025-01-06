@@ -2,7 +2,6 @@
 # https://github.com/omerxx/dotfiles
 # https://github.com/MatthiasBenaets/nix-config/blob/master/darwin.org
 # https://github.com/caarlos0/dotfiles/blob/main/machines/shared/darwin.nix
-
 {
   description = "Setting up everything with Nix";
 
@@ -18,34 +17,31 @@
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
   };
 
-  outputs =
-    inputs@{
-      self,
-      nixpkgs,
-      home-manager,
-      nix-darwin,
-      nix-homebrew,
-    }:
-    let
-      mkSystem = import ./mksystem.nix {
-        inherit nixpkgs inputs;
-      };
-    in
-    {
-      darwinConfigurations.macbook = mkSystem "macbook" {
-        system = "aarch64-darwin";
-        user = "damz";
-        is-darwin = true;
-      };
-
-      nixosConfigurations.vm-arm = mkSystem "vm" {
-        system = "aarch64-linux";
-        user = "damz";
-      };
-
-      nixosConfigurations.vm-amd = mkSystem "vm" {
-        system = "x86_64-linux";
-        user = "damz";
-      };
+  outputs = inputs @ {
+    self,
+    nixpkgs,
+    home-manager,
+    nix-darwin,
+    nix-homebrew,
+  }: let
+    mkSystem = import ./mksystem.nix {
+      inherit nixpkgs inputs;
     };
+  in {
+    darwinConfigurations.macbook = mkSystem "macbook" {
+      system = "aarch64-darwin";
+      user = "damz";
+      is-darwin = true;
+    };
+
+    nixosConfigurations.vm-arm = mkSystem "vm" {
+      system = "aarch64-linux";
+      user = "damz";
+    };
+
+    nixosConfigurations.vm-amd = mkSystem "vm" {
+      system = "x86_64-linux";
+      user = "damz";
+    };
+  };
 }

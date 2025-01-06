@@ -1,7 +1,4 @@
-{ currentSystemUser, ... }:
-
-{
-
+{currentSystemUser, ...}: {
   nix = {
     configureBuildUsers = true;
     settings.experimental-features = "nix-command flakes";
@@ -38,7 +35,7 @@
           "/Applications/Visual\ Studio\ Code.app"
           "/System/Applications/System Settings.app"
         ];
-        persistent-others = [ "/Users/${currentSystemUser}/Downloads/" ];
+        persistent-others = ["/Users/${currentSystemUser}/Downloads/"];
       };
       finder = {
         AppleShowAllExtensions = true;

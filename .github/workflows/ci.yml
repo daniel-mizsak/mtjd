@@ -20,6 +20,13 @@ jobs:
           config_file: ansible/.yamllint.yml
           strict: true
 
+      - name: Lint Ansible files
+        uses: daniel-mizsak/workflows/.github/actions/ansible-lint@main
+        with:
+          lintables: ansible
+          config_file: ansible/.ansible-lint.yml
+          strict: true
+
   nix-flake-check:
     runs-on: ubuntu-latest
     steps:

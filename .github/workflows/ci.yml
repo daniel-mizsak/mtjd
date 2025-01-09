@@ -27,6 +27,9 @@ jobs:
           config_file: ansible/.ansible-lint.yml
           strict: true
 
+      - name: Format Nix files
+        uses: daniel-mizsak/workflows/.github/actions/nix-format@main
+
   nix-flake-check:
     runs-on: ubuntu-latest
     steps:

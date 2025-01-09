@@ -18,6 +18,7 @@
       atuin
       bat
       btop
+      deadnix
       direnv
       eza
       fastfetch
@@ -37,6 +38,7 @@
       poppler
       pre-commit
       ripgrep
+      statix
       tlrc
       tmux
       tree

@@ -48,10 +48,12 @@ in
 
       home-manager.home-manager
       {
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.users.${user} = import ./modules/home-manager.nix {
-          inherit user is-darwin inputs;
+        home-manager = {
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          users.${user} = import ./modules/home-manager.nix {
+            inherit user is-darwin inputs;
+          };
         };
       }
 
@@ -62,8 +64,7 @@ in
           currentSystem = system;
           currentSystemName = name;
           currentSystemUser = user;
-          is-darwin = is-darwin;
-          inputs = inputs;
+          inherit is-darwin inputs;
         };
       }
     ];

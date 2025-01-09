@@ -59,14 +59,3 @@ jobs:
       - name: Run nix flake check
         run: >
           nix flake check --impure ./nix
-
-
-  molecule:
-    uses: daniel-mizsak/workflows/.github/workflows/molecule.yml@main
-    with:
-      working-directory: ./ansible
-      molecule: false
-      yamllint: true
-      yamllint-config: .yamllint.yml
-      ansible-lint: true
-      ansible-lint-config: .ansible-lint.yml

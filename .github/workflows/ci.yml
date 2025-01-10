@@ -7,30 +7,28 @@ on:
   push:
 
 jobs:
-  lint:
+  ansible:
     runs-on: ubuntu-latest
+
     steps:
       - name: Check out the codebase
         uses: actions/checkout@v4
 
-      - name: Lint YAML files
-        uses: daniel-mizsak/workflows/.github/actions/yaml-lint@main
+      - name: Run yamllint
+        uses: daniel-mizsak/workflows/.github/actions/yaml-lint@feature/major-refactor
         with:
-          file_or_dir: ansible
-          config_file: ansible/.yamllint.yml
+          working_directory: ansible
+          config_file: .yamllint.yml
           strict: true
 
-      - name: Lint Ansible files
-        uses: daniel-mizsak/workflows/.github/actions/ansible-lint@main
+      - name: Run ansible-lint
+        uses: ansible/ansible-lint@main
         with:
-          lintables: ansible
-          config_file: ansible/.ansible-lint.yml
-          strict: true
+          working_directory: ansible
+          args: "--config-file .ansible-lint.yml --format=pep8 --force-color"
+          setup_python: true
 
-      - name: Format Nix files
-        uses: daniel-mizsak/workflows/.github/actions/nix-format@main
-
-  nix-flake-check:
+  nix:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the codebase
@@ -42,6 +40,9 @@ jobs:
           nix_path: nixpkgs=channel:nixos-unstable
           extra_nix_config: |
             experimental-features = nix-command flakes
+
+      - name: Run nix format
+        uses: daniel-mizsak/workflows/.github/actions/nix-format@feature/major-refactor
 
       - name: Create files to make the flake valid
         run: |

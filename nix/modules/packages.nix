@@ -18,6 +18,7 @@
       atuin
       bat
       btop
+      bzip2
       deadnix
       direnv
       eza
@@ -27,16 +28,21 @@
       fzf
       gcc
       git
+      gnumake
       htop
       imagemagick
       jq
       kubectl
       lazydocker
       lazygit
+      libffi
+      ncurses
       neovim
       oh-my-posh
+      openssl
       poppler
       pre-commit
+      readline
       ripgrep
       statix
       tlrc
@@ -44,6 +50,7 @@
       tree
       wget
       yazi
+      zlib
       zoxide
 
       dotnet-sdk_8

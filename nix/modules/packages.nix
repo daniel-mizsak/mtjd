@@ -11,6 +11,8 @@
       SUDO_EDITOR = "nvim";
       TERMINAL = "wezterm";
 
+      DOTNET_ROOT = "${pkgs.dotnet-sdk_8}/share/dotnet";
+
       # Required for Pyenv
       #   - https://semyonsinchenko.github.io/ssinchenko/post/using-pyenv-with-nixos/
       #   - https://github.com/pyenv/pyenv/wiki/common-build-problems#build-failed-error-the-python-zlib-extension-was-not-compiled-missing-the-zlib

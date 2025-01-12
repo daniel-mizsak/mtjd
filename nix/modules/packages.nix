@@ -11,14 +11,23 @@
       SUDO_EDITOR = "nvim";
       TERMINAL = "wezterm";
 
-      PYENV_ROOT = "$HOME/.pyenv";
-      CPPFLAGS = "-I${pkgs.zlib.dev}/include -I${pkgs.libffi.dev}/include -I${pkgs.readline.dev}/include -I${pkgs.bzip2.dev}/include -I${pkgs.openssl.dev}/include";
-      CXXFLAGS = "-I${pkgs.zlib.dev}/include -I${pkgs.libffi.dev}/include -I${pkgs.readline.dev}/include -I${pkgs.bzip2.dev}/include -I${pkgs.openssl.dev}/include";
-      CFLAGS = "-I${pkgs.openssl.dev}/include";
-      LDFLAGS = "-L${pkgs.zlib.out}/lib -L${pkgs.libffi.out}/lib -L${pkgs.readline.out}/lib -L${pkgs.bzip2.out}/lib -L${pkgs.openssl.out}/lib";
+      # Required for Pyenv
+      # https://github.com/pyenv/pyenv/wiki/common-build-problems#build-failed-error-the-python-zlib-extension-was-not-compiled-missing-the-zlib
+      CPPFLAGS =
+        "-I${pkgs.bzip2.dev}/include "
+        + "-I${pkgs.libffi.dev}/include "
+        + "-I${pkgs.openssl.dev}/include "
+        + "-I${pkgs.readline.dev}/include "
+        + "-I${pkgs.zlib.dev}/include";
+      LDFLAGS =
+        "-L${pkgs.bzip2.out}/lib "
+        + "-L${pkgs.libffi.out}/lib "
+        + "-L${pkgs.openssl.out}/lib "
+        + "-L${pkgs.readline.out}/lib "
+        + "-L${pkgs.zlib.out}/lib";
       CONFIGURE_OPTS = "-with-openssl=${pkgs.openssl.dev}";
-      PYENV_VIRTUALENV_DISABLE_PROMPT = "1";
     };
+
     systemPackages = with pkgs; [
       # Terminal
       _1password-cli
@@ -52,6 +61,7 @@
       pre-commit
       readline
       ripgrep
+      sqlite
       statix
       tlrc
       tmux

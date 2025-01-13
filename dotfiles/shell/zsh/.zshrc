@@ -2,6 +2,12 @@
 export EDITOR=nvim
 export SUDO_EDITOR=nvim
 
+# Use github ssh key in vscode devcontainers on macOS
+# https://apple.stackexchange.com/questions/48502/how-can-i-permanently-add-my-ssh-private-key-to-keychain-so-it-is-automatically
+if [[ "$(uname)" == "Darwin" ]]; then
+    ssh-add --apple-use-keychain ~/.ssh/id_github -q
+fi
+
 # Insensitive completion
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/completion.zsh
 zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=*'

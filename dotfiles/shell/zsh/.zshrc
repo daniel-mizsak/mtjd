@@ -72,6 +72,9 @@ fi
 # Postgresql
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
+# Podman
+export PATH="/opt/podman/bin:$PATH"
+
 # Pyenv
 # https://github.com/pyenv/pyenv?tab=readme-ov-file#set-up-your-shell-environment-for-pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -100,7 +103,7 @@ eval "$(zoxide init --cmd cd zsh)"
 # https://github.com/ohmyzsh/ohmyzsh/blob/c690f731618959cba3b85500acee20ebf43e51c1/lib/key-bindings.zsh#L90
 bindkey "^[[3~" delete-char
 
-# Direrctory
+# Directory
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -109,7 +112,10 @@ alias .....="cd ../../../.."
 alias cat="bat"
 alias ls="eza --color=always --all --icons=always"
 alias ll="eza --color=always --all --long --icons=always"
-alias lzd="lazydocker"
+# Docker
+alias dps="docker ps --all"
+alias di="docker images --all"
+alias dx="docker exec --interactive --tty"
 # Kubernetes
 alias k="kubectl"
 # Python

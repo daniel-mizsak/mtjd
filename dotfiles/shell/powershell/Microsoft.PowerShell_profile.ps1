@@ -44,3 +44,10 @@ function Invoke-EzaLong
 }
 Set-Alias ls -Value Invoke-Eza -Option AllScope
 Set-Alias ll -Value Invoke-EzaLong -Option AllScope
+
+
+# Python
+Set-Alias -Name create_venv -Value "python -m venv --upgrade-deps .venv" -Option AllScope
+Set-Alias -Name activate_venv -Value ". .\.venv\Scripts\Activate.ps1" -Option AllScope
+Set-Alias -Name pip_install -Value "pip install -r requirements.txt" -Option AllScope
+Set-Alias -Name pip_uninstall -Value "python -m venv --clear .venv" -Option AllScope

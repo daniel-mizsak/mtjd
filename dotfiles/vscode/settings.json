@@ -14,26 +14,15 @@
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "editor.mouseWheelScrollSensitivity": 0.8,
+  // Explorer
+  "explorer.excludeGitIgnore": true,
+  "explorer.sortOrderLexicographicOptions": "upper",
   // Files
   "files.associations": {
     "**/ansible/**/*.yml": "ansible",
     "**/tasks/*.yml": "ansible",
   },
   "files.eol": "\n",
-  "files.exclude": {
-    "**/__pycache__": true,
-    "**/._*": true,
-    "**/.coverage": true,
-    "**/.idea": true,
-    "**/.mypy_cache": true,
-    "**/.pytest_cache": true,
-    "**/.ruff_cache": true,
-    "**/.tox": true,
-    "**/.venv": true,
-    "**/*.egg-info": true,
-    "**/coverage.xml": true,
-    "**/htmlcov": true,
-  },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   // Git
@@ -63,8 +52,9 @@
   // Extensions
   /*
     .NET Install Tool
-    ? .NET MAUI
-    ? 1Password
+    .NET MAUI
+    1Password
+    Alejandra
     Ansible
     autoDocstring - Python Docstring Generator
     Better Comments

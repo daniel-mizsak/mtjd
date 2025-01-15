@@ -34,6 +34,7 @@
       "obsidian"
       "openinterminal"
       "parallels@19"
+      "podman-desktop"
       "postman"
       "raspberry-pi-imager"
       "raycast"

@@ -40,6 +40,9 @@
           "PackageIdentifier": "Microsoft.PowerShell"
         },
         {
+          "PackageIdentifier": "Microsoft.PowerToys"
+        },
+        {
           "PackageIdentifier": "Microsoft.VisualStudioCode"
         },
         {

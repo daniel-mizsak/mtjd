@@ -90,6 +90,11 @@ in {
         ".config/oh-my-posh/oh-my-posh.toml".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/oh-my-posh/oh-my-posh.toml";
 
+        # ssh
+        ".ssh/config".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config";
+        ".ssh/config.d/github".source = "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config.d/github";
+
         # tmux
         ".config/tmux/tmux.conf".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/tmux/.tmux.conf";

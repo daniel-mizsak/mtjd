@@ -55,6 +55,7 @@
       gcc
       git
       gnumake
+      gnutar
       htop
       imagemagick
       jq

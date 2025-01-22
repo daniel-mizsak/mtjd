@@ -39,10 +39,6 @@
 
   ### Docker
   virtualisation.docker.enable = true;
-  virtualisation.docker.rootless = {
-    enable = true;
-    setSocketVariable = true;
-  };
 
   ### SSH
   services.openssh = {
@@ -56,8 +52,9 @@
     isNormalUser = true;
     description = "Daniel Mizsak";
     extraGroups = [
-      "networkmanager"
       "wheel"
+      "networkmanager"
+      "docker"
     ];
     home = "/home/damz";
     shell = pkgs.zsh;

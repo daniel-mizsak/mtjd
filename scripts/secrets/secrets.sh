@@ -1,5 +1,4 @@
-#! /usr/bin/env nix-shell
-#! nix-shell -i bash --packages bash
+#!/usr/bin/env bash
 
 # Read password in a hidden way
 read -sp "Enter your password: " SECRET
@@ -12,5 +11,7 @@ if [[ $? -ne 0 ]]; then
     exit 1
 fi
 export OP_SERVICE_ACCOUNT_TOKEN
+echo "1Password service account token successfully set."
 
-op read --out-file ~/.ssh/id_github "op://Development/id_github/private key"
+op read --out-file ~/.ssh/id_github "op://Development/id_github/private key?ssh-format=openssh"
+echo "GitHub SSH key successfully set."

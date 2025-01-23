@@ -75,11 +75,9 @@ export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 # Podman
 export PATH="/opt/podman/bin:$PATH"
 
-# Pyenv
-# https://github.com/pyenv/pyenv?tab=readme-ov-file#set-up-your-shell-environment-for-pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# Uv
+# https://docs.astral.sh/uv/
+eval "$(uv generate-shell-completion zsh)"
 
 # Yazy
 # https://yazi-rs.github.io/docs/quick-start

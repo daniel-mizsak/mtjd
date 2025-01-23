@@ -14,8 +14,8 @@
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "editor.mouseWheelScrollSensitivity": 0.8,
+  "editor.tabSize": 2,
   // Explorer
-  "explorer.excludeGitIgnore": true,
   "explorer.sortOrderLexicographicOptions": "upper",
   // Files
   "files.associations": {
@@ -23,6 +23,15 @@
     "**/tasks/*.yml": "ansible",
   },
   "files.eol": "\n",
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.coverage": true,
+    "**/.mypy_cache": true,
+    "**/.pytest_cache": true,
+    "**/.ruff_cache": true,
+    "**/.tox": true,
+    "**/.venv": true,
+  },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   // Git
@@ -106,7 +115,6 @@
   // Ansible
   "[ansible]": {
     "editor.defaultFormatter": "redhat.ansible",
-    "editor.tabSize": 2,
   },
   "redhat.telemetry.enabled": false,
   // C#
@@ -132,12 +140,7 @@
     "editor.defaultFormatter": "tamasfe.even-better-toml",
   },
   "evenBetterToml.formatter.indentEntries": true,
-  "evenBetterToml.formatter.indentString": "  ",
   "evenBetterToml.formatter.indentTables": true,
-  // GitHub Actions
-  "[github-actions-workflow]": {
-    "editor.tabSize": 2,
-  },
   // GitHub Copilot
   "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.enable": {
@@ -151,22 +154,11 @@
     "yaml",
     "yml",
   ],
-  // JSON
-  "[json]": {
-    "editor.tabSize": 2,
-  },
-  "[jsonc]": {
-    "editor.tabSize": 2,
-  },
   // Jupyter
   "jupyter.askForKernelRestart": false,
   "jupyter.experiments.enabled": false,
   "notebook.formatOnSave.enabled": true,
   "notebook.lineNumbers": "on",
-  // Lua
-  "[lua]": {
-    "editor.tabSize": 2,
-  },
   // Mypy Type Checker
   "mypy-type-checker.args": [
     "--ignore-missing-imports",
@@ -189,9 +181,7 @@
   // PowerShell
   "[powershell]": {
     "editor.defaultFormatter": "ms-vscode.powershell",
-    "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
-    "editor.trimAutoWhitespace": true,
+    "editor.tabSize": 4,
   },
   "powershell.codeFormatting.autoCorrectAliases": true,
   "powershell.codeFormatting.avoidSemicolonsAsLineTerminators": true,
@@ -248,7 +238,6 @@
   // YAML
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml",
-    "editor.tabSize": 2,
   },
   // Remote - SSH
   "remote.SSH.remotePlatform": {

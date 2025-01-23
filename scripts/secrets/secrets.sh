@@ -1,5 +1,4 @@
-#! /usr/bin/env nix-shell
-#! nix-shell -i bash --packages bash
+#!/usr/bin/env bash
 
 # Read password in a hidden way
 read -sp "Enter your password: " SECRET

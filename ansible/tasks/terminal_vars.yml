@@ -4,11 +4,13 @@ packages:
   - bat
   - btop
   - direnv
+  - dotnet@8
   - eza
   - fastfetch
   - fd
   - fzf
   - git
+  - go
   - htop
   - imagemagick
   - jq
@@ -22,14 +24,11 @@ packages:
   - sevenzip
   - tmux
   - tree
+  - uv
   - wget
   - yazi
   - zoxide
   - ffmpegthumbnailer
-
-  - dotnet@8
-  - go
-  - pyenv
 
 symlinks:
   # atuin

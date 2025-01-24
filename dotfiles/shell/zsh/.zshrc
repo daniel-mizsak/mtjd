@@ -75,11 +75,9 @@ export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 # Podman
 export PATH="/opt/podman/bin:$PATH"
 
-# Pyenv
-# https://github.com/pyenv/pyenv?tab=readme-ov-file#set-up-your-shell-environment-for-pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# Uv
+# https://docs.astral.sh/uv/
+eval "$(uv generate-shell-completion zsh)"
 
 # Yazy
 # https://yazi-rs.github.io/docs/quick-start
@@ -119,7 +117,6 @@ alias dx="docker exec --interactive --tty"
 # Kubernetes
 alias k="kubectl"
 # Python
-alias create_venv="python -m venv --upgrade-deps .venv"
+alias create_venv="uv venv --python 3.12"
 alias activate_venv="source .venv/bin/activate"
-alias pip_install="pip install -r requirements.txt"
-alias pip_uninstall="python -m venv --clear .venv"
+alias pip_install="uv pip install --requirements requirements.txt"

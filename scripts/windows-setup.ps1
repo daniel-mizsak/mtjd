@@ -1,12 +1,12 @@
 # Prepare environment
-Write-Output "Making sure repository is present."
+Write-Output 'Making sure repository is present.'
 if (-Not (Test-Path -Path $env:USERPROFILE\mtjd)) {
     git clone https://github.com/daniel-mizsak/mtjd.git $env:USERPROFILE\mtjd --quiet
 }
 # TODO: This way the repo will be owned by the admin user and it will not use ssh for git operations.
 
 # Install winget packages
-Write-Output "Installing winget packages."
+Write-Output 'Installing winget packages.'
 winget import --import-file $env:USERPROFILE\mtjd\windows\winget.json --accept-source-agreements
 
 # Alacritty
@@ -42,7 +42,7 @@ New-Item -ItemType SymbolicLink `
     -Force
 
 # Powershell
-Write-Output "Setting up PowerShell profile."
+Write-Output 'Setting up PowerShell profile.'
 Install-PackageProvider -Name NuGet -Force -Confirm:$false
 Install-Module -Name PSReadLine -Force -Confirm:$false
 
@@ -50,12 +50,6 @@ New-Item -ItemType SymbolicLink `
     -Path $env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 `
     -Target "$env:USERPROFILE\mtjd\dotfiles\shell\powershell\Microsoft.PowerShell_profile.ps1" `
     -Force
-
-# Pyenv-win
-# https://pyenv-win.github.io/pyenv-win/docs/installation.html#powershell
-Invoke-WebRequest -UseBasicParsing -Uri `
-    "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" `
-    -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
 
 # VSCode
 New-Item -ItemType SymbolicLink `

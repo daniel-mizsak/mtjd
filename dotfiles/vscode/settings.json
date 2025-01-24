@@ -183,6 +183,9 @@
     "editor.defaultFormatter": "ms-vscode.powershell",
     "editor.tabSize": 4,
   },
+  "powershell.powerShellAdditionalExePaths": {
+    "pwsh": "/run/current-system/sw/bin/pwsh",
+  },
   "powershell.codeFormatting.autoCorrectAliases": true,
   "powershell.codeFormatting.avoidSemicolonsAsLineTerminators": true,
   "powershell.codeFormatting.pipelineIndentationStyle": "IncreaseIndentationForFirstPipeline",
@@ -235,6 +238,9 @@
     "--line-length",
     "120",
   ],
+  "[shellscript]": {
+    "editor.tabSize": 4,
+  },
   // YAML
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml",

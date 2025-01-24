@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Read password in a hidden way
-read -sp "Enter your password: " SECRET
+read -prs "Enter your password: " SECRET
 echo -e "\n"
 
 # Encrypt by: `openssl enc -aes-256-cbc -in OP_SERVICE_ACCOUNT_TOKEN -out OP_SERVICE_ACCOUNT_TOKEN.enc -pbkdf2`

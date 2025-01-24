@@ -44,8 +44,11 @@
       oh-my-posh
       openssl
       poppler
+      powershell
       pre-commit
       ripgrep
+      shellcheck
+      shfmt
       statix
       tlrc
       tmux

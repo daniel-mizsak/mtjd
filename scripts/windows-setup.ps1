@@ -1,12 +1,12 @@
 # Prepare environment
-Write-Output "Making sure repository is present."
+Write-Output 'Making sure repository is present.'
 if (-Not (Test-Path -Path $env:USERPROFILE\mtjd)) {
     git clone https://github.com/daniel-mizsak/mtjd.git $env:USERPROFILE\mtjd --quiet
 }
 # TODO: This way the repo will be owned by the admin user and it will not use ssh for git operations.
 
 # Install winget packages
-Write-Output "Installing winget packages."
+Write-Output 'Installing winget packages.'
 winget import --import-file $env:USERPROFILE\mtjd\windows\winget.json --accept-source-agreements
 
 # Alacritty
@@ -42,7 +42,7 @@ New-Item -ItemType SymbolicLink `
     -Force
 
 # Powershell
-Write-Output "Setting up PowerShell profile."
+Write-Output 'Setting up PowerShell profile.'
 Install-PackageProvider -Name NuGet -Force -Confirm:$false
 Install-Module -Name PSReadLine -Force -Confirm:$false
 

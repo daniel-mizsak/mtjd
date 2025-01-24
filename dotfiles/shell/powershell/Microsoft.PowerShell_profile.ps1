@@ -23,6 +23,10 @@ Invoke-Expression "$(direnv hook pwsh)"
 # https://ohmyposh.dev/docs/installation/prompt
 oh-my-posh init pwsh --config $env:USERPROFILE\mtjd\dotfiles\config\oh-my-posh\oh-my-posh.toml | Invoke-Expression
 
+# Uv
+# https://docs.astral.sh/uv/getting-started/installation/#shell-autocompletion
+Add-Content -Path $PROFILE -Value '(& uv generate-shell-completion powershell) | Out-String | Invoke-Expression'
+
 # Yazy
 # https://yazi-rs.github.io/docs/installation/#install-with-winget
 $env:YAZI_FILE_ONE = "C:\Program Files\Git\usr\bin\file.exe"

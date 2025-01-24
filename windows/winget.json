@@ -7,6 +7,9 @@
           "PackageIdentifier": "7zip.7zip"
         },
         {
+          "PackageIdentifier": "astral-sh.uv"
+        },
+        {
           "PackageIdentifier": "AgileBits.1Password"
         },
         {

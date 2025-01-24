@@ -51,12 +51,6 @@ New-Item -ItemType SymbolicLink `
     -Target "$env:USERPROFILE\mtjd\dotfiles\shell\powershell\Microsoft.PowerShell_profile.ps1" `
     -Force
 
-# Pyenv-win
-# https://pyenv-win.github.io/pyenv-win/docs/installation.html#powershell
-Invoke-WebRequest -UseBasicParsing -Uri `
-    "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" `
-    -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
-
 # VSCode
 New-Item -ItemType SymbolicLink `
     -Path $env:APPDATA\Code\User\settings.json `

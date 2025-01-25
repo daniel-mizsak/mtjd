@@ -117,6 +117,11 @@
     "editor.defaultFormatter": "redhat.ansible",
   },
   "redhat.telemetry.enabled": false,
+  // Bash IDE
+  "[shellscript]": {
+    "editor.tabSize": 4,
+  },
+  "bashIde.shfmt.spaceRedirects": true,
   // C#
   "[csharp]": {
     "editor.defaultFormatter": "csharpier.csharpier-vscode",
@@ -238,9 +243,6 @@
     "--line-length",
     "120",
   ],
-  "[shellscript]": {
-    "editor.tabSize": 4,
-  },
   // YAML
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml",
@@ -248,5 +250,6 @@
   // Remote - SSH
   "remote.SSH.remotePlatform": {
     "*": "linux",
+    "nixos": "linux"
   },
 }

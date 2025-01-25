@@ -6,7 +6,7 @@
   defaultBranch = main
 
 # [commit]
-  # template = ~/.gitmessage
+#   template = ~/.gitmessage
 
 [core]
   excludesfile = ~/.gitignore_global
@@ -15,6 +15,9 @@
 
 [pull]
   rebase = true
+
+[fetch]
+  prune = true
 
 [status]
   short = true

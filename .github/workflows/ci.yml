@@ -22,11 +22,11 @@ jobs:
         uses: oxsecurity/megalinter@v8
         env:
           ENABLE_LINTERS: YAML_YAMLLINT,ANSIBLE_ANSIBLE_LINT
+          DEFAULT_WORKSPACE: ansible
           YAML_YAMLLINT_ARGUMENTS: --strict
-          YAML_YAMLLINT_CONFIG_FILE: ansible/.yamllint.yml
-          YAML_YAMLLINT_FILTER_REGEX_INCLUDE: ansible/
-          ANSIBLE_ANSIBLE_LINT_ARGUMENTS: --strict ./ansible
-          ANSIBLE_ANSIBLE_LINT_CONFIG_FILE: ansible/.ansible-lint.yml
+          YAML_YAMLLINT_CONFIG_FILE: .yamllint.yml
+          ANSIBLE_ANSIBLE_LINT_ARGUMENTS: --strict
+          ANSIBLE_ANSIBLE_LINT_CONFIG_FILE: .ansible-lint.yml
 
   nix:
     runs-on: ubuntu-latest

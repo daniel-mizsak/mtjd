@@ -18,15 +18,18 @@ jobs:
       - name: Check out the codebase
         uses: actions/checkout@v4
 
-      - name: Run megalinter
-        uses: oxsecurity/megalinter@v8
-        env:
-          ENABLE_LINTERS: YAML_YAMLLINT,ANSIBLE_ANSIBLE_LINT
-          DEFAULT_WORKSPACE: ansible
-          YAML_YAMLLINT_ARGUMENTS: --strict
-          YAML_YAMLLINT_CONFIG_FILE: .yamllint.yml
-          ANSIBLE_ANSIBLE_LINT_ARGUMENTS: --strict
-          ANSIBLE_ANSIBLE_LINT_CONFIG_FILE: .ansible-lint.yml
+      - name: Run yamllint
+        uses: daniel-mizsak/workflows/.github/actions/yaml-lint@main
+        with:
+          config_file: .github/linters/.yamllint.yml
+          strict: true
+
+      - name: Run ansible-lint
+        uses: ansible/ansible-lint@main
+        with:
+          working_directory: ansible
+          setup_python: true
+          args: --strict
 
   nix:
     runs-on: ubuntu-latest

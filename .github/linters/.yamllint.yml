@@ -2,8 +2,13 @@
 extends: default
 
 ignore: |
+  .venv
 
 rules:
   line-length:
     max: 200
     level: warning
+
+  truthy:
+    ignore: |
+      .github

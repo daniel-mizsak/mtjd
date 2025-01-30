@@ -31,6 +31,8 @@
     "**/.ruff_cache": true,
     "**/.tox": true,
     "**/.venv": true,
+    "**/coverage.xml": true,
+    "**/htmlcov": true,
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,

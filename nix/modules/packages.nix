@@ -34,6 +34,7 @@
       gnumake
       gnutar
       go
+      hadolint
       htop
       imagemagick
       jq

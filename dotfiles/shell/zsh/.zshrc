@@ -117,6 +117,7 @@ alias dx="docker exec --interactive --tty"
 # Kubernetes
 alias k="kubectl"
 # Python
+alias pip="uv pip"
 alias create_venv="uv venv --python 3.12"
 alias activate_venv="source .venv/bin/activate"
 alias pip_install="uv pip install --requirements requirements.txt"

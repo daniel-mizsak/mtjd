@@ -21,6 +21,7 @@
       atuin
       bat
       btop
+      csharpier
       deadnix
       direnv
       dotnet-sdk_8

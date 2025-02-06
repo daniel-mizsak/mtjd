@@ -2,7 +2,6 @@
   // Base settings
   // Editor
   "editor.accessibilitySupport": "off",
-  "editor.detectIndentation": false,
   "editor.dragAndDrop": false,
   "editor.emptySelectionClipboard": false,
   "editor.fontFamily": "MesloLGS Nerd Font Mono",
@@ -14,7 +13,6 @@
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "editor.mouseWheelScrollSensitivity": 0.8,
-  "editor.tabSize": 2,
   // Explorer
   "explorer.sortOrderLexicographicOptions": "upper",
   // Files
@@ -38,6 +36,7 @@
   "files.trimTrailingWhitespace": true,
   // Git
   "git.allowForcePush": true,
+  "git.blame.editorDecoration.enabled": true,
   "git.confirmForcePush": false,
   "git.confirmSync": false,
   "git.replaceTagsWhenPull": true,
@@ -78,11 +77,9 @@
     Dev Containers
     Docker
     Even Better TOML
-    GistPad
     Github Actions
     GitHub Copilot
     GitHub Copilot Chat
-    GitLens — Git supercharged
     Go
     hadolint
     indent-rainbow
@@ -121,9 +118,6 @@
   },
   "redhat.telemetry.enabled": false,
   // Bash IDE
-  "[shellscript]": {
-    "editor.tabSize": 4,
-  },
   "bashIde.shfmt.spaceRedirects": true,
   // C#
   "[csharp]": {
@@ -181,15 +175,10 @@
     "${workspaceFolder}/.venv/bin/mypy",
   ],
   // Nix IDE
-  "[nix]": {
-    "editor.defaultFormatter": "kamadorueda.alejandra",
-    "editor.formatOnSave": true,
-  },
-  "alejandra.program": "alejandra",
+  "nix.formatterPath": "alejandra",
   // PowerShell
   "[powershell]": {
     "editor.defaultFormatter": "ms-vscode.powershell",
-    "editor.tabSize": 4,
   },
   "powershell.powerShellAdditionalExePaths": {
     "pwsh": "/run/current-system/sw/bin/pwsh",
@@ -236,7 +225,6 @@
       80,
       120,
     ],
-    "editor.tabSize": 4,
   },
   "python.analysis.typeCheckingMode": "off",
   "python.experiments.enabled": false,
@@ -253,6 +241,6 @@
   // Remote - SSH
   "remote.SSH.remotePlatform": {
     "*": "linux",
-    "nixos": "linux"
+    "nixos": "linux",
   },
 }

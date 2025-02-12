@@ -1,9 +1,5 @@
 {currentSystemUser, ...}: {
-  nix = {
-    configureBuildUsers = true;
-    settings.experimental-features = "nix-command flakes";
-    useDaemon = true;
-  };
+  nix.settings.experimental-features = "nix-command flakes";
   security.pam.enableSudoTouchIdAuth = true;
 
   system = {

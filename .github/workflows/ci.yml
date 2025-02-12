@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  ansible:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,6 +29,12 @@ jobs:
         with:
           setup_python: true
           args: --strict --config-file .github/linters/.ansible-lint.yml
+
+      - name: Run shell linter
+        uses: luizm/action-sh-checker@v0.9.0
+        env:
+          SHELLCHECK_OPTS: --external-sources --exclude=SC1091
+          SHFMT_OPTS: --indent 4 --space-redirects
 
   nix:
     runs-on: ubuntu-latest

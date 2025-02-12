@@ -10,7 +10,7 @@ fi
 
 echo "Making sure the python virtual environment and dependencies are present."
 if [[ ! -d "${HOME}/mtjd/.venv" ]]; then
-    python3 -m venv --upgrade-deps "${HOME}/mtjd/.venv" >/dev/null
+    python3 -m venv --upgrade-deps "${HOME}/mtjd/.venv" > /dev/null
 fi
 
 # Activate virtual environment and install dependencies

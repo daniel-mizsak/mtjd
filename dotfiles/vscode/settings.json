@@ -67,6 +67,7 @@
     Alejandra
     Ansible
     autoDocstring - Python Docstring Generator
+    Bash IDE
     Better Comments
     C#
     C# Dev Kit
@@ -230,13 +231,12 @@
   "python.experiments.enabled": false,
   // Ruff
   "ruff.fixAll": false,
-  "ruff.lint.args": [
-    "--line-length",
-    "120",
-  ],
+  "ruff.lineLength": 120,
+  "ruff.nativeServer": "on",
   // YAML
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.tabSize": 2,
   },
   // Remote - SSH
   "remote.SSH.remotePlatform": {

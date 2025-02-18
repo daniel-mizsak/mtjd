@@ -1,4 +1,4 @@
-## <div align="center"> ✨ mtjd</div>
+## <div align="center">✨ mtjd</div>
 
 <div align="center">
 <a href="https://github.com/daniel-mizsak/mtjd/actions/workflows/ci.yml" target="_blank"><img src="https://github.com/daniel-mizsak/mtjd/actions/workflows/ci.yml/badge.svg" alt="build status"></a>
@@ -6,8 +6,8 @@
 <a href="https://img.shields.io/github/license/daniel-mizsak/mtjd" target="_blank"><img src="https://img.shields.io/github/license/daniel-mizsak/mtjd" alt="license"></a>
 </div>
 
-## Overview
 
+## Overview
 More Than Just Dotfiles is a collection of tools, scripts and configurations that I use to set up my `Linux`, `macOS` and `Windows` machines.
 The most up-to-date solution uses `nix-darwin` for `macOS` with a `NixOS` virtual machine inside `Parallels Desktop`.
 
@@ -18,8 +18,8 @@ The most up-to-date solution uses `nix-darwin` for `macOS` with a `NixOS` virtua
 
 <img src="https://raw.githubusercontent.com/daniel-mizsak/mtjd/main/.github/images/terminal.png">
 
-## Getting started
 
+## Getting started
 ❄️ - Most actively maintained
 
 Set up macOS:

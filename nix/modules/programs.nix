@@ -8,8 +8,9 @@
       upgrade = true;
     };
     brews = [
-      "sevenzip"
+      "mas"
       "postgresql@16"
+      "sevenzip"
     ];
     casks = [
       "1password"

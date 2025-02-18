@@ -141,6 +141,7 @@
   // Even Better TOML
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.tabSize": 2,
   },
   "evenBetterToml.formatter.indentEntries": true,
   "evenBetterToml.formatter.indentTables": true,

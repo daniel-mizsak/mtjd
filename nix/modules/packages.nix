@@ -48,6 +48,7 @@
       poppler
       powershell
       pre-commit
+      rclone
       ripgrep
       shellcheck
       shfmt

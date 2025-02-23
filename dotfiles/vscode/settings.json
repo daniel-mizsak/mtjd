@@ -94,6 +94,7 @@
     Jupyter Keymap
     Jupyter Notebook Renderers
     Jupyter Slide Show
+    LaTeX Workshop
     Live Share
     Mypy Type Checker
     Nix IDE
@@ -110,7 +111,6 @@
     SQLite
     Vim
     ? VSCode Neovim
-    vscode-pdf
     WSL
     YAML
     */
@@ -163,6 +163,7 @@
   // indent-rainbow
   "indentRainbow.includedLanguages": [
     "ansible",
+    "github-actions-workflow",
     "json",
     "jsonc",
     "yaml",

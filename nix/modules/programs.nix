@@ -47,6 +47,7 @@
       "synology-drive"
       "updf"
       "visual-studio-code"
+      "vivaldi"
       "vlc"
       "vnc-viewer"
       "wezterm"

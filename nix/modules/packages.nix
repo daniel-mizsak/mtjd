@@ -53,6 +53,7 @@
       shellcheck
       shfmt
       statix
+      texliveFull
       tlrc
       tmux
       tree

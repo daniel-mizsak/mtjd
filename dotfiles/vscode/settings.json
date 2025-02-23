@@ -23,6 +23,7 @@
   "files.eol": "\n",
   "files.exclude": {
     "**/__pycache__": true,
+    "**/.ansible": true,
     "**/.coverage": true,
     "**/.mypy_cache": true,
     "**/.pytest_cache": true,
@@ -54,6 +55,9 @@
   "window.zoomLevel": -0.35,
   // Workbench
   "workbench.colorTheme": "Default Dark+",
+  "workbench.editorAssociations": {
+    "*.pdf": "latex-workshop-pdf-hook"
+  },
   "workbench.editor.wrapTabs": true,
   "workbench.enableExperiments": false,
   "workbench.settings.editor": "json",
@@ -113,6 +117,8 @@
   // .NET Install Tool
   "dotnet.automaticallyCreateSolutionInWorkspace": false,
   "dotnetAcquisitionExtension.enableTelemetry": false,
+  // 1Password
+  "1password.editor.suggestStorage": false,
   // Ansible
   "[ansible]": {
     "editor.defaultFormatter": "redhat.ansible",
@@ -145,6 +151,10 @@
   },
   "evenBetterToml.formatter.indentEntries": true,
   "evenBetterToml.formatter.indentTables": true,
+  // GitHub Actions
+  "[github-actions-workflow]": {
+    "editor.tabSize": 2,
+  },
   // GitHub Copilot
   "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.enable": {

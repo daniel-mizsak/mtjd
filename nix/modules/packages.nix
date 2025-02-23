@@ -48,10 +48,12 @@
       poppler
       powershell
       pre-commit
+      rclone
       ripgrep
       shellcheck
       shfmt
       statix
+      texliveFull
       tlrc
       tmux
       tree

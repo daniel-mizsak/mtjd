@@ -23,6 +23,7 @@
   "files.eol": "\n",
   "files.exclude": {
     "**/__pycache__": true,
+    "**/.ansible": true,
     "**/.coverage": true,
     "**/.mypy_cache": true,
     "**/.pytest_cache": true,
@@ -54,6 +55,9 @@
   "window.zoomLevel": -0.35,
   // Workbench
   "workbench.colorTheme": "Default Dark+",
+  "workbench.editorAssociations": {
+    "*.pdf": "latex-workshop-pdf-hook"
+  },
   "workbench.editor.wrapTabs": true,
   "workbench.enableExperiments": false,
   "workbench.settings.editor": "json",
@@ -90,6 +94,7 @@
     Jupyter Keymap
     Jupyter Notebook Renderers
     Jupyter Slide Show
+    LaTeX Workshop
     Live Share
     Mypy Type Checker
     Nix IDE
@@ -106,13 +111,14 @@
     SQLite
     Vim
     ? VSCode Neovim
-    vscode-pdf
     WSL
     YAML
     */
   // .NET Install Tool
   "dotnet.automaticallyCreateSolutionInWorkspace": false,
   "dotnetAcquisitionExtension.enableTelemetry": false,
+  // 1Password
+  "1password.editor.suggestStorage": false,
   // Ansible
   "[ansible]": {
     "editor.defaultFormatter": "redhat.ansible",
@@ -141,9 +147,14 @@
   // Even Better TOML
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.tabSize": 2,
   },
   "evenBetterToml.formatter.indentEntries": true,
   "evenBetterToml.formatter.indentTables": true,
+  // GitHub Actions
+  "[github-actions-workflow]": {
+    "editor.tabSize": 2,
+  },
   // GitHub Copilot
   "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.enable": {
@@ -152,6 +163,7 @@
   // indent-rainbow
   "indentRainbow.includedLanguages": [
     "ansible",
+    "github-actions-workflow",
     "json",
     "jsonc",
     "yaml",

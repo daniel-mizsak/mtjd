@@ -8,8 +8,9 @@
       upgrade = true;
     };
     brews = [
-      "sevenzip"
+      "mas"
       "postgresql@16"
+      "sevenzip"
     ];
     casks = [
       "1password"
@@ -46,6 +47,7 @@
       "synology-drive"
       "updf"
       "visual-studio-code"
+      "vivaldi"
       "vlc"
       "vnc-viewer"
       "wezterm"

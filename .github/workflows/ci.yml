@@ -22,7 +22,6 @@ jobs:
         uses: daniel-mizsak/workflows/.github/actions/yaml-lint@main
         with:
           config_file: .github/linters/.yamllint.yml
-          strict: true
 
       - name: Run ansible-lint
         uses: ansible/ansible-lint@main

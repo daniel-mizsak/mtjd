@@ -34,6 +34,7 @@ repos:
     rev: v2.4.1
     hooks:
       - id: codespell
+        exclude: "dotfiles/config"
 
   # alejandra
   - repo: https://github.com/kamadorueda/alejandra

@@ -1,5 +1,4 @@
 ## Complete NixOS setup using Nix
-
 Download **NixOS** ([official documentation](https://nixos.org/download.html))\
 Be careful to choose the right CPU architecture.
 
@@ -39,3 +38,30 @@ cd ~/mtjd/scripts/secrets
 ```
 
 The password is: `***`.
+
+
+# Additional commands
+Switch to the latest configuration:
+```bash
+sudo nixos-rebuild switch --impure --flake ~/mtjd/nix#vm-arm
+```
+
+To update the system:
+```bash
+sudo nix flake update --flake ~/mtjd/nix
+```
+
+List Nix generations:
+```bash
+sudo nixos-rebuild list-generations
+```
+
+Rollback to previous generation:
+```bash
+sudo nixos-rebuild switch --impure --flake ~/mtjd/nix#vm-arm --rollback
+```
+
+Delete old generations:
+```bash
+sudo nix-collect-garbage -d
+```

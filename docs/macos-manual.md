@@ -1,5 +1,4 @@
 ## Manual macOS settings
-
 The actual amount of manual steps highly exceeds the below mentioned ones.
 
 Hostname:

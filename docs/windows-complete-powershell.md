@@ -1,5 +1,4 @@
 ## Complete Windows setup using Powershell
-
 > [!WARNING]
 > This solutions is not very well maintained.\
 > It is also limited compared to other solutions.

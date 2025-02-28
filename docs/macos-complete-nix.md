@@ -1,5 +1,4 @@
 ## Complete macOS setup using Nix-Darwin
-
 In a **macOS** environment first install `xcode-select`:
 ```bash
 xcode-select --install
@@ -34,16 +33,16 @@ nix run nix-darwin -- switch --impure --flake ~/mtjd/nix#macbook
 
 Apply **manual settings** detailed [here](macos-manual.md).
 
-## Additional commands
 
-After the first run, switches can be done with:
+## Additional commands
+After the first run, switch to the latest configuration:
 ```bash
 darwin-rebuild switch --impure --flake ~/mtjd/nix#macbook
 ```
 
 To update the system:
 ```bash
-❯ nix flake update --flake ~/mtjd/nix
+nix flake update --flake ~/mtjd/nix
 ```
 
 List Nix generations:
@@ -51,7 +50,7 @@ List Nix generations:
 nix-env --list-generations
 ```
 
-Rollback to a specific previous generation:
+Rollback to previous generation:
 ```bash
 darwin-rebuild switch --impure --flake ~/mtjd/nix#macbook --rollback
 ```

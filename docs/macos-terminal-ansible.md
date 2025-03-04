@@ -1,5 +1,4 @@
 ## Terminal macOS setup using Ansible
-
 > [!WARNING]
 > This solutions is *less* maintained than the [Nix-Darwin](macos-complete-nix.md) one.\
 > Some settings/programs might be missing from this setup.

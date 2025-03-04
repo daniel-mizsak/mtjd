@@ -34,7 +34,17 @@ in
 
     modules = [
       # Allow unfree packages.
-      {nixpkgs.config.allowUnfree = true;}
+      {
+        nix = {
+          gc = {
+            automatic = true;
+            options = "--delete-older-than 30d";
+          };
+          optimise.automatic = true;
+          settings.experimental-features = "nix-command flakes";
+        };
+        nixpkgs.config.allowUnfree = true;
+      }
 
       inputs.nix-homebrew.darwinModules.nix-homebrew
       (

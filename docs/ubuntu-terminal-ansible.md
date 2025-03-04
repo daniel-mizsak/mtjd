@@ -1,5 +1,4 @@
 ## Terminal Ubuntu setup using Ansible (also works on WSL2)
-
 > [!WARNING]
 > This solutions is *less* maintained than the [Nix-Darwin](macos-complete-nix.md) one.\
 > Some settings/programs might be missing from this setup.

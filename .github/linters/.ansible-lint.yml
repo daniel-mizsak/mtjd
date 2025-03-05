@@ -1,6 +1,6 @@
 ---
 exclude_paths:
-  - ansible/playbook.yml
+  - playbook.yml
 
 kinds:
-  - vars: "**/*_vars.yml"
+  - vars: "**/*vars.yml"

@@ -31,6 +31,7 @@
       ffmpegthumbnailer
       fzf
       gcc
+      gh
       git
       gnumake
       gnutar

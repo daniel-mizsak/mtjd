@@ -18,6 +18,8 @@
       # Terminal
       _1password-cli
       alejandra
+      ansible
+      ansible-lint
       atuin
       bat
       btop
@@ -43,23 +45,27 @@
       kubectl
       lazydocker
       lazygit
+      molecule
       neovim
       oh-my-posh
       openssl
       poppler
       powershell
       pre-commit
+      pulumi
       rclone
       ripgrep
       shellcheck
       shfmt
       statix
+      terraform
       texliveFull
       tlrc
       tmux
       tree
       uv
       wget
+      yamllint
       yazi
       zoxide
     ];

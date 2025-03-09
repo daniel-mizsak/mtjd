@@ -87,6 +87,7 @@
     GitHub Copilot Chat
     Go
     hadolint
+    HashiCorp Terraform
     indent-rainbow
     IntelliCode for C# Dev Kit
     Jupyter
@@ -156,6 +157,7 @@
     "editor.tabSize": 2,
   },
   // GitHub Copilot
+  "github.copilot.chat.codesearch.enabled": true,
   "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.enable": {
     "markdown": true,

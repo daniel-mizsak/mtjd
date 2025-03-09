@@ -3,4 +3,5 @@ exclude_paths:
   - playbook.yml
 
 kinds:
-  - vars: "**/*vars.yml"
+  - vars: "**/tasks/programs_vars.yml"
+  - vars: "**/tasks/terminal_vars.yml"

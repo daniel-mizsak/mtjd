@@ -1,7 +1,7 @@
 ---
 - name: Include variables
   ansible.builtin.include_vars:
-    file: ./programs_vars.yml
+    file: ../vars/programs.yml
 
 # Brew
 - name: Update homebrew index

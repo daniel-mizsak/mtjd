@@ -1,7 +1,6 @@
-# https://github.com/mitchellh/nixos-config/blob/main/lib/mksystem.nix
-# https://discourse.nixos.org/t/optimize-flake-nix-code/29687
-# This function creates a NixOS system based on our VM setup for a
-# particular architecture.
+# Documentation:
+#   - https://discourse.nixos.org/t/optimize-flake-nix-code/29687
+# This function creates a NixOS system based on our VM setup for a particular architecture.
 {
   nixpkgs,
   inputs,

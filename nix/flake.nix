@@ -1,7 +1,8 @@
-# https://github.com/zmre/mac-nix-simple-example
-# https://github.com/omerxx/dotfiles
-# https://github.com/MatthiasBenaets/nix-config/blob/master/darwin.org
-# https://github.com/caarlos0/dotfiles/blob/main/machines/shared/darwin.nix
+# Documentation:
+#   - https://github.com/mitchellh/nixos-config
+#   - https://github.com/zmre/mac-nix-simple-example
+#   - https://github.com/MatthiasBenaets/nix-config
+#   - https://github.com/caarlos0/dotfiles
 {
   description = "Setting up everything with Nix";
 

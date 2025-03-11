@@ -133,8 +133,13 @@ in {
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/wezterm/wezterm.lua";
       })
     ];
-    activation = {
-      batCache = "${pkgs.bat}/bin/bat cache --build";
-    };
+    activation = mkMerge [
+      {
+        batCache = "${pkgs.bat}/bin/bat cache --build";
+      }
+      (mkIf is-darwin {
+        brewUpgrade = "brew upgrade --greedy";
+      })
+    ];
   };
 }

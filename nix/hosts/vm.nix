@@ -19,7 +19,6 @@
   time.timeZone = "Europe/Budapest";
 
   i18n.defaultLocale = "en_US.UTF-8";
-
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "hu_HU.UTF-8";
     LC_IDENTIFICATION = "hu_HU.UTF-8";
@@ -36,6 +35,11 @@
     layout = "us";
     variant = "";
   };
+
+  # KDE
+  # services.xserver.enable = true;
+  # services.xserver.displayManager.sddm.enable = true;
+  # services.xserver.desktopManager.plasma6.enable = true;
 
   ### Docker
   virtualisation.docker.enable = true;
@@ -82,5 +86,7 @@
   programs.zsh.enable = true;
   programs.nix-ld.enable = true;
 
+  # Do not change stateVersion after installation!
+  # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.11";
 }

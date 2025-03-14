@@ -138,7 +138,7 @@ in {
         batCache = "${pkgs.bat}/bin/bat cache --build";
       }
       (mkIf is-darwin {
-        brewUpgrade = "brew upgrade --greedy";
+        brewUpgrade = "/opt/homebrew/bin/brew upgrade --greedy";
       })
     ];
   };

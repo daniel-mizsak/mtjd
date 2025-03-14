@@ -58,6 +58,7 @@
       shellcheck
       shfmt
       statix
+      stripe-cli
       terraform
       texliveFull
       tlrc

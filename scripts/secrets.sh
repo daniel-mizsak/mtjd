@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 # Read password in a hidden way
-read -prs "Enter your password: " SECRET
+read -rsp "Enter your password: " SECRET
 echo -e "\n"
 
 # Encrypt by: `openssl enc -aes-256-cbc -in OP_SERVICE_ACCOUNT_TOKEN -out OP_SERVICE_ACCOUNT_TOKEN.enc -pbkdf2`
-OP_SERVICE_ACCOUNT_TOKEN=$(openssl enc -d -aes-256-cbc -in OP_SERVICE_ACCOUNT_TOKEN.enc -pass pass:"$SECRET" -pbkdf2 2> /dev/null)
+OP_SERVICE_ACCOUNT_TOKEN=$(openssl enc -d -aes-256-cbc -in ~/mtjd/scripts/secrets/OP_SERVICE_ACCOUNT_TOKEN.enc -pass pass:"$SECRET" -pbkdf2 2> /dev/null)
 # shellcheck disable=SC2181
 if [[ $? -ne 0 ]]; then
     echo "Incorrect password. Exiting."

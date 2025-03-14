@@ -31,10 +31,11 @@ or
 sudo nixos-rebuild switch --impure --flake ~/mtjd/nix#vm-amd
 ```
 
-If you are me, consider settings **private configurations**:
+If you are me, consider settings **secrets**:
 ```bash
-cd ~/mtjd/scripts/secrets
-./secrets.sh
+gh auth login --git-protocol https --skip-ssh-key --web
+gh repo clone secrets ~/mtjd/scripts/secrets
+~/mtjd/scripts/secrets.sh
 ```
 
 The password is: `***`.

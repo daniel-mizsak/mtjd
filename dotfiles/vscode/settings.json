@@ -110,8 +110,8 @@
     Remote Explorer
     Ruff
     SQLite
-    Vim
-    ? VSCode Neovim
+    ? Vim
+    VSCode Neovim
     WSL
     YAML
     */
@@ -243,6 +243,11 @@
   },
   "python.analysis.typeCheckingMode": "off",
   "python.experiments.enabled": false,
+  // Remote - SSH
+  "remote.SSH.remotePlatform": {
+    "*": "linux",
+    "nixos": "linux",
+  },
   // Ruff
   "ruff.fixAll": false,
   "ruff.lineLength": 120,
@@ -252,9 +257,8 @@
     "editor.defaultFormatter": "redhat.vscode-yaml",
     "editor.tabSize": 2,
   },
-  // Remote - SSH
-  "remote.SSH.remotePlatform": {
-    "*": "linux",
-    "nixos": "linux",
+  // VSCode Neovim
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
   },
 }

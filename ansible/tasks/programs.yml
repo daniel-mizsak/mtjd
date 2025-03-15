@@ -1,0 +1,106 @@
+---
+- name: Include variables
+  ansible.builtin.include_vars:
+    file: ../vars/programs.yml
+
+# Brew
+- name: Update homebrew index
+  community.general.homebrew:
+    update_homebrew: true
+
+- name: Install homebrew casks
+  community.general.homebrew_cask:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - "1password"
+    - "affinity-designer"
+    - "affinity-photo"
+    - "affinity-publisher"
+    - "alacritty"
+    - "aldente"
+    - "appcleaner"
+    - "arc"
+    - "betterdisplay"
+    - "db-browser-for-sqlite"
+    - "devtoys"
+    - "docker"
+    - "github"
+    - "hiddenbar"
+    - "iterm2"
+    - "keyboardcleantool"
+    - "mullvadvpn"
+    - "obs"
+    - "obsidian"
+    - "openinterminal"
+    - "parallels@19"
+    - "postman"
+    - "raspberry-pi-imager"
+    - "raycast"
+    - "scroll-reverser"
+    - "signal"
+    - "slack"
+    - "spotify"
+    - "sublime-text"
+    - "synology-drive"
+    - "updf"
+    - "visual-studio-code"
+    - "vlc"
+    - "vnc-viewer"
+    - "wezterm"
+
+- name: Install mas
+  community.general.homebrew:
+    name: "mas"
+    state: present
+
+- name: Upgrade homebrew packages
+  community.general.homebrew:
+    upgrade_all: true
+  when: install_latest_packages
+
+- name: Install app store apps.  # noqa: args[module]
+  community.general.mas:
+    id: "{{ item | int }}"
+    state: present
+  loop:
+    - 424390742  # Compressor
+    - 424389933  # Final Cut Pro
+    - 409183694  # Keynote
+    - 441258766  # Magnet
+    - 434290957  # Motion
+    - 409203825  # Numbers
+    - 409201541  # Pages
+    - 1295203466  # Microsoft Remote Desktop
+    - 497799835  # Xcode
+    # Safari Extensions
+    - 1569813296  # 1Password for Safari
+    - 1440147259  # AdGuard for Safari
+    - 1521133201  # Speed Player for Safari
+    - 1573461917  # SponsorBlock for YouTube
+
+- name: Upgrade app store apps
+  community.general.mas:
+    upgrade_all: true
+  when: install_latest_packages
+
+- name: Install nerd font macOS
+  community.general.homebrew_cask:
+    name: "font-meslo-lg-nerd-font"
+    state: present
+
+# Symlinks
+- name: Ensure symlink directories exist
+  ansible.builtin.file:
+    path: "{{ item.dest | dirname }}"
+    state: directory
+    mode: "0775"
+  loop: "{{ symlinks }}"
+
+- name: Create dotfile symlinks
+  ansible.builtin.file:
+    src: "{{ item.source }}"
+    dest: "{{ item.dest }}"
+    state: link
+    force: true
+  loop: "{{ symlinks }}"

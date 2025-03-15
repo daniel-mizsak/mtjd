@@ -24,7 +24,7 @@ winget install --id Git.Git -e --source winget
 
 Reopen **PowerShell** as administrator and run the **windows setup** script:
 ```powershell
-iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/daniel-mizsak/mtjd/main/scripts/windows-setup.ps1'))
+iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/daniel-mizsak/mtjd/main/scripts/windows-complete-powershell.ps1'))
 ```
 
 Since the script installed `PowerShell 7`, it can be used by opening `pwsh` instead of `powershell`.

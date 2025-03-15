@@ -25,5 +25,5 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 Run the **terminal setup** script:
 ```bash
 /bin/bash -c "$(curl -fsSL \
-https://raw.githubusercontent.com/daniel-mizsak/mtjd/main/scripts/terminal-setup.sh)"
+https://raw.githubusercontent.com/daniel-mizsak/mtjd/main/scripts/terminal-ansible.sh)"
 ```

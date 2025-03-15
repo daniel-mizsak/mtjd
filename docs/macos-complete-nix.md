@@ -31,6 +31,16 @@ Run [`nix-darwin`](https://github.com/LnL7/nix-darwin):
 nix run nix-darwin -- switch --impure --flake ~/mtjd/nix#macbook
 ```
 
+If you are me, consider settings **secrets**:
+```bash
+gh auth login --git-protocol https --skip-ssh-key --web
+gh repo clone secrets ~/mtjd/scripts/secrets
+~/mtjd/scripts/secrets.sh
+```
+
+The password is: `***`.
+
+
 Apply **manual settings** detailed [here](macos-manual.md).
 
 

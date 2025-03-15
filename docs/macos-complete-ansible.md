@@ -29,7 +29,7 @@ Enable full disk access for **Terminal** in `System Preferences > Privacy & Secu
 Run the **macos setup** script:
 ```bash
 /bin/bash -c "$(curl -fsSL \
-https://raw.githubusercontent.com/daniel-mizsak/mtjd/main/scripts/macos-setup.sh)"
+https://raw.githubusercontent.com/daniel-mizsak/mtjd/main/scripts/macos-complete-ansible.sh)"
 ```
 
 Apply **manual settings** detailed [here](macos-manual.md).

@@ -52,7 +52,6 @@
       poppler
       powershell
       pre-commit
-      pulumi
       rclone
       ripgrep
       shellcheck

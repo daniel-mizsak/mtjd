@@ -1,0 +1,22 @@
+---
+- name: Install dockutil
+  community.general.homebrew:
+    name: "dockutil"
+    state: present
+
+- name: Remove all dock content
+  ansible.builtin.command: >
+    dockutil --remove all
+  changed_when: false
+
+- name: Dock set content
+  ansible.builtin.command: >
+    dockutil --add {{ item }} --no-restart
+  changed_when: false
+  loop:
+    - '/Applications/Safari.app'
+    - '/Applications/Mail.app'
+    - '/Applications/Signal.app'
+    - '/Applications/Visual\ Studio\ Code.app'
+    - '/Applications/System\ Settings.app'
+    - '/Users/{{ lookup("env", "USER") }}/Downloads/'

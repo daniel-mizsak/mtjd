@@ -6,6 +6,7 @@
 
 # pre-commit ci
 ci:
+  skip: [alejandra-system]
   autoupdate_schedule: monthly
 
 # pre-commit
@@ -34,3 +35,10 @@ repos:
     rev: v2.4.1
     hooks:
       - id: codespell
+        exclude: "dotfiles/config"
+
+  # alejandra
+  - repo: https://github.com/kamadorueda/alejandra
+    rev: 3.1.0
+    hooks:
+      - id: alejandra-system

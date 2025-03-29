@@ -1,0 +1,21 @@
+---
+name: CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the codebase
+        uses: actions/checkout@v4
+
+      - name: Run yamllint
+        uses: daniel-mizsak/workflows/.github/actions/yaml-lint@v1

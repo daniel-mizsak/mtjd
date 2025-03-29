@@ -124,6 +124,7 @@
   "[ansible]": {
     "editor.defaultFormatter": "redhat.ansible",
   },
+  "ansible.lightspeed.enabled": false,
   "redhat.telemetry.enabled": false,
   // Bash IDE
   "bashIde.shfmt.spaceRedirects": true,
@@ -141,6 +142,7 @@
   "code-runner.ignoreSelection": true,
   // Code Spell Checker
   "cSpell.diagnosticLevel": "Hint",
+  "cSpell.diagnosticLevelFlaggedWords": "Hint",
   "cSpell.showStatus": false,
   // CodeSnap
   "codesnap.containerPadding": "1em",

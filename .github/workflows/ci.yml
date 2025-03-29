@@ -62,7 +62,7 @@ jobs:
               fsType = "ext4";
             };
           }' | sudo tee /etc/nixos/hardware-configuration.nix
-          sudo ln -s  $GITHUB_WORKSPACE/ /home/damz/mtjd
+          sudo ln -s $GITHUB_WORKSPACE/ /home/damz/mtjd
 
       - name: Run nix flake check
         run: >

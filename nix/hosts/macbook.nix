@@ -24,8 +24,7 @@
         show-recents = false;
         tilesize = 60;
         persistent-apps = [
-          "/System/Cryptexes/App/System/Applications/Safari.app"
-          "/System/Applications/Mail.app"
+          "/Applications/Vivaldi.app"
           "/Applications/Signal.app"
           "/Applications/Visual\ Studio\ Code.app"
           "/System/Applications/System Settings.app"

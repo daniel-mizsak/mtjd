@@ -27,3 +27,6 @@ Tmux:
 - Install Tmux plugins `tmux > prefix + I`, where prefix for me is `Ctrl + f`.
 
 Install [Asahi Linux](https://asahilinux.org).
+
+Browser:
+- Set `Vivaldi` as default browser: `System Preferences > Desktop & Dock > Default web browser`

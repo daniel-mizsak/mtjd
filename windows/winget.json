@@ -13,6 +13,9 @@
           "PackageIdentifier": "AgileBits.1Password"
         },
         {
+          "PackageIdentifier": "AgileBits.1Password.CLI"
+        },
+        {
           "PackageIdentifier": "Alacritty.Alacritty"
         },
         {

@@ -38,8 +38,8 @@
 
   # KDE
   services.xserver.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
 
   ### Docker
   virtualisation.docker.enable = true;
@@ -86,6 +86,9 @@
   programs.firefox.enable = true;
   programs.nix-ld.enable = true;
   programs.zsh.enable = true;
+
+  # 1Password CLI
+  programs._1password = {enable = true;};
 
   # Do not change stateVersion after installation!
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion

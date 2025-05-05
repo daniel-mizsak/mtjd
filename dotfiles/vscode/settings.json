@@ -66,7 +66,6 @@
   // Extensions
   /*
     .NET Install Tool
-    .NET MAUI
     1Password
     Alejandra
     Ansible
@@ -78,9 +77,10 @@
     Code Runner
     Code Spell Checker
     CodeSnap
+    Container Tools
     CSharpier - Code formatter
     Dev Containers
-    Docker
+    Docker DX
     Even Better TOML
     Github Actions
     GitHub Copilot
@@ -110,7 +110,6 @@
     Remote Explorer
     Ruff
     SQLite
-    ? Vim
     VSCode Neovim
     WSL
     YAML
@@ -147,6 +146,10 @@
   // CodeSnap
   "codesnap.containerPadding": "1em",
   "codesnap.showWindowControls": false,
+  // Docker
+  "[dockerfile]": {
+    "editor.tabSize": 1,
+  },
   // Even Better TOML
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",

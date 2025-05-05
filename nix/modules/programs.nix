@@ -67,7 +67,6 @@
       # Safari Extensions
       "1Password for Safari" = 1569813296;
       "AdGuard for Safari" = 1440147259;
-      "GitHub File Icons" = 1631366167;
       "Return YT Dislikes" = 6463305263;
       "Speed Player for Safari" = 1521133201;
       "SponsorBlock for YouTube" = 1573461917;

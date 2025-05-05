@@ -12,7 +12,7 @@
       TERMINAL = "wezterm";
 
       DOTNET_ROOT = "${pkgs.dotnet-sdk_8}/share/dotnet";
-      DOTNET_SYSTEM_GLOBALIZATION_INVARIANT = 1;
+      DOTNET_SYSTEM_GLOBALIZATION_INVARIANT = "1";
     };
 
     systemPackages = with pkgs; [

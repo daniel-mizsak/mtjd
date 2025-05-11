@@ -51,6 +51,8 @@
   // Terminal
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.scrollback": 10000,
+  // Update
+  "update.mode": "none",
   // Window
   "window.zoomLevel": -0.35,
   // Workbench

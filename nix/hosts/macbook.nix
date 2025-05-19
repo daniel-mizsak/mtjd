@@ -62,6 +62,7 @@
     };
   };
 
+  system.primaryUser = currentSystemUser;
   users.users.${currentSystemUser} = {
     name = currentSystemUser;
     home = "/Users/${currentSystemUser}";

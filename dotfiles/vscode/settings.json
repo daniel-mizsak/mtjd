@@ -36,6 +36,7 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   // Git
+  "diffEditor.ignoreTrimWhitespace": false,
   "git.allowForcePush": true,
   "git.blame.editorDecoration.enabled": true,
   "git.confirmForcePush": false,
@@ -67,55 +68,55 @@
   "workbench.sideBar.location": "left",
   // Extensions
   /*
-    .NET Install Tool
-    1Password
-    Alejandra
-    Ansible
-    autoDocstring - Python Docstring Generator
-    Bash IDE
-    Better Comments
-    C#
-    C# Dev Kit
-    Code Runner
-    Code Spell Checker
-    CodeSnap
-    Container Tools
-    CSharpier - Code formatter
-    Dev Containers
-    Docker DX
-    Even Better TOML
-    Github Actions
-    GitHub Copilot
-    GitHub Copilot Chat
-    Go
-    hadolint
-    HashiCorp Terraform
-    indent-rainbow
-    IntelliCode for C# Dev Kit
-    Jupyter
-    Jupyter Cell Tags
-    Jupyter Keymap
-    Jupyter Notebook Renderers
-    Jupyter Slide Show
-    LaTeX Workshop
-    Live Share
-    Mypy Type Checker
-    Nix IDE
-    PowerShell
-    psioniq File Header
-    Pylance
-    Python
-    Python Debugger
-    Rainbow CSV
-    Remote - SSH
-    Remote - SSH: Editing Configuration Files
-    Remote Explorer
-    Ruff
-    SQLite
-    VSCode Neovim
-    WSL
-    YAML
-    */
+  .NET Install Tool
+  1Password
+  Alejandra
+  Ansible
+  autoDocstring - Python Docstring Generator
+  Bash IDE
+  Better Comments
+  C#
+  C# Dev Kit
+  Code Runner
+  Code Spell Checker
+  CodeSnap
+  Container Tools
+  CSharpier - Code formatter
+  Dev Containers
+  Docker DX
+  Even Better TOML
+  Github Actions
+  GitHub Copilot
+  GitHub Copilot Chat
+  Go
+  hadolint
+  HashiCorp Terraform
+  indent-rainbow
+  IntelliCode for C# Dev Kit
+  Jupyter
+  Jupyter Cell Tags
+  Jupyter Keymap
+  Jupyter Notebook Renderers
+  Jupyter Slide Show
+  LaTeX Workshop
+  Live Share
+  Mypy Type Checker
+  Nix IDE
+  PowerShell
+  psioniq File Header
+  Pylance
+  Python
+  Python Debugger
+  Rainbow CSV
+  Remote - SSH
+  Remote - SSH: Editing Configuration Files
+  Remote Explorer
+  Ruff
+  SQLite
+  VSCode Neovim
+  WSL
+  YAML
+  */
   // .NET Install Tool
   "dotnet.automaticallyCreateSolutionInWorkspace": false,
   "dotnetAcquisitionExtension.enableTelemetry": false,

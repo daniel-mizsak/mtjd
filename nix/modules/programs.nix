@@ -42,7 +42,6 @@
       "raycast"
       "scroll-reverser"
       "signal"
-      "slack"
       "spotify"
       "sublime-text"
       "synology-drive"

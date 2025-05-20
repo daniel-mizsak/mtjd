@@ -28,7 +28,7 @@ git clone https://github.com/daniel-mizsak/mtjd.git ~/mtjd
 
 Run [`nix-darwin`](https://github.com/LnL7/nix-darwin):
 ```bash
-nix run nix-darwin -- switch --impure --flake ~/mtjd/nix#macbook
+sudo nix run nix-darwin -- switch --impure --flake ~/mtjd/nix#macbook
 ```
 
 Apply **secrets** detailed [here](secrets.md).
@@ -40,25 +40,25 @@ Apply **manual settings** detailed [here](macos-manual.md).
 ## Additional commands
 After the first run, switch to the latest configuration:
 ```bash
-darwin-rebuild switch --impure --flake ~/mtjd/nix#macbook
+sudo darwin-rebuild switch --impure --flake ~/mtjd/nix#macbook
 ```
 
 To update the system:
 ```bash
-nix flake update --flake ~/mtjd/nix
+sudo nix flake update --flake ~/mtjd/nix
 ```
 
 List Nix generations:
 ```bash
-nix-env --list-generations
+sudo nix-env --list-generations
 ```
 
 Rollback to previous generation:
 ```bash
-darwin-rebuild switch --impure --flake ~/mtjd/nix#macbook --rollback
+sudo darwin-rebuild switch --impure --flake ~/mtjd/nix#macbook --rollback
 ```
 
 Delete old generations (you may also want to run the command with `sudo`):
 ```bash
-nix-collect-garbage -d
+sudo nix-collect-garbage -d
 ```

@@ -31,7 +31,7 @@
       "karabiner-elements"
       "keyboardcleantool"
       "mullvad-browser"
-      "mullvadvpn"
+      "mullvad-vpn"
       "obs"
       "obsidian"
       "openinterminal"

@@ -18,6 +18,15 @@ jobs:
       - name: Check out the codebase
         uses: actions/checkout@v4
 
+      - name: Use megalinter
+        uses: oxsecurity/megalinter/flavors/cupcake@v8.7.0
+        env:
+          ENABLE: BASH,ACTION,ANSIBLE
+          ENABLE_LINTERS: YAML_YAMLLINT,REPOSITORY_GIT_DIFF,REPOSITORY_GITLEAKS
+          BASH_SHFMT_ARGUMENTS: --indent 4 --space-redirects
+          BASH_SHELLCHECK_ARGUMENTS: --external-sources --exclude=SC1091
+          ANSIBLE_ANSIBLE_LINT_FILTER_REGEX_INCLUDE: ansible
+
       - name: Run yamllint
         uses: daniel-mizsak/workflows/.github/actions/yaml-lint@v1
 

@@ -25,9 +25,10 @@
       bat
       btop
       csharpier
-      deadnix
+      curl
       direnv
       dotnet-sdk_8
+      dust
       eza
       fastfetch
       fd
@@ -40,6 +41,7 @@
       gnutar
       go
       hadolint
+      hyperfine
       htop
       icu
       imagemagick
@@ -58,15 +60,16 @@
       ripgrep
       shellcheck
       shfmt
-      statix
       stripe-cli
       terraform
       texliveFull
       tlrc
       tmux
+      tokei
       tree
       uv
       wget
+      xh
       yamllint
       yazi
       zoxide

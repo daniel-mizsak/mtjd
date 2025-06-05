@@ -23,26 +23,9 @@ jobs:
         env:
           ENABLE: BASH,ACTION,ANSIBLE
           ENABLE_LINTERS: YAML_YAMLLINT,REPOSITORY_GIT_DIFF,REPOSITORY_GITLEAKS
-          BASH_SHFMT_ARGUMENTS: --indent 4 --space-redirects
           BASH_SHELLCHECK_ARGUMENTS: --external-sources --exclude=SC1091
-          ANSIBLE_ANSIBLE_LINT_ARGUMENTS: --strict --exclude playbook.yml
+          BASH_SHFMT_ARGUMENTS: --indent 4 --space-redirects
           ANSIBLE_ANSIBLE_LINT_CONFIG_FILE: .github/linters/.ansible-lint.yml
-
-      - name: Run yamllint
-        uses: daniel-mizsak/workflows/.github/actions/yaml-lint@v1
-
-      - name: Run ansible-lint
-        uses: ansible/ansible-lint@main
-        with:
-          working_directory: ansible
-          setup_python: true
-          args: --strict --exclude playbook.yml
-
-      - name: Run shell linter
-        uses: luizm/action-sh-checker@v0.9.0
-        env:
-          SHELLCHECK_OPTS: --external-sources --exclude=SC1091
-          SHFMT_OPTS: --indent 4 --space-redirects
 
   nix:
     runs-on: ubuntu-latest

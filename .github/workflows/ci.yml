@@ -26,6 +26,7 @@ jobs:
           BASH_SHFMT_ARGUMENTS: --indent 4 --space-redirects
           BASH_SHELLCHECK_ARGUMENTS: --external-sources --exclude=SC1091
           ANSIBLE_ANSIBLE_LINT_ARGUMENTS: --strict --exclude playbook.yml
+          ANSIBLE_ANSIBLE_LINT_CONFIG_FILE: .github/linters/.ansible-lint.yml
 
       - name: Run yamllint
         uses: daniel-mizsak/workflows/.github/actions/yaml-lint@v1

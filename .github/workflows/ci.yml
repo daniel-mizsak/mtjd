@@ -25,7 +25,7 @@ jobs:
           ENABLE_LINTERS: YAML_YAMLLINT,REPOSITORY_GIT_DIFF,REPOSITORY_GITLEAKS
           BASH_SHFMT_ARGUMENTS: --indent 4 --space-redirects
           BASH_SHELLCHECK_ARGUMENTS: --external-sources --exclude=SC1091
-          ANSIBLE_ANSIBLE_LINT_FILTER_REGEX_INCLUDE: ansible
+          ANSIBLE_ANSIBLE_LINT_ARGUMENTS: --strict --exclude playbook.yml
 
       - name: Run yamllint
         uses: daniel-mizsak/workflows/.github/actions/yaml-lint@v1
@@ -71,7 +71,7 @@ jobs:
               fsType = "ext4";
             };
           }' | sudo tee /etc/nixos/hardware-configuration.nix
-          sudo ln -s $GITHUB_WORKSPACE/ /home/damz/mtjd
+          sudo ln -s "$GITHUB_WORKSPACE/" /home/damz/mtjd
 
       - name: Run nix flake check
         run: >

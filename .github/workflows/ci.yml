@@ -13,13 +13,12 @@ concurrency:
 jobs:
   lint:
     runs-on: ubuntu-latest
-
     steps:
       - name: Check out the codebase
         uses: actions/checkout@v4
 
       - name: Use megalinter
-        uses: oxsecurity/megalinter/flavors/cupcake@v8.7.0
+        uses: oxsecurity/megalinter/flavors/cupcake@v8
         env:
           ENABLE: BASH,ACTION,ANSIBLE
           ENABLE_LINTERS: YAML_YAMLLINT,REPOSITORY_GIT_DIFF,REPOSITORY_GITLEAKS
@@ -29,7 +28,6 @@ jobs:
 
   nix:
     runs-on: ubuntu-latest
-
     steps:
       - name: Check out the codebase
         uses: actions/checkout@v4

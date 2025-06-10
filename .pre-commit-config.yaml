@@ -6,7 +6,7 @@
 
 # pre-commit ci
 ci:
-  skip: [alejandra-system]
+  skip: [alejandra-system, shellcheck]
   autoupdate_schedule: monthly
 
 # pre-commit

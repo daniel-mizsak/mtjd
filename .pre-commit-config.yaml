@@ -16,6 +16,8 @@ repos:
     hooks:
       - id: check-added-large-files
         args: [--maxkb=2000]
+      - id: check-json
+        exclude: "dotfiles/vscode/settings.json"
       - id: check-merge-conflict
       - id: check-toml
       - id: check-yaml
@@ -23,6 +25,28 @@ repos:
       - id: detect-private-key
       - id: end-of-file-fixer
       - id: trailing-whitespace
+
+  # shellcheck
+  - repo: https://github.com/koalaman/shellcheck-precommit
+    rev: v0.10.0
+    hooks:
+      - id: shellcheck
+        types: [shell]
+        args: [--external-sources, --exclude=SC1091]
+        exclude: "dotfiles/shell/zsh/.zshrc"
+
+  # actionlint
+  - repo: https://github.com/rhysd/actionlint
+    rev: v1.7.7
+    hooks:
+      - id: actionlint
+
+  # yamllint
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.29.0
+    hooks:
+      - id: yamllint
+        args: [--config-file=.github/linters/.yamllint.yml]
 
   # gitleaks
   - repo: https://github.com/gitleaks/gitleaks

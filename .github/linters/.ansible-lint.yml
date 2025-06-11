@@ -1,0 +1,4 @@
+---
+strict: true
+exclude_paths:
+  - playbook.yml

@@ -25,6 +25,7 @@ jobs:
           BASH_SHELLCHECK_ARGUMENTS: --external-sources --exclude=SC1091
           BASH_SHFMT_ARGUMENTS: --indent 4 --space-redirects
           ANSIBLE_ANSIBLE_LINT_CONFIG_FILE: .github/linters/.ansible-lint.yml
+          YAML_YAMLLINT_ARGUMENTS: --strict
 
   nix:
     runs-on: ubuntu-latest

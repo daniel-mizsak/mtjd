@@ -18,6 +18,10 @@ Language & Region:
 
 Trackpad:
 - Enable `Tap to click`
+- Mission Control: Swipe up with four fingers
+- App Exposé: Swipe down with four fingers
+- Disable `Launchpad`
+- Disable `Show Desktop`
 
 Raycast:
 - Unbind `Spotlight`: `System Preferences > Keyboard > Keyboard Shortcuts... > Spotlight`

@@ -50,6 +50,7 @@
   // Telemetry
   "telemetry.telemetryLevel": "off",
   // Terminal
+  "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.scrollback": 10000,
   // Update
@@ -153,6 +154,7 @@
   "[dockerfile]": {
     "editor.tabSize": 1,
   },
+  "docker.extension.enableComposeLanguageServer": true,
   // Even Better TOML
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",
@@ -212,6 +214,8 @@
   "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
   "powershell.codeFormatting.useConstantStrings": true,
   "powershell.codeFormatting.useCorrectCasing": true,
+  "powershell.integratedConsole.showOnStartup": false,
+  "powershell.startAutomatically": false,
   // psioniq File Header
   "psi-header.config": {
     "author": "Daniel Mizsak",
@@ -260,13 +264,13 @@
   "ruff.fixAll": false,
   "ruff.lineLength": 120,
   "ruff.nativeServer": "on",
+  // VSCode Neovim
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
   // YAML
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml",
     "editor.tabSize": 2,
-  },
-  // VSCode Neovim
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
   },
 }

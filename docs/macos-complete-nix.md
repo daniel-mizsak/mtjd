@@ -26,7 +26,7 @@ Enable full disk access for **Terminal** in `System Preferences > Privacy & Secu
 git clone https://github.com/daniel-mizsak/mtjd.git ~/mtjd
 ```
 
-Run [`nix-darwin`](https://github.com/LnL7/nix-darwin):
+Run [`nix-darwin`](https://github.com/nix-darwin/nix-darwin):
 ```bash
 sudo nix run nix-darwin -- switch --impure --flake ~/mtjd/nix#macbook
 ```

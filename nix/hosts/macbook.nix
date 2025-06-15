@@ -19,6 +19,7 @@
         magnification = false;
         mineffect = "genie";
         minimize-to-application = false;
+        mru-spaces = false;
         orientation = "bottom";
         show-process-indicators = true;
         show-recents = false;

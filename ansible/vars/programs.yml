@@ -1,0 +1,17 @@
+---
+symlinks:
+  # alacritty
+  - source: ${HOME}/{{ repository }}/dotfiles/config/alacritty
+    dest: ${HOME}/.config/alacritty
+
+  # sublime
+  - source: ${HOME}/{{ repository }}/dotfiles/sublime/Preferences.sublime-settings
+    dest: ${HOME}/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings
+
+  # vscode
+  - source: ${HOME}/{{ repository }}/dotfiles/vscode/settings.json
+    dest: ${HOME}/Library/Application Support/Code/User/settings.json
+
+  # wezterm
+  - source: ${HOME}/{{ repository }}/dotfiles/config/wezterm/wezterm.lua
+    dest: ${HOME}/.config/wezterm/wezterm.lua

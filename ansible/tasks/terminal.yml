@@ -1,0 +1,74 @@
+---
+- name: Include variables
+  ansible.builtin.include_vars:
+    file: ../vars/terminal.yml
+
+- name: Update homebrew index
+  community.general.homebrew:
+    update_homebrew: true
+
+- name: Install zsh on linux
+  community.general.homebrew:
+    name: "zsh"
+    state: present
+  when: ansible_os_family != "Darwin"
+
+- name: Install terminal packages
+  community.general.homebrew:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ packages }}"
+
+- name: Upgrade terminal packages
+  community.general.homebrew:
+    upgrade_all: true
+  when: install_latest_packages
+
+# ZSH
+- name: Create zsh directory
+  ansible.builtin.file:
+    path: "${HOME}/.zsh/plugins"
+    state: directory
+    mode: "0755"
+
+- name: Install fzf-tab.  # noqa: latest
+  ansible.builtin.git:
+    repo: "https://github.com/Aloxaf/fzf-tab"
+    dest: "${HOME}/.zsh/plugins/fzf-tab"
+
+- name: Install zsh-autosuggestions.  # noqa: latest
+  ansible.builtin.git:
+    repo: "https://github.com/zsh-users/zsh-autosuggestions"
+    dest: "${HOME}/.zsh/plugins/zsh-autosuggestions"
+
+- name: Install zsh-syntax-highlighting.  # noqa: latest
+  ansible.builtin.git:
+    repo: "https://github.com/zsh-users/zsh-syntax-highlighting.git"
+    dest: "${HOME}/.zsh/plugins/zsh-syntax-highlighting"
+
+- name: Install tmux plugin manager.  # noqa: latest
+  ansible.builtin.git:
+    repo: "https://github.com/tmux-plugins/tpm"
+    dest: "${HOME}/.tmux/plugins/tpm"
+
+# Symlinks
+- name: Ensure symlink directories exist
+  ansible.builtin.file:
+    path: "{{ item.dest | dirname }}"
+    state: directory
+    mode: "0775"
+  loop: "{{ symlinks }}"
+
+- name: Create dotfile symlinks
+  ansible.builtin.file:
+    src: "{{ item.source }}"
+    dest: "{{ item.dest }}"
+    state: link
+    force: true
+  loop: "{{ symlinks }}"
+
+- name: Rebuild bat's cache
+  ansible.builtin.command: >
+    bat cache --build
+  args:
+    creates: "${HOME}/.cache/bat"

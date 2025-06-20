@@ -1,0 +1,17 @@
+theme = catppuccin-mocha
+font-family = "MesloLGS Nerd Font Mono"
+font-size = 14
+
+window-width = 100
+window-height = 34
+
+window-decoration = true
+background-blur-radius = 20
+background-opacity = 0.95
+window-colorspace = display-p3
+
+copy-on-select = true
+macos-option-as-alt = true
+mouse-hide-while-typing = true
+
+keybind = global:cmd+/=toggle_quick_terminal

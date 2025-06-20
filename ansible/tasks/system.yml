@@ -1,0 +1,236 @@
+---
+### NSGlobalDomain
+- name: AppleInterfaceStyle
+  community.general.osx_defaults:
+    domain: NSGlobalDomain
+    key: AppleInterfaceStyle
+    value: Dark
+    type: string
+
+### Controlcenter
+- name: BatteryShowPercentage
+  community.general.osx_defaults:
+    domain: com.apple.controlcenter.plist
+    key: BatteryShowPercentage
+    value: true
+    type: bool
+
+### Dock
+- name: Autohide
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: autohide
+    value: true
+    type: bool
+
+- name: Autohide-delay
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: autohide-delay
+    value: 0.0
+    type: float
+
+- name: Autohide-time-modifier
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: autohide-time-modifier
+    value: 0.0
+    type: float
+
+- name: Contents-immutable
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: contents-immutable
+    value: true
+    type: bool
+
+- name: Launchanim
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: launchanim
+    value: true
+    type: bool
+
+- name: Magnification
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: magnification
+    value: false
+    type: bool
+
+- name: Mineffect
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: mineffect
+    value: genie
+    type: string
+
+- name: Minimize-to-application
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: minimize-to-application
+    value: false
+    type: bool
+
+- name: Orientation
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: orientation
+    value: bottom
+    type: string
+
+- name: Show-process-indicators
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: show-process-indicators
+    value: true
+    type: bool
+
+- name: Show-recents
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: show-recents
+    value: false
+    type: bool
+
+- name: Size-immutable
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: size-immutable
+    value: true
+    type: bool
+
+- name: Tilesize
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: tilesize
+    value: 60
+    type: int
+
+### Finder
+- name: AppleShowAllExtensions
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: AppleShowAllExtensions
+    value: true
+    type: bool
+
+- name: AppleShowAllFiles
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: AppleShowAllFiles
+    value: true
+    type: bool
+
+- name: FXDefaultSearchScope
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: FXDefaultSearchScope
+    value: SCcf
+    type: string
+
+- name: FXEnableExtensionChangeWarning
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: FXEnableExtensionChangeWarning
+    value: false
+    type: bool
+
+- name: FXPreferredViewStyle
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: FXPreferredViewStyle
+    value: clmv
+    type: string
+
+- name: FXRemoveOldTrashItems
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: FXRemoveOldTrashItems
+    value: false
+    type: bool
+
+- name: NewWindowTarget
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: NewWindowTarget
+    value: PfDo
+    type: string
+
+- name: NewWindowTargetPath
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: NewWindowTargetPath
+    value: "file://Users/{{ lookup('env', 'USER') }}/Documents/"
+    type: string
+
+- name: QuitMenuItem
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: QuitMenuItem
+    value: true
+    type: bool
+
+- name: ShowExternalHardDrivesOnDesktop
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: ShowExternalHardDrivesOnDesktop
+    value: true
+    type: bool
+
+- name: ShowHardDrivesOnDesktop
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: ShowHardDrivesOnDesktop
+    value: false
+    type: bool
+
+- name: ShowPathbar
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: ShowPathbar
+    value: true
+    type: bool
+
+- name: ShowRecentTags
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: ShowRecentTags
+    value: false
+    type: bool
+
+- name: ShowStatusBar
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: ShowStatusBar
+    value: true
+    type: bool
+
+- name: ShowToolbar
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: ShowToolbar
+    value: true
+    type: bool
+
+- name: WarnOnEmptyTrash
+  community.general.osx_defaults:
+    domain: com.apple.finder
+    key: WarnOnEmptyTrash
+    value: false
+    type: bool
+
+### Other
+- name: DSDontWriteNetworkStores
+  community.general.osx_defaults:
+    domain: com.apple.desktopservices
+    key: DSDontWriteNetworkStores
+    value: true
+    type: bool
+
+- name: EnableStandardClickToShowDesktop
+  community.general.osx_defaults:
+    domain: com.apple.WindowManager
+    key: EnableStandardClickToShowDesktop
+    value: false
+    type: bool

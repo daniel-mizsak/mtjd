@@ -6,6 +6,7 @@
 
 # pre-commit ci
 ci:
+  skip: [shellcheck, alejandra-system]
   autoupdate_schedule: monthly
 
 # pre-commit
@@ -16,6 +17,7 @@ repos:
       - id: check-added-large-files
         args: [--maxkb=2000]
       - id: check-json
+        exclude: "dotfiles/vscode/settings.json"
       - id: check-merge-conflict
       - id: check-toml
       - id: check-yaml
@@ -23,6 +25,15 @@ repos:
       - id: detect-private-key
       - id: end-of-file-fixer
       - id: trailing-whitespace
+
+  # shellcheck
+  - repo: https://github.com/koalaman/shellcheck-precommit
+    rev: v0.10.0
+    hooks:
+      - id: shellcheck
+        types: [shell]
+        args: [--external-sources, --exclude=SC1091]
+        exclude: "dotfiles/shell/zsh/.zshrc"
 
   # actionlint
   - repo: https://github.com/rhysd/actionlint
@@ -48,3 +59,10 @@ repos:
     rev: v2.4.1
     hooks:
       - id: codespell
+        exclude: "dotfiles/config"
+
+  # alejandra
+  - repo: https://github.com/kamadorueda/alejandra
+    rev: 4.0.0
+    hooks:
+      - id: alejandra-system

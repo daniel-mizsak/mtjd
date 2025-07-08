@@ -43,14 +43,14 @@ repos:
 
   # yamllint
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.29.0
+    rev: v1.37.1
     hooks:
       - id: yamllint
         args: [--config-file=.github/linters/.yamllint.yml, --strict]
 
   # gitleaks
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.27.0
+    rev: v8.27.2
     hooks:
       - id: gitleaks
 

@@ -1,0 +1,4 @@
+Host mlops
+  HostName mlops
+  User ansible
+  IdentityFile ~/.ssh/id_mlops

@@ -47,6 +47,7 @@
       icu
       imagemagick
       jq
+      just
       kubectl
       lazydocker
       lazygit

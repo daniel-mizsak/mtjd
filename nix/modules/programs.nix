@@ -35,6 +35,7 @@
       "obs"
       "obsidian"
       "openinterminal"
+      "orbstack"
       "parallels@19"
       "podman-desktop"
       "postman"

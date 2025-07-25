@@ -54,6 +54,8 @@
       molecule
       navi
       neovim
+      ngrok
+      nodejs_24
       oh-my-posh
       openssl
       poppler

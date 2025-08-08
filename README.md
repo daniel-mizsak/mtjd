@@ -1,4 +1,5 @@
 # <div align="center">✨ mtjd</div>
+
 <div align="center">
     <kbd>
         <a href="https://github.com/daniel-mizsak/mtjd/actions/workflows/ci.yml" target="_blank"><img src="https://github.com/daniel-mizsak/mtjd/actions/workflows/ci.yml/badge.svg" alt="build status"></a>
@@ -7,8 +8,8 @@
     </kbd>
 </div>
 
-
 ## Overview
+
 More Than Just Dotfiles is a collection of tools, scripts and configurations that I use to set up my `Linux`, `macOS` and `Windows` machines.
 The most up-to-date solution uses `nix-darwin` for `macOS` with a `NixOS` virtual machine inside `Parallels Desktop`.
 
@@ -19,11 +20,12 @@ The most up-to-date solution uses `nix-darwin` for `macOS` with a `NixOS` virtua
 
 <img src="https://raw.githubusercontent.com/daniel-mizsak/mtjd/main/.github/images/terminal.png" alt="Terminal">
 
-
 ## Getting started
+
 ❄️ - Most actively maintained
 
 Set up macOS:
+
 - [Complete macOS setup using Nix-Darwin](docs/macos-complete-nix.md) ❄️
 - [Complete macOS setup using Ansible](docs/macos-complete-ansible.md)
 - [Terminal macOS setup using Ansible](docs/macos-terminal-ansible.md)
@@ -32,6 +34,7 @@ Set up macOS:
 <br>
 
 Other automated setups:
+
 - [Complete NixOS setup using Nix](docs/nixos-complete-nix.md) ❄️
 - [Terminal Ubuntu setup using Ansible](docs/ubuntu-terminal-ansible.md)
 - [Complete Windows setup using Powershell](docs/windows-complete-powershell.md)

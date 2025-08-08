@@ -6,7 +6,7 @@ on:
       - main
   pull_request:
   schedule:
-    - cron: "0 12 * * 6"  # Every Saturday at 12:00
+    - cron: "0 12 * * 6" # Every Saturday at 12:00
 
 permissions: read-all
 
@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  ci:
+  lint:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write

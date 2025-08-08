@@ -31,22 +31,22 @@
     state: directory
     mode: "0755"
 
-- name: Install fzf-tab.  # noqa: latest
+- name: Install fzf-tab. # noqa: latest
   ansible.builtin.git:
     repo: "https://github.com/Aloxaf/fzf-tab"
     dest: "${HOME}/.zsh/plugins/fzf-tab"
 
-- name: Install zsh-autosuggestions.  # noqa: latest
+- name: Install zsh-autosuggestions. # noqa: latest
   ansible.builtin.git:
     repo: "https://github.com/zsh-users/zsh-autosuggestions"
     dest: "${HOME}/.zsh/plugins/zsh-autosuggestions"
 
-- name: Install zsh-syntax-highlighting.  # noqa: latest
+- name: Install zsh-syntax-highlighting. # noqa: latest
   ansible.builtin.git:
     repo: "https://github.com/zsh-users/zsh-syntax-highlighting.git"
     dest: "${HOME}/.zsh/plugins/zsh-syntax-highlighting"
 
-- name: Install tmux plugin manager.  # noqa: latest
+- name: Install tmux plugin manager. # noqa: latest
   ansible.builtin.git:
     repo: "https://github.com/tmux-plugins/tpm"
     dest: "${HOME}/.tmux/plugins/tpm"

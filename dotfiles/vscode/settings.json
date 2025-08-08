@@ -2,6 +2,7 @@
   // Base settings
   // Editor
   "editor.accessibilitySupport": "off",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.dragAndDrop": false,
   "editor.emptySelectionClipboard": false,
   "editor.fontFamily": "MesloLGS Nerd Font Mono",
@@ -17,7 +18,7 @@
   // Files
   "files.associations": {
     "**/ansible/**/*.yml": "ansible",
-    "**/tasks/*.yml": "ansible",
+    "**/tasks/*.yml": "ansible"
   },
   "files.eol": "\n",
   "files.exclude": {
@@ -34,7 +35,7 @@
     "**/.tox": true,
     "**/.venv": true,
     "**/coverage.xml": true,
-    "**/htmlcov": true,
+    "**/htmlcov": true
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
@@ -48,7 +49,7 @@
   "git.suggestSmartCommit": false,
   // Search
   "search.exclude": {
-    "**/.venv": true,
+    "**/.venv": true
   },
   // Telemetry
   "telemetry.telemetryLevel": "off",
@@ -91,7 +92,7 @@
   Github Actions
   GitHub Copilot
   GitHub Copilot Chat
-  ? GitHub Pull Requests
+  GitHub Pull Requests
   Go
   hadolint
   HashiCorp Terraform
@@ -112,12 +113,14 @@
   Pylance
   Python
   Python Debugger
+  Python Environments
   Rainbow CSV
   Remote - SSH
   Remote - SSH: Editing Configuration Files
   Remote Explorer
   Ruff
   SQLite
+  Tailwind CSS IntelliSense
   VSCode Neovim
   vscode-just
   WSL
@@ -129,16 +132,13 @@
   // 1Password
   "1password.editor.suggestStorage": false,
   // Ansible
-  "[ansible]": {
-    "editor.defaultFormatter": "redhat.ansible",
-  },
   "ansible.lightspeed.enabled": false,
   "redhat.telemetry.enabled": false,
   // Bash IDE
   "bashIde.shfmt.spaceRedirects": true,
   // C#
   "[csharp]": {
-    "editor.defaultFormatter": "csharpier.csharpier-vscode",
+    "editor.defaultFormatter": "csharpier.csharpier-vscode"
   },
   "csharp.experimental.debug.hotReload": true,
   // Code Spell Checker
@@ -150,24 +150,24 @@
   "codesnap.showWindowControls": false,
   // Docker
   "[dockerfile]": {
-    "editor.tabSize": 4,
+    "editor.tabSize": 4
   },
   "docker.extension.enableComposeLanguageServer": true,
   // Even Better TOML
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",
-    "editor.tabSize": 2,
+    "editor.tabSize": 2
   },
   "evenBetterToml.formatter.indentEntries": true,
   "evenBetterToml.formatter.indentTables": true,
   // GitHub Actions
   "[github-actions-workflow]": {
-    "editor.tabSize": 2,
+    "editor.tabSize": 2
   },
   // GitHub Copilot
   "github.copilot.chat.codesearch.enabled": true,
   "github.copilot.enable": {
-    "markdown": true,
+    "markdown": true
   },
   // indent-rainbow
   "indentRainbow.includedLanguages": [
@@ -177,16 +177,16 @@
     "json",
     "jsonc",
     "yaml",
-    "yml",
+    "yml"
   ],
   // Javascript
   "[javascript][javascriptreact][typescript][typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.rulers": [80]
   },
   "[javascriptreact][typescriptreact]": {
     "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit",
-    },
+      "source.organizeImports": "explicit"
+    }
   },
   // Jupyter
   "jupyter.askForKernelRestart": false,
@@ -201,19 +201,17 @@
     "--show-error-context",
     "--strict",
     "--warn-unreachable",
-    "--warn-unused-ignores",
+    "--warn-unused-ignores"
   ],
-  "mypy-type-checker.path": [
-    "${workspaceFolder}/.venv/bin/mypy",
-  ],
+  "mypy-type-checker.path": ["${workspaceFolder}/.venv/bin/mypy"],
   // Nix IDE
   "nix.formatterPath": "alejandra",
   // PowerShell
   "[powershell]": {
-    "editor.defaultFormatter": "ms-vscode.powershell",
+    "editor.defaultFormatter": "ms-vscode.powershell"
   },
   "powershell.powerShellAdditionalExePaths": {
-    "pwsh": "/run/current-system/sw/bin/pwsh",
+    "pwsh": "/run/current-system/sw/bin/pwsh"
   },
   "powershell.codeFormatting.autoCorrectAliases": true,
   "powershell.codeFormatting.avoidSemicolonsAsLineTerminators": true,
@@ -223,18 +221,20 @@
   "powershell.codeFormatting.useCorrectCasing": true,
   "powershell.integratedConsole.showOnStartup": false,
   "powershell.startAutomatically": false,
+  // Prettier - Code formatter
+  // "prettier.requireConfig": true,
   // psioniq File Header
   "psi-header.config": {
     "author": "Daniel Mizsak",
     "authorEmail": "info@pythonvilag.hu",
     "blankLinesAfter": 1,
-    "forceToTop": true,
+    "forceToTop": true
   },
   "psi-header.lang-config": [
     {
       "language": "python",
       "begin": "\"\"\"",
-      "end": "\"\"\"",
+      "end": "\"\"\""
     }
   ],
   "psi-header.templates": [
@@ -243,7 +243,7 @@
       "template": [
         "Short description and source of base code.",
         "",
-        "@author \"<<author>>\" <<<authoremail>>>",
+        "@author \"<<author>>\" <<<authoremail>>>"
       ]
     }
   ],
@@ -255,16 +255,13 @@
     },
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.defaultFoldingRangeProvider": "charliermarsh.ruff",
-    "editor.rulers": [
-      80,
-      120,
-    ],
+    "editor.rulers": [80, 120]
   },
   "python.experiments.enabled": false,
   // Remote - SSH
   "remote.SSH.remotePlatform": {
     "*": "linux",
-    "nixos": "linux",
+    "nixos": "linux"
   },
   // Ruff
   "ruff.fixAll": false,
@@ -276,7 +273,6 @@
   },
   // YAML
   "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml",
-    "editor.tabSize": 2,
-  },
+    "editor.tabSize": 2
+  }
 }

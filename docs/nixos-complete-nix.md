@@ -38,7 +38,7 @@ or
 sudo nixos-rebuild switch --impure --flake ~/mtjd/nix#vm-amd
 ```
 
-[Apply secrets](secrets.md).
+[Apply secrets.](secrets.md)
 
 ## Additional commands
 

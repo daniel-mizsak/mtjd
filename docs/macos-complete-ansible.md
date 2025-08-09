@@ -38,4 +38,4 @@ Run the **macos setup** script:
 https://raw.githubusercontent.com/daniel-mizsak/mtjd/main/scripts/macos-complete-ansible.sh)"
 ```
 
-[Apply manual settings](macos-manual.md).
+[Apply manual settings.](macos-manual.md)

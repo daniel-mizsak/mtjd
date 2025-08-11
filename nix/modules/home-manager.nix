@@ -8,13 +8,16 @@
   ...
 }: let
   inherit (config.lib.file) mkOutOfStoreSymlink;
-  inherit (pkgs.lib) mkMerge mkIf;
+  inherit (pkgs.lib) mkIf mkMerge mkOrder;
   repository = "mtjd";
 in {
   programs.home-manager.enable = true;
 
   programs.zsh = {
     enable = true;
+    initContent = mkOrder 1500 ''
+      source ~/.zshrc.manual
+    '';
 
     plugins = [
       {
@@ -111,7 +114,7 @@ in {
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/yazi";
 
         # zsh
-        ".zshrc".source =
+        ".zshrc.manual".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/shell/zsh/.zshrc";
       }
 

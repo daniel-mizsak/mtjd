@@ -57,8 +57,6 @@
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.scrollback": 10000,
-  // Update
-  "update.mode": "none",
   // Window
   "window.zoomLevel": -0.35,
   // Workbench
@@ -181,9 +179,7 @@
   ],
   // Javascript
   "[javascript][javascriptreact][typescript][typescriptreact]": {
-    "editor.rulers": [80]
-  },
-  "[javascriptreact][typescriptreact]": {
+    "editor.rulers": [80],
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
     }

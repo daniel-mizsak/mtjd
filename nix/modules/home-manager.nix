@@ -145,9 +145,10 @@ in {
       {
         batCache = "${pkgs.bat}/bin/bat cache --build";
       }
-      (mkIf is-darwin {
-        brewUpgrade = "/opt/homebrew/bin/brew upgrade --greedy";
-      })
+      # This would update all the homebrew application.
+      # (mkIf is-darwin {
+      #   brewUpgrade = "/opt/homebrew/bin/brew upgrade --greedy";
+      # })
     ];
   };
 }

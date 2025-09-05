@@ -53,6 +53,7 @@
       "vlc"
       "vnc-viewer"
       "wezterm"
+      "zed"
     ];
     masApps = {
       # General

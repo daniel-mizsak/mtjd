@@ -139,6 +139,10 @@ in {
         # wezterm
         ".config/wezterm/wezterm.lua".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/wezterm/wezterm.lua";
+
+        # zed
+        ".config/zed/settings.json".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/zed/settings.jsonc";
       })
     ];
     activation = mkMerge [

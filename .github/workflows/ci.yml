@@ -39,7 +39,7 @@ jobs:
         uses: daniel-mizsak/workflows/.github/actions/nix-format@v1.0.1
 
       - name: Install Nix
-        uses: cachix/install-nix-action@v31.6.0
+        uses: cachix/install-nix-action@v31.6.1
         with:
           nix_path: nixpkgs=channel:nixos-unstable
           extra_nix_config: |

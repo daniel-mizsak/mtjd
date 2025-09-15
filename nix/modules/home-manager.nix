@@ -133,6 +133,9 @@ in {
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/sublime/Preferences.sublime-settings";
 
         # vscode
+        "/Users/${user}/Library/Application Support/Code/User/mcp.json".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/vscode/mcp.json";
+
         "/Users/${user}/Library/Application Support/Code/User/settings.json".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/vscode/settings.json";
 

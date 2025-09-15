@@ -93,7 +93,6 @@
   GitHub Pull Requests
   Go
   hadolint
-  HashiCorp Terraform
   indent-rainbow
   IntelliCode for C# Dev Kit
   Jupyter
@@ -117,7 +116,6 @@
   Remote - SSH: Editing Configuration Files
   Remote Explorer
   Ruff
-  SQLite
   Tailwind CSS IntelliSense
   VSCode Neovim
   vscode-just
@@ -217,8 +215,6 @@
   "powershell.codeFormatting.useCorrectCasing": true,
   "powershell.integratedConsole.showOnStartup": false,
   "powershell.startAutomatically": false,
-  // Prettier - Code formatter
-  // "prettier.requireConfig": true,
   // psioniq File Header
   "psi-header.config": {
     "author": "Daniel Mizsak",

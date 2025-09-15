@@ -61,6 +61,7 @@
       poppler
       powershell
       pre-commit
+      prettier
       pulumi-bin
       rclone
       ripgrep

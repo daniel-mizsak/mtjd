@@ -8,17 +8,21 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "base_keymap": "VSCode",
+  "buffer_font_family": "MesloLGS Nerd Font Mono",
   "icon_theme": "Zed (Default)",
   "telemetry": {
     "diagnostics": true,
     "metrics": true
   },
   "vim_mode": true,
-  "ui_font_size": 17,
-  "buffer_font_size": 15,
+  "ui_font_size": 15,
+  "buffer_font_size": 14,
   "theme": {
     "mode": "dark",
     "light": "One Light",
     "dark": "macOS Classic Dark"
+  },
+  "terminal": {
+    "font_family": "MesloLGS Nerd Font Mono"
   }
 }

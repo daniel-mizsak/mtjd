@@ -36,7 +36,7 @@ jobs:
         uses: actions/checkout@v5.0.0
 
       - name: Run nix format
-        uses: daniel-mizsak/workflows/.github/actions/nix-format@v1.0.1
+        uses: daniel-mizsak/workflows/.github/actions/nix-format@v1
 
       - name: Install Nix
         uses: cachix/install-nix-action@v31.6.2

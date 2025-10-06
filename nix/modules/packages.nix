@@ -38,6 +38,7 @@
       gcc
       gh
       git
+      github-copilot-cli
       gnumake
       gnutar
       go

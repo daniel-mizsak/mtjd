@@ -6,7 +6,7 @@
   defaultBranch = main
 
 [credential]
-	helper = !gh auth git-credential
+  helper = !gh auth git-credential
 
 # [commit]
 #   template = ~/.gitmessage
@@ -20,7 +20,7 @@
   rebase = true
 
 [push]
-	autoSetupRemote = true
+  autoSetupRemote = true
 
 [fetch]
   prune = true
@@ -29,9 +29,7 @@
   short = true
 
 [alias]
-  cm = commit -m
   lg = log --graph --decorate --oneline --all
-  st = status
   sw = switch
   diffs = diff --staged
   oops = commit --amend --no-edit

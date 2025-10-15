@@ -78,6 +78,7 @@ export PATH="/opt/podman/bin:$PATH"
 # Uv
 # https://docs.astral.sh/uv/
 eval "$(uv generate-shell-completion zsh)"
+export PATH="${HOME}/.local/bin:$PATH"
 
 # Yazy
 # https://yazi-rs.github.io/docs/quick-start

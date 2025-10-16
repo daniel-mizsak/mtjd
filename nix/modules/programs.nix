@@ -9,8 +9,6 @@
     };
     brews = [
       "mas"
-      "postgresql@16"
-      "sevenzip"
     ];
     casks = [
       "1password"
@@ -20,7 +18,6 @@
       "alacritty"
       "aldente"
       "betterdisplay"
-      "db-browser-for-sqlite"
       "dbeaver-community"
       "devtoys"
       "docker-desktop"
@@ -35,9 +32,7 @@
       "obs"
       "obsidian"
       "openinterminal"
-      "orbstack"
       "parallels@19"
-      "podman-desktop"
       "postman"
       "raspberry-pi-imager"
       "raycast"

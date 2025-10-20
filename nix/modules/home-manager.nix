@@ -151,6 +151,13 @@ in {
     activation = mkMerge [
       {
         batCache = "${pkgs.bat}/bin/bat cache --build";
+
+        ansible = "${pkgs.uv}/bin/uv tool install --upgrade ansible";
+        ansible-lint = "${pkgs.uv}/bin/uv tool install --upgrade ansible-lint";
+        mkdocs = "${pkgs.uv}/bin/uv tool install --upgrade mkdocs";
+        molecule = "${pkgs.uv}/bin/uv tool install --upgrade molecule";
+        pre-commit = "${pkgs.uv}/bin/uv tool install --upgrade pre-commit";
+        yamllint = "${pkgs.uv}/bin/uv tool install --upgrade yamllint";
       }
       # This would update all the homebrew application.
       # (mkIf is-darwin {

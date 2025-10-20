@@ -39,8 +39,7 @@
         FXEnableExtensionChangeWarning = false;
         FXPreferredViewStyle = "clmv";
         FXRemoveOldTrashItems = false;
-        NewWindowTarget = "PfDo";
-        NewWindowTargetPath = "file://Users/${currentSystemUser}/Documents/";
+        NewWindowTarget = "Documents";
         QuitMenuItem = true;
         ShowExternalHardDrivesOnDesktop = true;
         ShowHardDrivesOnDesktop = false;
@@ -50,9 +49,8 @@
       menuExtraClock = {
         FlashDateSeparators = false;
         Show24Hour = true;
-        # ShowDate = true;
-        # ShowDayOfWeek = true;
-        # ShowDayOfMonth = true;
+        ShowDate = 2;
+        ShowDayOfWeek = true;
       };
       CustomUserPreferences = {
         "com.apple.desktopservices".DSDontWriteNetworkStores = true;

@@ -24,6 +24,7 @@
       "ghostty"
       "github"
       "hiddenbar"
+      "iina"
       "iterm2"
       "karabiner-elements"
       "keyboardcleantool"

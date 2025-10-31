@@ -37,8 +37,6 @@ Run [`nix-darwin`](https://github.com/nix-darwin/nix-darwin):
 sudo nix run nix-darwin -- switch --impure --flake ~/mtjd/nix#macbook
 ```
 
-[Apply secrets.](secrets.md)
-
 [Apply manual settings.](macos-manual.md)
 
 ## Additional commands

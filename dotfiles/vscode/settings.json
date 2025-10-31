@@ -22,20 +22,8 @@
   },
   "files.eol": "\n",
   "files.exclude": {
-    // Ansible
-    "**/.ansible": true,
-    // Javascript
-    "**/node_modules": true,
     // Python
-    "**/__pycache__": true,
-    "**/.coverage": true,
-    "**/.mypy_cache": true,
-    "**/.pytest_cache": true,
-    "**/.ruff_cache": true,
-    "**/.tox": true,
-    "**/.venv": true,
-    "**/coverage.xml": true,
-    "**/htmlcov": true
+    "**/__pycache__": true
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
@@ -111,7 +99,7 @@
   Pylance
   Python
   Python Debugger
-  Python Environments
+  ? Python Environments
   Rainbow CSV
   Remote - SSH
   Remote - SSH: Editing Configuration Files
@@ -188,6 +176,10 @@
   "jupyter.experiments.enabled": false,
   "notebook.formatOnSave.enabled": true,
   "notebook.lineNumbers": "on",
+  // Lua
+  "[lua]": {
+    "editor.defaultFormatter": "yinfei.luahelper"
+  },
   // Mypy Type Checker
   "mypy-type-checker.args": [
     "--ignore-missing-imports",

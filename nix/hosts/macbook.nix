@@ -39,11 +39,18 @@
         FXEnableExtensionChangeWarning = false;
         FXPreferredViewStyle = "clmv";
         FXRemoveOldTrashItems = false;
+        NewWindowTarget = "Documents";
         QuitMenuItem = true;
         ShowExternalHardDrivesOnDesktop = true;
         ShowHardDrivesOnDesktop = false;
         ShowPathbar = true;
         ShowStatusBar = true;
+      };
+      menuExtraClock = {
+        FlashDateSeparators = false;
+        Show24Hour = true;
+        ShowDate = 2;
+        ShowDayOfWeek = true;
       };
       CustomUserPreferences = {
         "com.apple.desktopservices".DSDontWriteNetworkStores = true;
@@ -52,8 +59,6 @@
           size-immutable = true;
         };
         "com.apple.finder" = {
-          NewWindowTarget = "PfDo";
-          NewWindowTargetPath = "file://Users/${currentSystemUser}/Documents/";
           ShowRecentTags = false;
           ShowToolbar = true;
           WarnOnEmptyTrash = false;
@@ -64,6 +69,7 @@
   };
 
   system.primaryUser = currentSystemUser;
+  time.timeZone = "Europe/Budapest";
   users.users.${currentSystemUser} = {
     name = currentSystemUser;
     home = "/Users/${currentSystemUser}";

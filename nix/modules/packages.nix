@@ -19,8 +19,6 @@
       # Terminal
       _1password-cli
       alejandra
-      ansible
-      ansible-lint
       atuin
       azure-cli
       bat
@@ -52,7 +50,6 @@
       kubectl
       lazydocker
       lazygit
-      molecule
       navi
       neovim
       ngrok
@@ -61,7 +58,6 @@
       openssl
       poppler
       powershell
-      pre-commit
       prettier
       pulumi-bin
       rclone
@@ -78,7 +74,6 @@
       uv
       wget
       xh
-      yamllint
       yazi
       zoxide
     ];

@@ -38,8 +38,6 @@ or
 sudo nixos-rebuild switch --impure --flake ~/mtjd/nix#vm-amd
 ```
 
-[Apply secrets.](secrets.md)
-
 ## Additional commands
 
 Switch to the latest configuration:

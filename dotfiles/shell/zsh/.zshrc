@@ -2,7 +2,7 @@
 export EDITOR=nvim
 export SUDO_EDITOR=nvim
 
-# Use github ssh key in vscode devcontainers on macOS
+# Use github ssh key on macOS
 # https://apple.stackexchange.com/questions/48502/how-can-i-permanently-add-my-ssh-private-key-to-keychain-so-it-is-automatically
 if [[ "$(uname)" == "Darwin" ]]; then
     ssh-add --apple-use-keychain ~/.ssh/id_github -q
@@ -10,8 +10,8 @@ fi
 
 # Insensitive completion
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/completion.zsh
-zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=*'
-zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]-_}={[:upper:][:lower:]_-}' 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=*'  # case insensitive
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]-_}={[:upper:][:lower:]_-}' 'r:|=*' 'l:|=* r:|=*'  # hyphen insensitive
 
 autoload -Uz compinit && compinit
 
@@ -28,14 +28,10 @@ source ${HOME}/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Bat
 # https://github.com/sharkdp/bat
 export BAT_THEME="Catppuccin Mocha"
-# > bat cache --build
 
 # Direnv
 # https://direnv.net
 eval "$(direnv hook zsh)"
-
-# Dotnet
-export PATH="$PATH:$HOME/.dotnet/tools"
 
 # Fastfetch
 # https://github.com/fastfetch-cli/fastfetch
@@ -69,15 +65,10 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config ${HOME}/.config/oh-my-posh/oh-my-posh.toml)"
 fi
 
-# Postgresql
-export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
-
-# Podman
-export PATH="/opt/podman/bin:$PATH"
-
 # Uv
 # https://docs.astral.sh/uv/
 eval "$(uv generate-shell-completion zsh)"
+export PATH="${HOME}/.local/bin:$PATH"
 
 # Yazy
 # https://yazi-rs.github.io/docs/quick-start

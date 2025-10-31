@@ -19,29 +19,47 @@ config.macos_window_background_blur = 20
 config.window_background_opacity = 0.95
 config.window_close_confirmation = "NeverPrompt"
 
-config.keys = {
-    -- Navigation
-    { key="LeftArrow", mods="OPT", action=wezterm.action{SendString="\x1bb" } },
-    { key="RightArrow", mods="OPT", action=wezterm.action{SendString="\x1bf"} },
-}
-config.mouse_bindings = {
-    {
-        event = { Up = { streak = 1, button = "Left" } },
-        mods = "NONE",
-        action = wezterm.action_callback(function(window, pane)
-            local has_selection = window:get_selection_text_for_pane(pane) ~= ""
-            if has_selection then
-                window:perform_action(act.CopyTo("ClipboardAndPrimarySelection"), pane)
-                window:perform_action(act.ClearSelection, pane)
-            end
-        end),
+config.keys = { -- Navigation
+{
+    key = "LeftArrow",
+    mods = "OPT",
+    action = wezterm.action {
+        SendString = "\x1bb"
+    }
+}, {
+    key = "RightArrow",
+    mods = "OPT",
+    action = wezterm.action {
+        SendString = "\x1bf"
+    }
+}}
+config.mouse_bindings = {{
+    event = {
+        Up = {
+            streak = 1,
+            button = "Left"
+        }
     },
-    {
-        event = { Down = { streak = 1, button = "Middle" } },
-        mods = "NONE",
-        action = wezterm.action({ PasteFrom = "Clipboard" }),
+    mods = "NONE",
+    action = wezterm.action_callback(function(window, pane)
+        local has_selection = window:get_selection_text_for_pane(pane) ~= ""
+        if has_selection then
+            window:perform_action(act.CopyTo("ClipboardAndPrimarySelection"), pane)
+            window:perform_action(act.ClearSelection, pane)
+        end
+    end)
+}, {
+    event = {
+        Down = {
+            streak = 1,
+            button = "Middle"
+        }
     },
-}
+    mods = "NONE",
+    action = wezterm.action({
+        PasteFrom = "Clipboard"
+    })
+}}
 
 -- and finally, return the configuration to wezterm
 return config

@@ -19,7 +19,7 @@ config.macos_window_background_blur = 20
 config.window_background_opacity = 0.95
 config.window_close_confirmation = "NeverPrompt"
 
-config.default_prog = { 'pwsh.exe' }
+config.default_prog = {'pwsh.exe'}
 
 -- and finally, return the configuration to wezterm
 return config

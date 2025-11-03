@@ -23,7 +23,6 @@
       azure-cli
       bat
       btop
-      csharpier
       curl
       direnv
       dotnet-sdk_8
@@ -41,8 +40,9 @@
       gnutar
       go
       hadolint
-      hyperfine
       htop
+      hugo
+      hyperfine
       icu
       imagemagick
       jq

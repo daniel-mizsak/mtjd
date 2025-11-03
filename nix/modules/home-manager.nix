@@ -159,6 +159,8 @@ in {
         pre-commit = "${pkgs.uv}/bin/uv tool install --upgrade --quiet pre-commit";
         ruff = "${pkgs.uv}/bin/uv tool install --upgrade --quiet ruff";
         yamllint = "${pkgs.uv}/bin/uv tool install --upgrade --quiet yamllint";
+
+        csharpier = "${pkgs.dotnet-sdk_8}/bin/dotnet tool install --global csharpier";
       }
       # This would update all the homebrew application.
       # (mkIf is-darwin {

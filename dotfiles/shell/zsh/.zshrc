@@ -33,6 +33,9 @@ export BAT_THEME="Catppuccin Mocha"
 # https://direnv.net
 eval "$(direnv hook zsh)"
 
+# Dotnet
+export PATH="$PATH:$HOME/.dotnet/tools"
+
 # Fastfetch
 # https://github.com/fastfetch-cli/fastfetch
 if [ -z "$TMUX" ] && [ "$TERM_PROGRAM" != "vscode" ]; then

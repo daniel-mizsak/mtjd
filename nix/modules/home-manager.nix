@@ -150,7 +150,7 @@ in {
     ];
     activation = mkMerge [
       {
-        batCache = "${pkgs.bat}/bin/bat cache --build";
+        # batCache = "${pkgs.bat}/bin/bat cache --build";
 
         ansible = "${pkgs.uv}/bin/uv tool install --upgrade --quiet ansible";
         ansible-lint = "${pkgs.uv}/bin/uv tool install --upgrade --quiet ansible-lint";
@@ -160,7 +160,7 @@ in {
         ruff = "${pkgs.uv}/bin/uv tool install --upgrade --quiet ruff";
         yamllint = "${pkgs.uv}/bin/uv tool install --upgrade --quiet yamllint";
 
-        csharpier = "${pkgs.dotnet-sdk_8}/bin/dotnet tool install --global csharpier";
+        # csharpier = "${pkgs.dotnet-sdk_8}/bin/dotnet tool install --verbosity quiet --global csharpier";
       }
       # This would update all the homebrew application.
       # (mkIf is-darwin {

@@ -149,10 +149,12 @@ in {
       })
     ];
     activation = mkMerge [
+      # These will run in alphabetical order!
       {
         # batCache = "${pkgs.bat}/bin/bat cache --build";
 
-        ansible = "${pkgs.uv}/bin/uv tool install --upgrade --quiet ansible";
+        # uninstall = "${pkgs.uv}/bin/uv tool uninstall --all";
+        ansible = "${pkgs.uv}/bin/uv tool install --upgrade --quiet ansible-core";
         ansible-lint = "${pkgs.uv}/bin/uv tool install --upgrade --quiet ansible-lint";
         mkdocs = "${pkgs.uv}/bin/uv tool install --upgrade --quiet mkdocs";
         molecule = "${pkgs.uv}/bin/uv tool install --upgrade --quiet molecule";

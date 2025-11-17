@@ -1,5 +1,7 @@
 {
   // Base settings
+  // Chat
+  "chat.openEditedFilesAutomatically": true,
   // Editor
   "editor.accessibilitySupport": "off",
   "editor.defaultFormatter": "esbenp.prettier-vscode",

@@ -22,21 +22,16 @@ The most up-to-date solution uses `nix-darwin` for `macOS` with a `NixOS` virtua
 
 ## Getting started
 
-❄️ - Most actively maintained
-
 Set up macOS:
 
-- [Complete macOS setup using Nix-Darwin](docs/macos-complete-nix.md) ❄️
-- [Complete macOS setup using Ansible](docs/macos-complete-ansible.md)
-- [Terminal macOS setup using Ansible](docs/macos-terminal-ansible.md)
+- [Complete macOS setup using Nix-Darwin](docs/macos-complete-nix.md)
 - [Manual macOS settings](docs/macos-manual.md)
 
 <br>
 
 Other automated setups:
 
-- [Complete NixOS setup using Nix](docs/nixos-complete-nix.md) ❄️
-- [Terminal Ubuntu setup using Ansible](docs/ubuntu-terminal-ansible.md)
+- [Complete NixOS setup using Nix](docs/nixos-complete-nix.md)
 - [Complete Windows setup using Powershell](docs/windows-complete-powershell.md)
 
 <hr>

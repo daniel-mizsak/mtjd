@@ -60,7 +60,6 @@
       "Motion" = 434290957;
       "Numbers" = 409203825;
       "Pages" = 409201541;
-      "Windows App" = 1295203466;
       "Xcode" = 497799835;
       # Safari Extensions
       "1Password for Safari" = 1569813296;

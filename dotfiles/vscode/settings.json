@@ -24,6 +24,8 @@
   },
   "files.eol": "\n",
   "files.exclude": {
+    // Ansible
+    "**/.ansible": true,
     // Python
     "**/__pycache__": true
   },

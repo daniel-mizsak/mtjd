@@ -86,7 +86,6 @@
   Go
   hadolint
   indent-rainbow
-  IntelliCode for C# Dev Kit
   Jupyter
   Jupyter Cell Tags
   Jupyter Keymap
@@ -94,7 +93,9 @@
   Jupyter Slide Show
   LaTeX Workshop
   Live Share
+  Lua
   marimo
+  markdownlint
   Mypy Type Checker
   Nix IDE
   PowerShell
@@ -249,8 +250,7 @@
   "python.experiments.enabled": false,
   // Remote - SSH
   "remote.SSH.remotePlatform": {
-    "*": "linux",
-    "nixos": "linux"
+    "*": "linux"
   },
   // Ruff
   "ruff.fixAll": false,

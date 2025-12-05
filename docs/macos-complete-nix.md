@@ -9,7 +9,7 @@ xcode-select --install
 Install **Nix** ([official documentation](https://nixos.org/download/)):
 
 ```bash
-sh <(curl -L https://nixos.org/nix/install)
+sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install)
 ```
 
 Enable **Nix Flakes** in `~/.config/nix/nix.conf`:
@@ -23,7 +23,7 @@ EOF
 
 Sign in to **Apple Account**.
 
-Enable full disk access for **Terminal** in `System Preferences > Privacy & Security > Full Disk Access`.
+Enable full disk access for **Terminal** in `System Preferences > Privacy & Security > Full Disk Access > Terminal.app`.
 
 **Clone** repository:
 

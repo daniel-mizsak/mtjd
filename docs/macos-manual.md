@@ -14,7 +14,8 @@ Finder:
 
 - Disable `Tags` in Finder
 - Remove `Recents` from Finder
-- Set `Finder` Favourites order to: `AirDrop`, `Applications`, `<user>`, `GitHub`, `Downloads`
+- Set `Finder` Favorites to: `Downloads`, `GitHub`, `Desktop`, `Documents`, `Applications`
+- Set `Finder` Locations to: `iCloud Drive`, `<user>`, `AirDrop`, `Network`, `Trash`
 
 Language & Region:
 

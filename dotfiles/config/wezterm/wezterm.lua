@@ -9,9 +9,22 @@ local config = wezterm.config_builder()
 config.color_scheme = "catppuccin-mocha"
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
 config.font_size = 14
+config.max_fps = 120
 
 config.initial_cols = 100
 config.initial_rows = 34
+
+-- Position window on left half of screen
+-- https://github.com/wezterm/wezterm/discussions/2506
+wezterm.on('gui-startup', function(cmd)
+    local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
+    local gui_window = window:gui_window()
+    local screen = wezterm.gui.screens().active
+    local width = screen.width / 2
+    local height = screen.height
+    gui_window:set_position(0, 0)
+    gui_window:set_inner_size(width, height)
+end)
 
 config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true

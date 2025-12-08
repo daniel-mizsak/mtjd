@@ -14,6 +14,12 @@ config.max_fps = 120
 config.initial_cols = 100
 config.initial_rows = 34
 
+config.animation_fps = 120
+config.cursor_blink_ease_in = 'Constant'
+config.cursor_blink_ease_out = 'Constant'
+config.cursor_blink_rate = 600
+config.default_cursor_style = "BlinkingBar"
+
 -- Position window on left half of screen
 -- https://github.com/wezterm/wezterm/discussions/2506
 wezterm.on('gui-startup', function(cmd)

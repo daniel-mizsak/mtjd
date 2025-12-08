@@ -97,7 +97,7 @@ in {
         ".ssh/config".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config";
         ".ssh/config.d/github".source = "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config.d/github";
-        ".ssh/config.d/mlops".source = "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config.d/mlops";
+        ".ssh/config.d/hostinger".source = "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config.d/hostinger";
 
         # tmux
         ".config/tmux/tmux.conf".source =

@@ -1,0 +1,9 @@
+Host kvm1
+  HostName kvm1
+  User ansible
+  IdentityFile ~/.ssh/id_hostinger
+
+Host kvm2
+  HostName kvm2
+  User ansible
+  IdentityFile ~/.ssh/id_hostinger

@@ -2,6 +2,7 @@
   // Base settings
   // Chat
   "chat.openEditedFilesAutomatically": true,
+  "chat.viewSessions.enabled": false,
   // Editor
   "editor.accessibilitySupport": "off",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -159,6 +160,8 @@
   "github.copilot.enable": {
     "markdown": true
   },
+  // Github Pull Requests
+  "githubPullRequests.codingAgent.codeLens": false,
   // indent-rainbow
   "indentRainbow.includedLanguages": [
     "ansible",
@@ -192,8 +195,7 @@
     "--show-column-numbers",
     "--show-error-context",
     "--strict",
-    "--warn-unreachable",
-    "--warn-unused-ignores"
+    "--warn-unreachable"
   ],
   "mypy-type-checker.path": ["${workspaceFolder}/.venv/bin/mypy"],
   // Nix IDE

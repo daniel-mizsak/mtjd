@@ -29,13 +29,13 @@ jobs:
       contents: read
     steps:
       - name: Check out the codebase
-        uses: actions/checkout@v5.0.0
+        uses: actions/checkout@v6.0.1
 
       - name: Run nix format
         uses: daniel-mizsak/workflows/.github/actions/nix-format@v1
 
       - name: Install Nix
-        uses: cachix/install-nix-action@v31.8.2
+        uses: cachix/install-nix-action@v31.9.0
         with:
           nix_path: nixpkgs=channel:nixos-unstable
           extra_nix_config: |

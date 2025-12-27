@@ -161,6 +161,7 @@ in {
           ${pkgs.uv}/bin/uv tool install --upgrade --quiet molecule
           ${pkgs.uv}/bin/uv tool install --upgrade --quiet pre-commit
           ${pkgs.uv}/bin/uv tool install --upgrade --quiet ruff
+          ${pkgs.uv}/bin/uv tool install --upgrade --quiet ty
           ${pkgs.uv}/bin/uv tool install --upgrade --quiet yamllint
         '';
 

@@ -75,6 +75,7 @@
       wget
       xh
       yazi
+      yt-dlp
       zoxide
     ];
   };

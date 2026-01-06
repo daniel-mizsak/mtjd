@@ -51,7 +51,12 @@ config.keys = { -- Navigation
     action = wezterm.action {
         SendString = "\x1bf"
     }
+}, {
+    key = "mapped:_",
+    mods = "SHIFT|CTRL",
+    action = wezterm.action.DisableDefaultAssignment
 }}
+
 config.mouse_bindings = {{
     event = {
         Up = {

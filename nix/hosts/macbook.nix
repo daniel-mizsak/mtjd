@@ -64,6 +64,9 @@
           WarnOnEmptyTrash = false;
         };
       };
+      ".GlobalPreferences" = {
+        "com.apple.mouse.scaling" = 1.8;
+      };
       WindowManager.EnableStandardClickToShowDesktop = false;
     };
   };

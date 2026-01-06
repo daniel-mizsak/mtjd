@@ -15,6 +15,14 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]-_}={[:upper:][:lower:
 
 autoload -Uz compinit && compinit
 
+# Open buffer line in editor
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^Xe' edit-command-line
+
+# Expands history expressions like !! or !$ when you press space
+bindkey ' ' magic-space
+
 # Zsh Autosuggestions
 # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 source ${HOME}/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -76,14 +84,12 @@ export PATH="${HOME}/.local/bin:$PATH"
 # Yazy
 # https://yazi-rs.github.io/docs/quick-start
 function yy() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
-# > ya pack -a yazi-rs/flavors:catppuccin-mocha
 
 # Zoxide
 # https://github.com/ajeetdsouza/zoxide

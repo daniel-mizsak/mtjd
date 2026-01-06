@@ -148,31 +148,23 @@ in {
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/zed/settings.jsonc";
       })
     ];
-    activation = mkMerge [
+    activation = {
       # These will run in alphabetical order!
-      {
-        # batCache = "${pkgs.bat}/bin/bat cache --build";
+      # batCache = "${pkgs.bat}/bin/bat cache --build";
+      # csharpier = "${pkgs.dotnet-sdk_8}/bin/dotnet tool install --verbosity quiet --global csharpier";
+      # yazi = "${pkgs.bat}/yazi/ya pkg add yazi-rs/flavors:catppuccin-mocha";
 
-        # These uv tools are listed here to be even more up-to-date than what is under nix packages.
-        installUvTools = ''
-          ${pkgs.uv}/bin/uv tool uninstall --all --quiet
-          ${pkgs.uv}/bin/uv tool install --upgrade --quiet ansible-core
-          ${pkgs.uv}/bin/uv tool install --upgrade --quiet ansible-lint
-          ${pkgs.uv}/bin/uv tool install --upgrade --quiet molecule
-          ${pkgs.uv}/bin/uv tool install --upgrade --quiet pre-commit
-          ${pkgs.uv}/bin/uv tool install --upgrade --quiet ruff
-          ${pkgs.uv}/bin/uv tool install --upgrade --quiet ty
-          ${pkgs.uv}/bin/uv tool install --upgrade --quiet yamllint
-        '';
-
-        # csharpier = "${pkgs.dotnet-sdk_8}/bin/dotnet tool install --verbosity quiet --global csharpier";
-      }
-      # This would update all the homebrew application.
-      # I decided not to use it as it is sometimes outdated compared to automatic application updates,
-      # and in some cases it ended up downgrading applications.
-      # (mkIf is-darwin {
-      #   brewUpgrade = "/opt/homebrew/bin/brew upgrade --greedy";
-      # })
-    ];
+      # These uv tools are listed here to be even more up-to-date than what is under nix packages.
+      installUvTools = ''
+        ${pkgs.uv}/bin/uv tool uninstall --all --quiet
+        ${pkgs.uv}/bin/uv tool install --upgrade --quiet ansible-core
+        ${pkgs.uv}/bin/uv tool install --upgrade --quiet ansible-lint
+        ${pkgs.uv}/bin/uv tool install --upgrade --quiet molecule
+        ${pkgs.uv}/bin/uv tool install --upgrade --quiet pre-commit
+        ${pkgs.uv}/bin/uv tool install --upgrade --quiet ruff
+        ${pkgs.uv}/bin/uv tool install --upgrade --quiet ty
+        ${pkgs.uv}/bin/uv tool install --upgrade --quiet yamllint
+      '';
+    };
   };
 }

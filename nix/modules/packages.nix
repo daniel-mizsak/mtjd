@@ -54,7 +54,7 @@
       neovim
       ngrok
       nodejs_24
-      oh-my-posh
+      oh-my-posh # Sometimes bugs out. To fix run: `rm -f ~/.cache/oh-my-posh/init.*`
       openssl
       poppler
       powershell

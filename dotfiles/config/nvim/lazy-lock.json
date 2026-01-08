@@ -33,7 +33,7 @@
   },
   "gitsigns.nvim": {
     "branch": "main",
-    "commit": "dfac404ac94b0eb1461bd7da32279e16950dfd67"
+    "commit": "30e5c516f03e0a0a4f71300c52abad481ee90337"
   },
   "grug-far.nvim": {
     "branch": "main",
@@ -57,7 +57,7 @@
   },
   "mason.nvim": {
     "branch": "main",
-    "commit": "57e5a8addb8c71fb063ee4acda466c7cf6ad2800"
+    "commit": "44d1e90e1f66e077268191e3ee9d2ac97cc18e65"
   },
   "mini.ai": {
     "branch": "main",
@@ -85,7 +85,7 @@
   },
   "nvim-lint": {
     "branch": "master",
-    "commit": "1e6b2ac034d1a7588d11b0b8e862a7ad89368376"
+    "commit": "ca6ea12daf0a4d92dc24c5c9ae22a1f0418ade37"
   },
   "nvim-lspconfig": {
     "branch": "master",
@@ -93,7 +93,7 @@
   },
   "nvim-treesitter": {
     "branch": "main",
-    "commit": "b033ab331ca0bccbd93c3c2b4f886fdfc09abec0"
+    "commit": "de878155ca66c49b027b1380e4e60a6c665b2630"
   },
   "nvim-treesitter-textobjects": {
     "branch": "main",

@@ -76,5 +76,6 @@
   users.users.${currentSystemUser} = {
     name = currentSystemUser;
     home = "/Users/${currentSystemUser}";
+    shell = pkgs.fish;
   };
 }

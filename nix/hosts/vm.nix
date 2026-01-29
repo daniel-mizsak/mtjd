@@ -61,7 +61,7 @@
       "docker"
     ];
     home = "/home/damz";
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     packages = with pkgs; [
       kdePackages.kate
       vscode
@@ -84,6 +84,7 @@
 
   ### Packages
   programs.firefox.enable = true;
+  programs.fish.enable = true;
   programs.nix-ld.enable = true;
   programs.zsh.enable = true;
 

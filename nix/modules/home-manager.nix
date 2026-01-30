@@ -13,9 +13,16 @@
 in {
   programs.home-manager.enable = true;
 
+  programs.fish = {
+    enable = true;
+    interactiveShellInit = ''
+      source ~/.config/fish/config.fish.manual
+    '';
+  };
+
   programs.zsh = {
     enable = true;
-    initContent = mkOrder 1500 ''
+    initContent = ''
       source ~/.zshrc.manual
     '';
 
@@ -72,6 +79,10 @@ in {
         # fastfetch
         ".config/fastfetch/config.jsonc".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/fastfetch/config.jsonc";
+
+        # fish
+        ".config/fish/config.fish.manual".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/shell/fish/config.fish";
 
         # ghostty
         ".config/ghostty/config".source =
@@ -156,7 +167,6 @@ in {
 
       # These uv tools are listed here to be even more up-to-date than what is under nix packages.
       installUvTools = ''
-        ${pkgs.uv}/bin/uv tool uninstall --all --quiet
         ${pkgs.uv}/bin/uv tool install --upgrade --quiet ansible-core
         ${pkgs.uv}/bin/uv tool install --upgrade --quiet ansible-lint
         ${pkgs.uv}/bin/uv tool install --upgrade --quiet molecule

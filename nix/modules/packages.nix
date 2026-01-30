@@ -31,6 +31,7 @@
       fastfetch
       fd
       ffmpegthumbnailer
+      fish
       fzf
       gcc
       gh

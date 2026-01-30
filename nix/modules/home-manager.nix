@@ -18,18 +18,6 @@ in {
     interactiveShellInit = ''
       source ~/.config/fish/config.fish.manual
     '';
-
-    plugins = [
-      {
-        name = "fzf.fish";
-        src = pkgs.fetchFromGitHub {
-          owner = "PatrickF1";
-          repo = "fzf.fish";
-          rev = "v10.3";
-          hash = "sha256-T8KYLA/r/gOKvAivKRoeqIwE2pINlxFQtZJHpOy9GMM=";
-        };
-      }
-    ];
   };
 
   programs.zsh = {

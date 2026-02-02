@@ -30,7 +30,6 @@
 
 [alias]
   lg = log --graph --decorate --oneline --all
-  sw = switch
   diffs = diff --staged
   oops = commit --amend --no-edit
   uncommit = reset --soft HEAD~1

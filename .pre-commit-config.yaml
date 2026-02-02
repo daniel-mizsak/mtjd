@@ -6,7 +6,7 @@
 
 # pre-commit ci
 ci:
-  skip: [shellcheck, alejandra-system]
+  skip: [shellcheck, alejandra-system, run-prettier]
   autoupdate_schedule: monthly
 
 # pre-commit
@@ -15,7 +15,7 @@ repos:
     rev: v6.0.0
     hooks:
       - id: check-added-large-files
-        args: [--maxkb=2000]
+        args: [--maxkb=2000, --enforce-all]
       - id: check-json
         exclude: "dotfiles/vscode/settings.json"
       - id: check-merge-conflict
@@ -43,7 +43,7 @@ repos:
 
   # yamllint
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.37.1
+    rev: v1.38.0
     hooks:
       - id: yamllint
         args: [--config-file=.github/linters/.yamllint.yml, --strict]
@@ -66,3 +66,12 @@ repos:
     rev: 4.0.0
     hooks:
       - id: alejandra-system
+
+  # prettier
+  - repo: local
+    hooks:
+      - id: run-prettier
+        name: Run Prettier
+        language: system
+        entry: |
+          prettier --write .

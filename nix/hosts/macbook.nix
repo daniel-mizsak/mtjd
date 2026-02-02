@@ -1,8 +1,12 @@
-{currentSystemUser, ...}: {
+{
+  pkgs,
+  currentSystemUser,
+  ...
+}: {
   security.pam.services.sudo_local.touchIdAuth = true;
 
   system = {
-    stateVersion = 5;
+    primaryUser = currentSystemUser;
 
     defaults = {
       NSGlobalDomain = {
@@ -69,12 +73,21 @@
       };
       WindowManager.EnableStandardClickToShowDesktop = false;
     };
+
+    stateVersion = 5;
   };
 
-  system.primaryUser = currentSystemUser;
   time.timeZone = "Europe/Budapest";
-  users.users.${currentSystemUser} = {
-    name = currentSystemUser;
-    home = "/Users/${currentSystemUser}";
+  programs.fish.enable = true;
+
+  users = {
+    knownUsers = [currentSystemUser];
+
+    users.${currentSystemUser} = {
+      name = currentSystemUser;
+      uid = 501;
+      home = "/Users/${currentSystemUser}";
+      shell = pkgs.fish;
+    };
   };
 }

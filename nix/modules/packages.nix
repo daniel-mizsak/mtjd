@@ -31,6 +31,7 @@
       fastfetch
       fd
       ffmpegthumbnailer
+      fish
       fzf
       gcc
       gh
@@ -77,6 +78,7 @@
       yazi
       yt-dlp
       zoxide
+      zsh
     ];
   };
 }

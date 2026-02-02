@@ -48,9 +48,9 @@
   // Telemetry
   "telemetry.telemetryLevel": "off",
   // Terminal
-  "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.suggest.enabled": false,
   // Window
   "window.zoomLevel": -0.35,
   // Workbench
@@ -153,6 +153,10 @@
   },
   "evenBetterToml.formatter.indentEntries": true,
   "evenBetterToml.formatter.indentTables": true,
+  // Fish
+  "[fish]": {
+    "editor.defaultFormatter": "bmalehorn.vscode-fish"
+  },
   // GitHub Actions
   "[github-actions-workflow]": {
     "editor.tabSize": 2
@@ -186,6 +190,10 @@
   "jupyter.experiments.enabled": false,
   "notebook.formatOnSave.enabled": true,
   "notebook.lineNumbers": "on",
+  // Just
+  "[just]": {
+    "editor.defaultFormatter": "nefrob.vscode-just-syntax"
+  },
   // Lua
   "[lua]": {
     "editor.defaultFormatter": "yinfei.luahelper"

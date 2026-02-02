@@ -81,7 +81,7 @@ fi
 eval "$(uv generate-shell-completion zsh)"
 export PATH="${HOME}/.local/bin:$PATH"
 
-# Yazy
+# Yazi
 # https://yazi-rs.github.io/docs/quick-start
 function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd

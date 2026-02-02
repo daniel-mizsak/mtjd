@@ -78,6 +78,7 @@
       yazi
       yt-dlp
       zoxide
+      zsh
     ];
   };
 }

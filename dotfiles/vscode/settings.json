@@ -48,7 +48,6 @@
   // Telemetry
   "telemetry.telemetryLevel": "off",
   // Terminal
-  "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.suggest.enabled": false,
@@ -191,6 +190,10 @@
   "jupyter.experiments.enabled": false,
   "notebook.formatOnSave.enabled": true,
   "notebook.lineNumbers": "on",
+  // Just
+  "[just]": {
+    "editor.defaultFormatter": "nefrob.vscode-just-syntax"
+  },
   // Lua
   "[lua]": {
     "editor.defaultFormatter": "yinfei.luahelper"

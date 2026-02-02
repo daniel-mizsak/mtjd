@@ -15,8 +15,11 @@ if status is-interactive
 
     # Welcome message
     function fish_greeting
-        if not set -q TMUX; and test "$TERM_PROGRAM" != vscode
-            fastfetch
+        set fastfetch_whitelist WezTerm ghostty
+        if not set -q TMUX
+            if contains -- "$TERM_PROGRAM" $fastfetch_whitelist
+                fastfetch
+            end
         end
     end
 
@@ -68,7 +71,11 @@ if status is-interactive
     # Docker
     abbr --add dps "docker ps --all"
     abbr --add di "docker images --all"
+    abbr --add dv "docker volume"
     abbr --add dx "docker exec --interactive --tty"
+
+    # Git
+    abbr --add gcm --set-cursor 'git commit -m "%"'
 
     # Kubernetes
     alias k="kubectl"

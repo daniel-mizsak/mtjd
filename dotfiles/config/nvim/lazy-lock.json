@@ -29,7 +29,7 @@
   },
   "fzf-lua": {
     "branch": "main",
-    "commit": "b3c870638bad2929aa62c4003cd9935110ada467"
+    "commit": "b4b1f05957a77f7662de834328827890c1a8c02b"
   },
   "gitsigns.nvim": {
     "branch": "main",
@@ -37,7 +37,7 @@
   },
   "grug-far.nvim": {
     "branch": "main",
-    "commit": "1f7a722a9b9f0206a345377c13e62542f484398a"
+    "commit": "14babc9b4520184d9696ef282eb7ac20687d4373"
   },
   "lazy.nvim": {
     "branch": "main",
@@ -85,15 +85,15 @@
   },
   "nvim-lint": {
     "branch": "master",
-    "commit": "b3292aac30b935d4cccf0904053d1c7930df8a20"
+    "commit": "bcd1a44edbea8cd473af7e7582d3f7ffc60d8e81"
   },
   "nvim-lspconfig": {
     "branch": "master",
-    "commit": "79c9a15be5731bc8694840a8fb0c9141c20a80c0"
+    "commit": "3f58aeca0c6ece8a9fb8782ea3fcb6024f285be3"
   },
   "nvim-treesitter": {
     "branch": "main",
-    "commit": "19c729dae6e0eeb79423df0cf37780aa9a7cc3b7"
+    "commit": "4967fa48b0fe7a7f92cee546c76bb4bb61bb14d5"
   },
   "nvim-treesitter-textobjects": {
     "branch": "main",

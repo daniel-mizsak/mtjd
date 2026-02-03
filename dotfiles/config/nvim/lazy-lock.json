@@ -29,7 +29,7 @@
   },
   "fzf-lua": {
     "branch": "main",
-    "commit": "b4b1f05957a77f7662de834328827890c1a8c02b"
+    "commit": "e5804f4924cf74ad03834c25988998a273ae0d7b"
   },
   "gitsigns.nvim": {
     "branch": "main",
@@ -37,7 +37,7 @@
   },
   "grug-far.nvim": {
     "branch": "main",
-    "commit": "14babc9b4520184d9696ef282eb7ac20687d4373"
+    "commit": "275dbedc96e61a6b8d1dfb28ba51586ddd233dcf"
   },
   "lazy.nvim": {
     "branch": "main",
@@ -73,7 +73,7 @@
   },
   "neo-tree.nvim": {
     "branch": "main",
-    "commit": "466ba7ac7e4841a73d01afa48b6be8a4825a2372"
+    "commit": "2d04b7a422c9f84788bbb4e5ca2634c81dd0f5a3"
   },
   "noice.nvim": {
     "branch": "main",

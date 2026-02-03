@@ -4,7 +4,7 @@ The actual amount of manual steps highly exceeds the below mentioned ones.
 
 Hostname:
 
-- `Mizsak-D-MBM`.
+- `M-Daniel-MBP`.
 
 Wallpaper:
 
@@ -12,7 +12,7 @@ Wallpaper:
 
 Finder:
 
-- Disable `Tags` in Finder
+- Disable `Tags` in Finder: Uncheck them + [Drag them out](https://apple.stackexchange.com/questions/387849/remove-tags-section-from-macos-finder-right-click-context-menu)
 - Remove `Recents` from Finder
 - Set `Finder` Favorites to: `Downloads`, `GitHub`, `Desktop`, `Documents`, `Applications`
 - Set `Finder` Locations to: `iCloud Drive`, `<user>`, `AirDrop`, `Network`, `Trash`
@@ -37,10 +37,13 @@ Raycast:
 
 Tmux:
 
-- Install Tmux plugins `tmux > prefix + I`, where prefix for me is `Ctrl + f`.
-
-Install [Asahi Linux](https://asahilinux.org).
+- Install Tmux plugins `tmux > prefix + I`, where prefix for me is `Ctrl + Space`.
+- [In macOS](https://github.com/tmux/tmux/issues/457#issuecomment-357938515) uncheck: Keyboard > Keyboard Shortcuts... > Input Sources > Select the previous input source
 
 Browser:
 
 - Set `Vivaldi` as default browser: `System Preferences > Desktop & Dock > Default web browser`
+
+Other:
+
+- Install [Asahi Linux](https://asahilinux.org)?

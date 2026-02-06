@@ -40,7 +40,7 @@
           "PackageIdentifier": "JanDeDobbeleer.OhMyPosh"
         },
         {
-          "PackageIdentifier": "Microsoft.DotNet.SDK.8"
+          "PackageIdentifier": "Microsoft.DotNet.SDK.10"
         },
         {
           "PackageIdentifier": "Microsoft.PowerShell"

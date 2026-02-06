@@ -11,7 +11,7 @@
       SUDO_EDITOR = "nvim";
       TERMINAL = "wezterm";
 
-      DOTNET_ROOT = "${pkgs.dotnet-sdk_8}/share/dotnet";
+      DOTNET_ROOT = "${pkgs.dotnet-sdk_10}/share/dotnet";
       DOTNET_SYSTEM_GLOBALIZATION_INVARIANT = "1";
     };
 
@@ -25,7 +25,7 @@
       btop
       curl
       direnv
-      dotnet-sdk_8
+      dotnet-sdk_10
       dust
       eza
       fastfetch

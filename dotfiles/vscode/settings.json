@@ -1,7 +1,6 @@
 {
   // Base settings
   // Chat
-  "chat.openEditedFilesAutomatically": true,
   "chat.viewSessions.enabled": false,
   // Editor
   "editor.accessibilitySupport": "off",
@@ -81,8 +80,9 @@
   Dev Containers
   Docker DX
   Even Better TOML
+  Expo Tools
+  Fish
   Github Actions
-  GitHub Copilot
   GitHub Copilot Chat
   GitHub Pull Requests
   Go
@@ -106,8 +106,9 @@
   Pylance
   Python
   Python Debugger
-  ? Python Environments
+  Python Environments
   Rainbow CSV
+  Redis for VS Code
   Remote - SSH
   Remote - SSH: Editing Configuration Files
   Remote Explorer
@@ -166,8 +167,6 @@
   "github.copilot.enable": {
     "markdown": true
   },
-  // Github Pull Requests
-  "githubPullRequests.codingAgent.codeLens": false,
   // indent-rainbow
   "indentRainbow.includedLanguages": [
     "ansible",

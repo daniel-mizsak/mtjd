@@ -48,6 +48,7 @@
       imagemagick
       jq
       just
+      just-lsp
       kubectl
       lazydocker
       lazygit

@@ -98,7 +98,6 @@
   Lua
   marimo
   markdownlint
-  Mypy Type Checker
   Nix IDE
   PowerShell
   Prettier - Code formatter
@@ -197,16 +196,6 @@
   "[lua]": {
     "editor.defaultFormatter": "yinfei.luahelper"
   },
-  // Mypy Type Checker
-  "mypy-type-checker.args": [
-    "--ignore-missing-imports",
-    "--pretty",
-    "--show-column-numbers",
-    "--show-error-context",
-    "--strict",
-    "--warn-unreachable"
-  ],
-  "mypy-type-checker.path": ["${workspaceFolder}/.venv/bin/mypy"],
   // Nix IDE
   "nix.formatterPath": "alejandra",
   // PowerShell

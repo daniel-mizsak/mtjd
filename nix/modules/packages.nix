@@ -23,6 +23,7 @@
       azure-cli
       bat
       btop
+      bun
       curl
       direnv
       dotnet-sdk_10

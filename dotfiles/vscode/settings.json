@@ -47,6 +47,7 @@
   // Telemetry
   "telemetry.telemetryLevel": "off",
   // Terminal
+  "terminal.integrated.enableKittyKeyboardProtocol": false,
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.suggest.enabled": false,

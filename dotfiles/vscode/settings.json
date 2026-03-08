@@ -47,6 +47,7 @@
   // Telemetry
   "telemetry.telemetryLevel": "off",
   // Terminal
+  "terminal.integrated.enableKittyKeyboardProtocol": false,
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.suggest.enabled": false,
@@ -247,6 +248,7 @@
     "editor.defaultFoldingRangeProvider": "charliermarsh.ruff",
     "editor.rulers": [80, 120]
   },
+  "python-envs.terminal.autoActivationType": "off",
   "python.experiments.enabled": false,
   "python.languageServer": "None",
   // Remote - SSH

@@ -33,6 +33,7 @@
       "obsidian"
       "openinterminal"
       "parallels@19"
+      "pomotroid"
       "postman"
       "raspberry-pi-imager"
       "raycast"

@@ -248,6 +248,7 @@
     "editor.defaultFoldingRangeProvider": "charliermarsh.ruff",
     "editor.rulers": [80, 120]
   },
+  "python-envs.terminal.autoActivationType": "off",
   "python.experiments.enabled": false,
   "python.languageServer": "None",
   // Remote - SSH

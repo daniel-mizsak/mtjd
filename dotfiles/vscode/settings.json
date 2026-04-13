@@ -21,14 +21,14 @@
   // Files
   "files.associations": {
     "**/ansible/**/*.yml": "ansible",
-    "**/tasks/*.yml": "ansible"
+    "**/tasks/*.yml": "ansible",
   },
   "files.eol": "\n",
   "files.exclude": {
     // Ansible
     "**/.ansible": true,
     // Python
-    "**/__pycache__": true
+    "**/__pycache__": true,
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
@@ -42,21 +42,22 @@
   "git.suggestSmartCommit": false,
   // Search
   "search.exclude": {
-    "**/.venv": true
+    "**/.venv": true,
   },
   // Telemetry
   "telemetry.telemetryLevel": "off",
   // Terminal
   "terminal.integrated.enableKittyKeyboardProtocol": false,
   "terminal.integrated.fontSize": 14,
+  "terminal.integrated.initialHint": false,
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.suggest.enabled": false,
   // Window
   "window.zoomLevel": -0.35,
   // Workbench
-  "workbench.colorTheme": "Default Dark+",
+  "workbench.colorTheme": "Dark+",
   "workbench.editorAssociations": {
-    "*.pdf": "latex-workshop-pdf-hook"
+    "*.pdf": "latex-workshop-pdf-hook",
   },
   "workbench.editor.wrapTabs": true,
   "workbench.enableExperiments": false,
@@ -72,9 +73,11 @@
   autoDocstring - Python Docstring Generator
   Bash IDE
   Better Comments
+  Better JSON5
   C#
   C# Dev Kit
   Code Spell Checker
+  CodeRabbit
   CodeSnap
   Container Tools
   CSharpier - Code formatter
@@ -119,6 +122,7 @@
   vscode-just
   WSL
   YAML
+  zizmor
   */
   // .NET Install Tool
   "dotnet.automaticallyCreateSolutionInWorkspace": false,
@@ -127,45 +131,48 @@
   "1password.editor.suggestStorage": false,
   // Ansible
   "ansible.lightspeed.enabled": false,
+  "ansible.python.interpreterPath": "${workspaceFolder}/.venv/bin/python",
   "redhat.telemetry.enabled": false,
   // Bash IDE
+  "[shellscript]": {
+    "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode",
+  },
   "bashIde.shfmt.spaceRedirects": true,
   // C#
   "[csharp]": {
-    "editor.defaultFormatter": "csharpier.csharpier-vscode"
+    "editor.defaultFormatter": "csharpier.csharpier-vscode",
   },
   "csharp.experimental.debug.hotReload": true,
   // Code Spell Checker
   "cSpell.diagnosticLevel": "Hint",
   "cSpell.diagnosticLevelFlaggedWords": "Hint",
-  "cSpell.showStatus": false,
   // CodeSnap
   "codesnap.containerPadding": "1em",
   "codesnap.showWindowControls": false,
   // Docker
   "[dockerfile]": {
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
   },
   "docker.extension.enableComposeLanguageServer": true,
   // Even Better TOML
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
   },
   "evenBetterToml.formatter.indentEntries": true,
   "evenBetterToml.formatter.indentTables": true,
   // Fish
   "[fish]": {
-    "editor.defaultFormatter": "bmalehorn.vscode-fish"
+    "editor.defaultFormatter": "bmalehorn.vscode-fish",
   },
   // GitHub Actions
   "[github-actions-workflow]": {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
   },
   // GitHub Copilot
   "github.copilot.chat.codesearch.enabled": true,
   "github.copilot.enable": {
-    "markdown": true
+    "markdown": true,
   },
   // indent-rainbow
   "indentRainbow.includedLanguages": [
@@ -175,14 +182,14 @@
     "json",
     "jsonc",
     "yaml",
-    "yml"
+    "yml",
   ],
   // Javascript
   "[javascript][javascriptreact][typescript][typescriptreact]": {
     "editor.rulers": [80],
     "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    }
+      "source.organizeImports": "explicit",
+    },
   },
   // Jupyter
   "jupyter.askForKernelRestart": false,
@@ -191,42 +198,36 @@
   "notebook.lineNumbers": "on",
   // Just
   "[just]": {
-    "editor.defaultFormatter": "nefrob.vscode-just-syntax"
+    "editor.defaultFormatter": "nefrob.vscode-just-syntax",
   },
   // Lua
   "[lua]": {
-    "editor.defaultFormatter": "yinfei.luahelper"
+    "editor.defaultFormatter": "yinfei.luahelper",
   },
   // Nix IDE
   "nix.formatterPath": "alejandra",
   // PowerShell
   "[powershell]": {
-    "editor.defaultFormatter": "ms-vscode.powershell"
+    "editor.defaultFormatter": "ms-vscode.powershell",
   },
   "powershell.powerShellAdditionalExePaths": {
-    "pwsh": "/run/current-system/sw/bin/pwsh"
+    "pwsh": "/run/current-system/sw/bin/pwsh",
   },
-  "powershell.codeFormatting.autoCorrectAliases": true,
-  "powershell.codeFormatting.avoidSemicolonsAsLineTerminators": true,
-  "powershell.codeFormatting.pipelineIndentationStyle": "IncreaseIndentationForFirstPipeline",
-  "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
-  "powershell.codeFormatting.useConstantStrings": true,
-  "powershell.codeFormatting.useCorrectCasing": true,
   "powershell.integratedConsole.showOnStartup": false,
   "powershell.startAutomatically": false,
   // psioniq File Header
   "psi-header.config": {
     "author": "Daniel Mizsak",
-    "authorEmail": "info@pythonvilag.hu",
+    "authorEmail": "daniel@mizsak.com",
     "blankLinesAfter": 1,
-    "forceToTop": true
+    "forceToTop": true,
   },
   "psi-header.lang-config": [
     {
       "language": "python",
       "begin": "\"\"\"",
-      "end": "\"\"\""
-    }
+      "end": "\"\"\"",
+    },
   ],
   "psi-header.templates": [
     {
@@ -234,26 +235,26 @@
       "template": [
         "Short description and source of base code.",
         "",
-        "@author \"<<author>>\" <<<authoremail>>>"
-      ]
-    }
+        "@author \"<<author>>\" <<<authoremail>>>",
+      ],
+    },
   ],
   // Python
   "[python]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit",
-      "source.sortMembers": "explicit"
+      "source.sortMembers": "explicit",
     },
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.defaultFoldingRangeProvider": "charliermarsh.ruff",
-    "editor.rulers": [80, 120]
+    "editor.rulers": [80, 120],
   },
   "python-envs.terminal.autoActivationType": "off",
   "python.experiments.enabled": false,
   "python.languageServer": "None",
   // Remote - SSH
   "remote.SSH.remotePlatform": {
-    "*": "linux"
+    "*": "linux",
   },
   // Ruff
   "ruff.fixAll": false,
@@ -261,10 +262,10 @@
   "ruff.nativeServer": "on",
   // VSCode Neovim
   "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
+    "asvetliakov.vscode-neovim": 1,
   },
   // YAML
   "[yaml]": {
-    "editor.tabSize": 2
-  }
+    "editor.tabSize": 2,
+  },
 }

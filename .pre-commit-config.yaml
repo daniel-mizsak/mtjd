@@ -7,7 +7,7 @@
 # pre-commit ci
 ci:
   skip: [shellcheck, alejandra-system, run-prettier]
-  autoupdate_schedule: monthly
+  autoupdate_schedule: quarterly
 
 # pre-commit
 repos:
@@ -40,6 +40,12 @@ repos:
     rev: v1.7.12
     hooks:
       - id: actionlint
+
+  # zizmor
+  - repo: https://github.com/zizmorcore/zizmor-pre-commit
+    rev: v1.23.1
+    hooks:
+      - id: zizmor
 
   # yamllint
   - repo: https://github.com/adrienverge/yamllint.git

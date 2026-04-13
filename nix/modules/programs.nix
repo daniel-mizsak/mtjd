@@ -17,8 +17,9 @@
       "alacritty"
       "aldente"
       "betterdisplay"
+      "boosteroid"
+      "codex-app"
       "dbeaver-community"
-      "devtoys"
       "docker-desktop"
       "ghostty"
       "github"
@@ -27,6 +28,8 @@
       "iterm2"
       "karabiner-elements"
       "keyboardcleantool"
+      "lens"
+      "localsend"
       "mullvad-browser"
       "mullvad-vpn"
       "obs"
@@ -46,27 +49,26 @@
       "updf"
       "visual-studio-code"
       "vivaldi"
-      "vlc"
       "vnc-viewer"
       "wezterm"
       "zed"
     ];
-    masApps = {
-      # General
-      "Compressor" = 424390742;
-      "Final Cut Pro" = 424389933;
-      "Keynote" = 409183694;
-      "Magnet" = 441258766;
-      "Motion" = 434290957;
-      "Numbers" = 409203825;
-      "Pages" = 409201541;
-      "Xcode" = 497799835;
-      # Safari Extensions
-      "1Password for Safari" = 1569813296;
-      "AdGuard for Safari" = 1440147259;
-      "Return YT Dislikes" = 6463305263;
-      "Speed Player for Safari" = 1521133201;
-      "SponsorBlock for YouTube" = 1573461917;
-    };
+    # masApps = {
+    #   # General
+    #   "Compressor" = 424390742;
+    #   "Final Cut Pro" = 424389933;
+    #   "Keynote" = 409183694;
+    #   "Magnet" = 441258766;
+    #   "Motion" = 434290957;
+    #   "Numbers" = 409203825;
+    #   "Pages" = 409201541;
+    #   "Xcode" = 497799835;
+    #   # Safari Extensions
+    #   "1Password for Safari" = 1569813296;
+    #   "AdGuard for Safari" = 1440147259;
+    #   "Return YT Dislikes" = 6463305263;
+    #   "Speed Player for Safari" = 1521133201;
+    #   "SponsorBlock for YouTube" = 1573461917;
+    # };
   };
 }

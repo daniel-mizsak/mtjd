@@ -1,0 +1,67 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: [
+    // See: https://docs.renovatebot.com/presets-config/#configbest-practices
+    "config:recommended",
+    "helpers:pinGitHubActionDigests",
+    ":configMigration",
+    "abandonments:recommended",
+  ],
+
+  enabledManagers: ["github-actions", "pre-commit"],
+  "pre-commit": {
+    enabled: true,
+  },
+
+  timezone: "Europe/Copenhagen",
+  schedule: ["* 0-5 1 * *"], // On the first day of the month before 6am.
+
+  minimumReleaseAge: "7 days",
+  internalChecksFilter: "strict",
+
+  prHourlyLimit: 0,
+  prConcurrentLimit: 0,
+
+  labels: ["dependencies"],
+  semanticCommits: "disabled",
+  separateMajorMinor: false,
+
+  suppressNotifications: ["prEditedNotification"],
+
+  packageRules: [
+    // Pin GitHub Actions to immutable SHAs.
+    {
+      matchDepTypes: ["action"],
+      pinDigests: true,
+    },
+    // Annotate GitHub Actions SHAs with a SemVer version.
+    {
+      extends: ["helpers:pinGitHubActionDigests"],
+      extractVersion: "^(?<version>v?\\d+\\.\\d+\\.\\d+)$",
+      versioning: "regex:^v?(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$",
+    },
+    // GitHub Actions: disable minimum release age for our own actions.
+    {
+      description: "Disable minimum release age checks for our own GitHub Actions",
+      matchManagers: ["github-actions"],
+      matchPackageNames: ["daniel-mizsak/workflows/*"],
+      minimumReleaseAge: null,
+    },
+    // Group GitHub Actions dependencies in a single PR.
+    {
+      groupName: "GitHub Actions dependencies",
+      matchManagers: ["github-actions"],
+      description: "Monthly update of GitHub Actions dependencies",
+    },
+    // Group pre-commit dependencies in a single PR.
+    {
+      groupName: "pre-commit dependencies",
+      matchManagers: ["pre-commit"],
+      description: "Monthly update of pre-commit dependencies",
+    },
+  ],
+
+  vulnerabilityAlerts: {
+    labels: ["dependencies", "security"],
+  },
+}

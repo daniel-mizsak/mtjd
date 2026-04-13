@@ -24,6 +24,7 @@
       bat
       btop
       bun
+      codex
       curl
       direnv
       dotnet-sdk_10
@@ -59,6 +60,7 @@
       nodejs_24
       oh-my-posh # Sometimes bugs out. To fix run: `rm -f ~/.cache/oh-my-posh/init.*`
       openssl
+      pinact
       poppler
       powershell
       prettier
@@ -79,6 +81,7 @@
       xh
       yazi
       yt-dlp
+      zizmor
       zoxide
       zsh
     ];

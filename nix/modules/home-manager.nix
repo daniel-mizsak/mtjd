@@ -144,9 +144,6 @@ in {
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/sublime/Preferences.sublime-settings";
 
         # vscode
-        "/Users/${user}/Library/Application Support/Code/User/mcp.json".source =
-          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/vscode/mcp.json";
-
         "/Users/${user}/Library/Application Support/Code/User/settings.json".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/vscode/settings.json";
 
@@ -165,15 +162,12 @@ in {
       # csharpier = "${pkgs.dotnet-sdk_8}/bin/dotnet tool install --verbosity quiet --global csharpier";
       # yazi = "${pkgs.bat}/yazi/ya pkg add yazi-rs/flavors:catppuccin-mocha";
 
+      # uninstallUvTools = "${pkgs.uv}/bin/uv tool uninstall --all";
       # These uv tools are listed here to be even more up-to-date than what is under nix packages.
       installUvTools = ''
-        ${pkgs.uv}/bin/uv tool install --upgrade --quiet ansible-core
-        ${pkgs.uv}/bin/uv tool install --upgrade --quiet ansible-lint
-        ${pkgs.uv}/bin/uv tool install --upgrade --quiet molecule
         ${pkgs.uv}/bin/uv tool install --upgrade --quiet pre-commit
         ${pkgs.uv}/bin/uv tool install --upgrade --quiet ruff
         ${pkgs.uv}/bin/uv tool install --upgrade --quiet ty
-        ${pkgs.uv}/bin/uv tool install --upgrade --quiet yamllint
       '';
     };
   };

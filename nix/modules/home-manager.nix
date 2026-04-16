@@ -165,7 +165,7 @@ in {
       # uninstallUvTools = "${pkgs.uv}/bin/uv tool uninstall --all";
       # These uv tools are listed here to be even more up-to-date than what is under nix packages.
       installUvTools = ''
-        ${pkgs.uv}/bin/uv tool install --upgrade --quiet pre-commit
+        ${pkgs.uv}/bin/uv tool install --upgrade --quiet prek
         ${pkgs.uv}/bin/uv tool install --upgrade --quiet ruff
         ${pkgs.uv}/bin/uv tool install --upgrade --quiet ty
       '';

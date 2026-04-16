@@ -16,11 +16,18 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  prek:
+    permissions:
+      contents: read
+    uses: daniel-mizsak/workflows/.github/workflows/prek.yml@1a10f29ef1289f7f1c82e896f9307e701b6c7a77 # v2.1.0
+    with:
+      skip: "shellcheck, alejandra-system, run-prettier"
+
   lint:
     permissions:
       contents: read
       pull-requests: write
-    uses: daniel-mizsak/workflows/.github/workflows/lint.yml@ae7973e16904f1318b7cac3c57ce011e7b6267e3 # v1.4.0
+    uses: daniel-mizsak/workflows/.github/workflows/lint.yml@1a10f29ef1289f7f1c82e896f9307e701b6c7a77 # v2.1.0
     with:
       megalinter-config: "./.github/linters/.megalinter.yml"
 
@@ -35,7 +42,7 @@ jobs:
           persist-credentials: false
 
       - name: Run nix format
-        uses: daniel-mizsak/workflows/.github/actions/nix-format@ae7973e16904f1318b7cac3c57ce011e7b6267e3 # v1.4.0
+        uses: daniel-mizsak/workflows/.github/actions/nix-format@1a10f29ef1289f7f1c82e896f9307e701b6c7a77 # v2.1.0
 
       - name: Install Nix
         uses: cachix/install-nix-action@616559265b40713947b9c190a8ff4b507b5df49b # v31.10.4

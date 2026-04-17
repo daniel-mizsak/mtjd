@@ -1,14 +1,13 @@
 {...}: {
   homebrew = {
     enable = true;
+    global = {
+      autoUpdate = false;
+    };
     onActivation = {
-      autoUpdate = true;
       cleanup = "zap";
       upgrade = true;
     };
-    brews = [
-      "mas"
-    ];
     casks = [
       "1password"
       "affinity-designer"
@@ -17,8 +16,9 @@
       "alacritty"
       "aldente"
       "betterdisplay"
+      "boosteroid"
+      "codex-app"
       "dbeaver-community"
-      "devtoys"
       "docker-desktop"
       "ghostty"
       "github"
@@ -27,6 +27,8 @@
       "iterm2"
       "karabiner-elements"
       "keyboardcleantool"
+      "lens"
+      "localsend"
       "mullvad-browser"
       "mullvad-vpn"
       "obs"
@@ -46,7 +48,6 @@
       "updf"
       "visual-studio-code"
       "vivaldi"
-      "vlc"
       "vnc-viewer"
       "wezterm"
       "zed"

@@ -1,0 +1,11 @@
+{
+  "overrides": [
+    {
+      "files": "dotfiles/vscode/settings.json",
+      "options": {
+        "parser": "jsonc",
+        "trailingComma": "all"
+      }
+    }
+  ]
+}

@@ -18,4 +18,6 @@ copy-on-select = clipboard
 macos-option-as-alt = true
 mouse-hide-while-typing = true
 
+shell-integration-features = ssh-env,ssh-terminfo
+
 keybind = global:cmd+/=toggle_quick_terminal

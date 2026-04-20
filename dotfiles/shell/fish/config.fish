@@ -12,17 +12,17 @@ if status is-interactive
     # Make complete-and-search the default tab behavior
     # https://github.com/fish-shell/fish-shell/issues/11193
     bind \t '
-		if commandline --search-field >/dev/null
-			commandline -f complete
-		else
-			commandline -f complete-and-search
-		end
-	'
+        if commandline --search-field >/dev/null
+            commandline --function complete
+        else
+            commandline --function complete-and-search
+        end
+    '
 
     # Welcome message
     function fish_greeting
         set fastfetch_whitelist WezTerm ghostty
-        if not set -q TMUX
+        if not set --query TMUX
             if contains -- "$TERM_PROGRAM" $fastfetch_whitelist
                 fastfetch
             end
@@ -38,6 +38,17 @@ if status is-interactive
 
     # Direnv
     direnv hook fish | source
+
+    # Ghostty
+    # https://github.com/ghostty-org/ghostty/discussions/2832
+    # https://github.com/ghostty-org/ghostty/discussions/4725
+
+    if set --query GHOSTTY_RESOURCES_DIR
+        set --local ghostty_shell_integration "$GHOSTTY_RESOURCES_DIR/shell-integration/fish/vendor_conf.d/ghostty-shell-integration.fish"
+        if test -f "$ghostty_shell_integration"
+            source "$ghostty_shell_integration"
+        end
+    end
 
     # Dotnet
     fish_add_path $HOME/.dotnet/tools

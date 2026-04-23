@@ -21,6 +21,7 @@ repos:
         args: [--allow-multiple-documents]
       - id: detect-private-key
       - id: end-of-file-fixer
+        exclude: "dotfiles/config/karabiner/karabiner.json"
       - id: trailing-whitespace
 
   # shellcheck

@@ -136,8 +136,9 @@ in {
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/alacritty/alacritty.toml";
 
         # karabiner
-        ".config/karabiner/karabiner.json".source =
-          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/karabiner/karabiner.json";
+        # https://github.com/pqrs-org/Karabiner-Elements/issues/3248
+        ".config/karabiner".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/karabiner";
 
         # sublime
         "/Users/${user}/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings".source =

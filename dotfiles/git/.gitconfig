@@ -29,6 +29,7 @@
   short = true
 
 [alias]
+  sw = switch
   lg = log --graph --decorate --oneline --all
   diffs = diff --staged
   oops = commit --amend --no-edit

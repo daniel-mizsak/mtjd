@@ -28,6 +28,7 @@
       "karabiner-elements"
       "keyboardcleantool"
       "lens"
+      "libreoffice"
       "localsend"
       "mullvad-browser"
       "mullvad-vpn"

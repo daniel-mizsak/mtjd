@@ -9,10 +9,7 @@
     variables = {
       EDITOR = "nvim";
       SUDO_EDITOR = "nvim";
-      TERMINAL = "wezterm";
-
-      DOTNET_ROOT = "${pkgs.dotnet-sdk_10}/share/dotnet";
-      DOTNET_SYSTEM_GLOBALIZATION_INVARIANT = "1";
+      TERMINAL = "ghostty";
     };
 
     systemPackages = with pkgs; [
@@ -27,13 +24,17 @@
       codex
       curl
       direnv
-      dotnet-sdk_10
+      (dotnetCorePackages.combinePackages [
+        dotnetCorePackages.sdk_8_0
+        dotnetCorePackages.sdk_10_0
+      ])
       dust
       eza
       fastfetch
       fd
       ffmpegthumbnailer
       fish
+      fossil
       fzf
       gcc
       gh
@@ -66,6 +67,7 @@
       prettier
       pulumi-bin
       rclone
+      repomix
       ripgrep
       shellcheck
       shfmt

@@ -45,14 +45,12 @@
       groupName: "Dependencies for github-actions",
       matchManagers: ["github-actions"],
     },
-    // Automerge non-major updates for our own workflows and actions.
+    // Group self-owned github-actions dependencies in a single PR.
     {
       groupName: "Dependencies for github-actions under daniel-mizsak/workflows",
       matchManagers: ["github-actions"],
       matchPackageNames: ["daniel-mizsak/workflows"],
-      matchUpdateTypes: ["minor", "patch"],
       minimumReleaseAge: null,
-      automerge: true,
       schedule: ["* 0-5 * * *"], // Daily before 6am.
     },
     // Group pre-commit dependencies in a single PR.

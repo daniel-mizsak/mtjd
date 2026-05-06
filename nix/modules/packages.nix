@@ -21,7 +21,6 @@
       bat
       btop
       bun
-      codex
       curl
       direnv
       (dotnetCorePackages.combinePackages [
@@ -32,14 +31,13 @@
       eza
       fastfetch
       fd
-      ffmpegthumbnailer
+      ffmpeg
       fish
       fossil
       fzf
       gcc
       gh
       git
-      github-copilot-cli
       gnumake
       gnutar
       go
@@ -53,16 +51,12 @@
       just
       just-lsp
       kubectl
-      lazydocker
-      lazygit
-      navi
       neovim
       ngrok
       nodejs_24
       oh-my-posh # Sometimes bugs out. To fix run: `rm -f ~/.cache/oh-my-posh/init.*`
       openssl
       pinact
-      poppler
       powershell
       prettier
       pulumi-bin
@@ -80,7 +74,6 @@
       tree
       uv
       wget
-      xh
       yazi
       yt-dlp
       zizmor

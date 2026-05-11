@@ -173,6 +173,10 @@
   "github.copilot.enable": {
     "markdown": true,
   },
+  // Go
+  "[go][go.mod]": {
+    "editor.defaultFormatter": "golang.go",
+  },
   // indent-rainbow
   "indentRainbow.includedLanguages": [
     "ansible",

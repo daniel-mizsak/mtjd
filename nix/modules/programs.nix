@@ -17,6 +17,7 @@
       "aldente"
       "betterdisplay"
       "boosteroid"
+      "claude"
       "codex-app"
       "dbeaver-community"
       "docker-desktop"

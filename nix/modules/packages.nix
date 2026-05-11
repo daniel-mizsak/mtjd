@@ -10,6 +10,8 @@
       EDITOR = "nvim";
       SUDO_EDITOR = "nvim";
       TERMINAL = "ghostty";
+
+      DOTNET_ROOT = "${pkgs.dotnet-sdk_10}/share/dotnet";
     };
 
     systemPackages = with pkgs; [

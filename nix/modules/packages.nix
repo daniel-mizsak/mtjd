@@ -43,6 +43,7 @@
       gnumake
       gnutar
       go
+      golangci-lint
       hadolint
       htop
       hugo

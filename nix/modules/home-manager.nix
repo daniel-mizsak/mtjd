@@ -162,11 +162,11 @@ in {
       # batCache = "${pkgs.bat}/bin/bat cache --build";
 
       installDotnetTools = ''
-        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install --verbosity quiet --global csharpier
-        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install --verbosity quiet --global GitVersion.Tool
-        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install --verbosity quiet --global MarkdownSnippets.Tool
-        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install --verbosity quiet --global Microsoft.Artifacts.CredentialProvider.NuGet.Tool
-        ${pkgs.dotnet-sdk_10}/bin/dotnet tool update --verbosity quiet --global --all
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install --global csharpier > /dev/null
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install --global GitVersion.Tool > /dev/null
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install --global MarkdownSnippets.Tool > /dev/null
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install --global Microsoft.Artifacts.CredentialProvider.NuGet.Tool > /dev/null
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool update --global --all > /dev/null
       '';
 
       # uninstallUvTools = "${pkgs.uv}/bin/uv tool uninstall --all";

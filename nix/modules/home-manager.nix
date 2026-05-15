@@ -160,8 +160,14 @@ in {
     activation = {
       # These will run in alphabetical order!
       # batCache = "${pkgs.bat}/bin/bat cache --build";
-      # csharpier = "${pkgs.dotnet-sdk_8}/bin/dotnet tool install --verbosity quiet --global csharpier";
-      # yazi = "${pkgs.bat}/yazi/ya pkg add yazi-rs/flavors:catppuccin-mocha";
+
+      installDotnetTools = ''
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install --verbosity quiet --global csharpier
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install --verbosity quiet --global GitVersion.Tool
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install --verbosity quiet --global MarkdownSnippets.Tool
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install --verbosity quiet --global Microsoft.Artifacts.CredentialProvider.NuGet.Tool
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool update --verbosity quiet --global --all
+      '';
 
       # uninstallUvTools = "${pkgs.uv}/bin/uv tool uninstall --all";
       # These uv tools are listed here to be even more up-to-date than what is under nix packages.
@@ -170,6 +176,8 @@ in {
         ${pkgs.uv}/bin/uv tool install --upgrade --quiet ruff
         ${pkgs.uv}/bin/uv tool install --upgrade --quiet ty
       '';
+
+      # yazi = "${pkgs.bat}/yazi/ya pkg add yazi-rs/flavors:catppuccin-mocha";
     };
   };
 }

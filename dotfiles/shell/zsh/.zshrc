@@ -10,8 +10,8 @@ fi
 
 # Insensitive completion
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/completion.zsh
-zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=*'  # case insensitive
-zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]-_}={[:upper:][:lower:]_-}' 'r:|=*' 'l:|=* r:|=*'  # hyphen insensitive
+zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=*'                                                   # case insensitive
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]-_}={[:upper:][:lower:]_-}' 'r:|=*' 'l:|=* r:|=*' # hyphen insensitive
 
 autoload -Uz compinit && compinit
 
@@ -31,7 +31,6 @@ source ${HOME}/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
 source ${HOME}/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-
 ##### Tools #####
 # Bat
 # https://github.com/sharkdp/bat
@@ -47,7 +46,7 @@ export PATH="$PATH:$HOME/.dotnet/tools"
 # Fastfetch
 # https://github.com/fastfetch-cli/fastfetch
 if [ -z "$TMUX" ] && [ "$TERM_PROGRAM" != "vscode" ]; then
-  fastfetch
+    fastfetch
 fi
 
 # Fzf
@@ -73,7 +72,7 @@ eval "$(atuin init zsh --disable-up-arrow)"
 # Oh-My-Posh
 # https://ohmyposh.dev/docs/installation/prompt
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh --config ${HOME}/.config/oh-my-posh/oh-my-posh.toml)"
+    eval "$(oh-my-posh init zsh --config ${HOME}/.config/oh-my-posh/oh-my-posh.toml)"
 fi
 
 # Uv
@@ -84,17 +83,16 @@ export PATH="${HOME}/.local/bin:$PATH"
 # Yazi
 # https://yazi-rs.github.io/docs/quick-start
 function yy() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	command yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    command yazi "$@" --cwd-file="$tmp"
+    IFS= read -r -d '' cwd < "$tmp"
+    [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+    rm -f -- "$tmp"
 }
 
 # Zoxide
 # https://github.com/ajeetdsouza/zoxide
 eval "$(zoxide init --cmd cd zsh)"
-
 
 ##### Alias #####
 # System

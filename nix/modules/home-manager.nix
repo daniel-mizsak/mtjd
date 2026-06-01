@@ -162,19 +162,10 @@ in {
       # batCache = "${pkgs.bat}/bin/bat cache --build";
 
       installDotnetTools = ''
-        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install --global csharpier > /dev/null
-        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install --global GitVersion.Tool > /dev/null
-        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install --global MarkdownSnippets.Tool > /dev/null
-        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install --global Microsoft.Artifacts.CredentialProvider.NuGet.Tool > /dev/null
-        ${pkgs.dotnet-sdk_10}/bin/dotnet tool update --global --all > /dev/null
-      '';
-
-      # uninstallUvTools = "${pkgs.uv}/bin/uv tool uninstall --all";
-      # These uv tools are listed here to be even more up-to-date than what is under nix packages.
-      installUvTools = ''
-        ${pkgs.uv}/bin/uv tool install --upgrade --quiet prek
-        ${pkgs.uv}/bin/uv tool install --upgrade --quiet ruff
-        ${pkgs.uv}/bin/uv tool install --upgrade --quiet ty
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install csharpier --version 1.2.6 --global
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install GitVersion.Tool --version 6.7.0 --global
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install MarkdownSnippets.Tool --version 28.3.0 --global
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install Microsoft.Artifacts.CredentialProvider.NuGet.Tool --version 2.0.2 --global
       '';
 
       # yazi = "${pkgs.bat}/yazi/ya pkg add yazi-rs/flavors:catppuccin-mocha";

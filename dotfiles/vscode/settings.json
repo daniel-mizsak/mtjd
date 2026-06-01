@@ -1,8 +1,7 @@
 {
   // Base settings
-  // Chat
   "chat.viewSessions.enabled": false,
-  // Editor
+  "diffEditor.ignoreTrimWhitespace": false,
   "editor.accessibilitySupport": "off",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.dragAndDrop": false,
@@ -16,9 +15,8 @@
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "editor.mouseWheelScrollSensitivity": 0.8,
-  // Explorer
   "explorer.sortOrderLexicographicOptions": "upper",
-  // Files
+  "extensions.autoUpdate": false,
   "files.associations": {
     "**/ansible/**/*.yml": "ansible",
     "**/tasks/*.yml": "ansible",
@@ -32,29 +30,22 @@
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  // Git
-  "diffEditor.ignoreTrimWhitespace": false,
   "git.allowForcePush": true,
   "git.blame.editorDecoration.enabled": true,
   "git.confirmForcePush": false,
   "git.confirmSync": false,
   "git.replaceTagsWhenPull": true,
   "git.suggestSmartCommit": false,
-  // Search
   "search.exclude": {
     "**/.venv": true,
   },
-  // Telemetry
   "telemetry.telemetryLevel": "off",
-  // Terminal
   "terminal.integrated.enableKittyKeyboardProtocol": false,
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.initialHint": false,
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.suggest.enabled": false,
-  // Window
   "window.zoomLevel": -0.35,
-  // Workbench
   "workbench.colorTheme": "Dark+",
   "workbench.editorAssociations": {
     "*.pdf": "latex-workshop-pdf-hook",
@@ -258,6 +249,7 @@
   // Remote - SSH
   "remote.SSH.remotePlatform": {
     "*": "linux",
+    "nixos": "linux",
   },
   // Ruff
   "ruff.fixAll": false,

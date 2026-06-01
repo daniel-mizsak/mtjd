@@ -61,11 +61,13 @@
       openssl
       pinact
       powershell
+      prek
       prettier
       pulumi-bin
       rclone
       repomix
       ripgrep
+      ruff
       shellcheck
       shfmt
       stripe-cli
@@ -75,6 +77,7 @@
       tmux
       tokei
       tree
+      ty
       uv
       wget
       yazi

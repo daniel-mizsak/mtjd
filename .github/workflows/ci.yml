@@ -21,7 +21,7 @@ jobs:
       contents: read
     uses: daniel-mizsak/workflows/.github/workflows/prek.yml@8279bcf5febc3f24a79510d5e9dec89c2415d79c # v2.1.1
     with:
-      skip: "shellcheck, alejandra-system, run-prettier"
+      skip: "shellcheck, run-nixfmt, run-prettier"
 
   lint:
     permissions:
@@ -42,7 +42,7 @@ jobs:
           persist-credentials: false
 
       - name: Run nix format
-        uses: daniel-mizsak/workflows/.github/actions/nix-format@8279bcf5febc3f24a79510d5e9dec89c2415d79c # v2.1.1
+        uses: daniel-mizsak/workflows/.github/actions/nix-format@feature/nixfmt
 
       - name: Install Nix
         uses: cachix/install-nix-action@ab739621df7a23f52766f9ccc97f38da6b7af14f # v31.10.5

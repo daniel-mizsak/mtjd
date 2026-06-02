@@ -2,7 +2,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     /etc/nixos/hardware-configuration.nix
   ];
@@ -47,7 +48,7 @@
 
     openssh = {
       enable = true;
-      ports = [22];
+      ports = [ 22 ];
     };
   };
 
@@ -73,18 +74,20 @@
 
   security.sudo.extraRules = [
     {
-      users = ["damz"];
+      users = [ "damz" ];
       commands = [
         {
           command = "ALL";
-          options = ["NOPASSWD"];
+          options = [ "NOPASSWD" ];
         }
       ];
     }
   ];
 
   programs = {
-    _1password = {enable = true;};
+    _1password = {
+      enable = true;
+    };
     firefox.enable = true;
     fish.enable = true;
     nix-ld.enable = true;

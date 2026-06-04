@@ -19,7 +19,7 @@ jobs:
   prek:
     permissions:
       contents: read
-    uses: daniel-mizsak/workflows/.github/workflows/prek.yml@8279bcf5febc3f24a79510d5e9dec89c2415d79c # v2.1.1
+    uses: daniel-mizsak/workflows/.github/workflows/prek.yml@6fe0b2d7b995be2cf288f1603c769f0cbf26b239 # v2.2.0
     with:
       skip: "shellcheck, run-nixfmt, run-prettier"
 
@@ -27,7 +27,7 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
-    uses: daniel-mizsak/workflows/.github/workflows/lint.yml@8279bcf5febc3f24a79510d5e9dec89c2415d79c # v2.1.1
+    uses: daniel-mizsak/workflows/.github/workflows/lint.yml@6fe0b2d7b995be2cf288f1603c769f0cbf26b239 # v2.2.0
     with:
       megalinter-config: "./.github/linters/.megalinter.yml"
 
@@ -42,10 +42,10 @@ jobs:
           persist-credentials: false
 
       - name: Run nix format
-        uses: daniel-mizsak/workflows/.github/actions/nix-format@feature/nixfmt
+        uses: daniel-mizsak/workflows/.github/actions/nix-format@6fe0b2d7b995be2cf288f1603c769f0cbf26b239 # v2.2.0
 
       - name: Install Nix
-        uses: cachix/install-nix-action@ab739621df7a23f52766f9ccc97f38da6b7af14f # v31.10.5
+        uses: cachix/install-nix-action@8aa03977d8d733052d78f4e008a241fd1dbf36b3 # v31.10.6
         with:
           nix_path: nixpkgs=channel:nixos-26.05
           extra_nix_config: |

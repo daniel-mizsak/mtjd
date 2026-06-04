@@ -1,6 +1,10 @@
 # System
 .DS_Store
 
+# Tools
+**/.claude/settings.local.json
+megalinter-reports
+
 # Environments
 .env
 .venv

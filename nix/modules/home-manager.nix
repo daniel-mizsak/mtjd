@@ -73,13 +73,13 @@ in
 
         # bat
         ".config/bat/themes/Catppuccin Mocha.tmTheme".source =
-          "${config.home.homeDirectory}/${repository}/dotfiles/config/bat/themes/Catppuccin Mocha.tmTheme";
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/bat/themes/Catppuccin Mocha.tmTheme";
 
         # btop
         ".config/btop/btop.conf".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/btop/btop.conf";
         ".config/btop/themes/catppuccin_mocha.theme".source =
-          "${config.home.homeDirectory}/${repository}/dotfiles/config/btop/themes/catppuccin_mocha.theme";
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/btop/themes/catppuccin_mocha.theme";
 
         # fastfetch
         ".config/fastfetch/config.jsonc".source =
@@ -113,9 +113,9 @@ in
         ".ssh/config".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config";
         ".ssh/config.d/github".source =
-          "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config.d/github";
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config.d/github";
         ".ssh/config.d/hostinger".source =
-          "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config.d/hostinger";
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config.d/hostinger";
 
         # tmux
         ".config/tmux/tmux.conf".source =
@@ -139,7 +139,7 @@ in
       (mkIf is-darwin {
         # alacritty
         ".config/alacritty/catppuccin-mocha.toml".source =
-          "${config.home.homeDirectory}/${repository}/dotfiles/config/alacritty/catppuccin-mocha.toml";
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/alacritty/catppuccin-mocha.toml";
         ".config/alacritty/alacritty.toml".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/alacritty/alacritty.toml";
 

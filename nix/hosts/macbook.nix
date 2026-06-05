@@ -32,7 +32,7 @@
         persistent-apps = [
           "/Applications/Vivaldi.app"
           "/Applications/Signal.app"
-          "/Applications/Visual\ Studio\ Code.app"
+          "/Applications/Visual Studio Code.app"
           "/System/Applications/System Settings.app"
         ];
         persistent-others = [ "/Users/${currentSystemUser}/Downloads/" ];

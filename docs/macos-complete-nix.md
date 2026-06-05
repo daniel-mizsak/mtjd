@@ -25,7 +25,7 @@ git clone https://github.com/daniel-mizsak/mtjd.git ~/mtjd
 Run [`nix-darwin`](https://github.com/nix-darwin/nix-darwin):
 
 ```bash
-sudo nix run nix-darwin --extra-experimental-features 'nix-command flakes' -- switch --impure --flake ~/mtjd/nix#macbookre --flake ~/mtjd/nix#macbook
+sudo nix run nix-darwin --extra-experimental-features 'nix-command flakes' -- switch --impure --flake ~/mtjd/nix#macbook
 ```
 
 Sometimes it is necessary to move some existing files. Last time these were: `/etc/nix/nix.conf`, `/etc/bashrc`, and `/etc/zshrc`.

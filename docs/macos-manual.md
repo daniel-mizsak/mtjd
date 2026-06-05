@@ -2,48 +2,56 @@
 
 The actual amount of manual steps highly exceeds the below mentioned ones.
 
-Hostname:
+## Finder
 
-- `M-Daniel-MBP`.
+- Uncheck `Tags` in Finder
+- Set `Finder` Favorites to: `Applications`, `Desktop`, `Documents`, `Downloads`, `Projects`
+- Set `Finder` Locations to: `iCloud Drive`, `damz`, `External disks`, ..., `Trash`
 
-Wallpaper:
+## System Settings
 
-- `System Preferences > Wallpaper > Monterey`
+- General:
+  - Language & Region:
+    - Change region to `Hungary` so that clock format is correct
+    - Set `Number format` to correct value.
+  - Sharing:
+    - Hostname: `M-Daniel-MBP`.
 
-Finder:
+- Desktop & Dock:
+  - Disable `Quick Note` under `Hot Corners...`
 
-- Disable `Tags` in Finder: Uncheck them + [Drag them out](https://apple.stackexchange.com/questions/387849/remove-tags-section-from-macos-finder-right-click-context-menu)
-- Remove `Recents` from Finder
-- Set `Finder` Favorites to: `Downloads`, `GitHub`, `Desktop`, `Documents`, `Applications`
-- Set `Finder` Locations to: `iCloud Drive`, `<user>`, `AirDrop`, `Network`, `Trash`
+- Wallpaper:
+  - `Sequoia`
 
-Language & Region:
+- Sound:
+  - Disable boot sound: `Sound Effects > Play sound on startup`
 
-- Change region to `Hungary` so that clock format is correct
-- Set `Number format` to international standard.
+- Trackpad:
+  - Enable `Tap to click`
+  - Mission Control: Swipe up with four fingers
+  - App Exposé: `Off`
+  - Disable `Show Desktop`
 
-Trackpad:
-
-- Enable `Tap to click`
-- Mission Control: Swipe up with four fingers
-- App Exposé: Swipe down with four fingers
-- Disable `Launchpad`
-- Disable `Show Desktop`
-
-Raycast:
+## Raycast
 
 - Unbind `Spotlight`: `System Preferences > Keyboard > Keyboard Shortcuts... > Spotlight`
 - Bind `⌘Space` to `Raycast`
 
-Tmux:
+## OpenInTerminal
+
+- Apply configurations for [OpenInTerminal](https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-Config.md)
+- Add `Ghostty` and `Visual Studio Code`
+
+## Tmux
 
 - Install Tmux plugins `tmux > prefix + I`, where prefix for me is `Ctrl + Space`.
 - [In macOS](https://github.com/tmux/tmux/issues/457#issuecomment-357938515) uncheck: Keyboard > Keyboard Shortcuts... > Input Sources > Select the previous input source
 
-Browser:
+## Browser
 
 - Set `Vivaldi` as default browser: `System Preferences > Desktop & Dock > Default web browser`
 
-Other:
+## BetterDisplay
 
-- Install [Asahi Linux](https://asahilinux.org)?
+- [Download](https://github.com/waydabber/BetterDisplay/releases/tag/v3.5.6) v3.5.6b and install the latest BetterDisplay supported by the license
+- Disable `Check for updates`

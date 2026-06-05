@@ -41,7 +41,7 @@ repos:
 
   # zizmor
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
-    rev: a4727cbbcd26d7098e96b9cb738169b59711ae51 # frozen: v1.24.1
+    rev: 9257c6050c0261b8c57e712f632dc4a8010109a9 # frozen: v1.25.2
     hooks:
       - id: zizmor
 
@@ -65,17 +65,20 @@ repos:
       - id: codespell
         exclude: "dotfiles/config"
 
-  # alejandra
-  - repo: https://github.com/kamadorueda/alejandra
-    rev: 3e2a85506627062313e131bf8a85315f3387c8e0 # frozen: 4.0.0
+  # nixfmt
+  - repo: local
     hooks:
-      - id: alejandra-system
+      - id: run-nixfmt
+        name: nixfmt
+        language: system
+        entry: nixfmt
+        types: [nix]
 
   # prettier
   - repo: local
     hooks:
       - id: run-prettier
-        name: Run Prettier
+        name: prettier
         language: system
         entry: |
           prettier --write .

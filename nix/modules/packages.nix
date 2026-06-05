@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   # Fonts
   fonts.packages = with pkgs; [
     nerd-fonts.meslo-lg
@@ -17,7 +18,6 @@
     systemPackages = with pkgs; [
       # Terminal
       _1password-cli
-      alejandra
       atuin
       azure-cli
       bat
@@ -56,6 +56,7 @@
       kubectl
       neovim
       ngrok
+      nixfmt
       nodejs_24
       oh-my-posh # Sometimes bugs out. To fix run: `rm -f ~/.cache/oh-my-posh/init.*`
       openssl
@@ -77,6 +78,7 @@
       tmux
       tokei
       tree
+      tree-sitter
       ty
       uv
       wget

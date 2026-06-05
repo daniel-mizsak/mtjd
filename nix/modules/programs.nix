@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   homebrew = {
     enable = true;
     global = {
@@ -15,7 +16,6 @@
       "affinity-publisher"
       "alacritty"
       "aldente"
-      "betterdisplay"
       "boosteroid"
       "claude"
       "codex-app"
@@ -25,7 +25,6 @@
       "github"
       "hiddenbar"
       "iina"
-      "iterm2"
       "karabiner-elements"
       "keyboardcleantool"
       "lens"
@@ -58,11 +57,8 @@
       # General
       "Compressor" = 424390742;
       "Final Cut Pro" = 424389933;
-      "Keynote" = 409183694;
       "Magnet" = 441258766;
       "Motion" = 434290957;
-      "Numbers" = 409203825;
-      "Pages" = 409201541;
       "Xcode" = 497799835;
       # Safari Extensions
       "1Password for Safari" = 1569813296;

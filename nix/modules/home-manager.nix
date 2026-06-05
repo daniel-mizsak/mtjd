@@ -2,15 +2,18 @@
   user,
   is-darwin,
   inputs,
-}: {
+}:
+{
   config,
   pkgs,
   ...
-}: let
+}:
+let
   inherit (config.lib.file) mkOutOfStoreSymlink;
   inherit (pkgs.lib) mkIf mkMerge mkOrder;
   repository = "mtjd";
-in {
+in
+{
   programs.home-manager.enable = true;
 
   programs.fish = {
@@ -69,12 +72,14 @@ in {
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/atuin/config.toml";
 
         # bat
-        ".config/bat/themes/Catppuccin Mocha.tmTheme".source = "${config.home.homeDirectory}/${repository}/dotfiles/config/bat/themes/Catppuccin Mocha.tmTheme";
+        ".config/bat/themes/Catppuccin Mocha.tmTheme".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/bat/themes/Catppuccin Mocha.tmTheme";
 
         # btop
         ".config/btop/btop.conf".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/btop/btop.conf";
-        ".config/btop/themes/catppuccin_mocha.theme".source = "${config.home.homeDirectory}/${repository}/dotfiles/config/btop/themes/catppuccin_mocha.theme";
+        ".config/btop/themes/catppuccin_mocha.theme".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/btop/themes/catppuccin_mocha.theme";
 
         # fastfetch
         ".config/fastfetch/config.jsonc".source =
@@ -107,8 +112,10 @@ in {
         # ssh
         ".ssh/config".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config";
-        ".ssh/config.d/github".source = "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config.d/github";
-        ".ssh/config.d/hostinger".source = "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config.d/hostinger";
+        ".ssh/config.d/github".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config.d/github";
+        ".ssh/config.d/hostinger".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config.d/hostinger";
 
         # tmux
         ".config/tmux/tmux.conf".source =
@@ -131,7 +138,8 @@ in {
 
       (mkIf is-darwin {
         # alacritty
-        ".config/alacritty/catppuccin-mocha.toml".source = "${config.home.homeDirectory}/${repository}/dotfiles/config/alacritty/catppuccin-mocha.toml";
+        ".config/alacritty/catppuccin-mocha.toml".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/alacritty/catppuccin-mocha.toml";
         ".config/alacritty/alacritty.toml".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/alacritty/alacritty.toml";
 

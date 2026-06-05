@@ -58,8 +58,6 @@
   // Extensions
   /*
   .NET Install Tool
-  1Password
-  Alejandra
   Ansible
   autoDocstring - Python Docstring Generator
   Bash IDE
@@ -75,18 +73,12 @@
   Dev Containers
   Docker DX
   Even Better TOML
-  Expo Tools
   Fish
   Github Actions
   GitHub Pull Requests
   Go
   hadolint
   indent-rainbow
-  Jupyter
-  Jupyter Cell Tags
-  Jupyter Keymap
-  Jupyter Notebook Renderers
-  Jupyter Slide Show
   LaTeX Workshop
   Live Share
   Lua
@@ -101,7 +93,6 @@
   Python Debugger
   Python Environments
   Rainbow CSV
-  Redis for VS Code
   Remote - SSH
   Remote - SSH: Editing Configuration Files
   Remote Explorer
@@ -115,10 +106,7 @@
   zizmor
   */
   // .NET Install Tool
-  "dotnet.automaticallyCreateSolutionInWorkspace": false,
   "dotnetAcquisitionExtension.enableTelemetry": false,
-  // 1Password
-  "1password.editor.suggestStorage": false,
   // Ansible
   "ansible.lightspeed.enabled": false,
   "ansible.python.interpreterPath": "${workspaceFolder}/.venv/bin/python",
@@ -185,21 +173,18 @@
       "source.organizeImports": "explicit",
     },
   },
-  // Jupyter
-  "jupyter.askForKernelRestart": false,
-  "jupyter.experiments.enabled": false,
-  "notebook.formatOnSave.enabled": true,
-  "notebook.lineNumbers": "on",
   // Just
   "[just]": {
     "editor.defaultFormatter": "nefrob.vscode-just-syntax",
   },
   // Lua
   "[lua]": {
-    "editor.defaultFormatter": "yinfei.luahelper",
+    "editor.defaultFormatter": "sumneko.lua",
   },
   // Nix IDE
-  "nix.formatterPath": "alejandra",
+  "[nix]": {
+    "editor.defaultFormatter": "jnoortheen.nix-ide",
+  },
   // PowerShell
   "[powershell]": {
     "editor.defaultFormatter": "ms-vscode.powershell",

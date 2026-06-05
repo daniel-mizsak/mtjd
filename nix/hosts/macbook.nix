@@ -2,7 +2,8 @@
   pkgs,
   currentSystemUser,
   ...
-}: {
+}:
+{
   security.pam.services.sudo_local.touchIdAuth = true;
 
   system = {
@@ -31,10 +32,10 @@
         persistent-apps = [
           "/Applications/Vivaldi.app"
           "/Applications/Signal.app"
-          "/Applications/Visual\ Studio\ Code.app"
+          "/Applications/Visual Studio Code.app"
           "/System/Applications/System Settings.app"
         ];
-        persistent-others = ["/Users/${currentSystemUser}/Downloads/"];
+        persistent-others = [ "/Users/${currentSystemUser}/Downloads/" ];
       };
       finder = {
         AppleShowAllExtensions = true;
@@ -81,7 +82,7 @@
   programs.fish.enable = true;
 
   users = {
-    knownUsers = [currentSystemUser];
+    knownUsers = [ currentSystemUser ];
 
     users.${currentSystemUser} = {
       name = currentSystemUser;

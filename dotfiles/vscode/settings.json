@@ -248,5 +248,4 @@
   "[yaml]": {
     "editor.tabSize": 2,
   },
-  "githubPullRequests.pullBranch": "never",
 }

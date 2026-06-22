@@ -119,6 +119,7 @@
   // C#
   "[csharp]": {
     "editor.defaultFormatter": "csharpier.csharpier-vscode",
+    "editor.rulers": [130],
   },
   "csharp.experimental.debug.hotReload": true,
   // Code Spell Checker

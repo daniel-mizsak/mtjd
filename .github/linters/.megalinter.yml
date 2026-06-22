@@ -5,7 +5,7 @@
 DISABLE:
   - SPELL
 DISABLE_LINTERS:
-  - REPOSITORY_OSV_SCANNER
+  - REPOSITORY_OSV_SCANNER # TODO: Remove this once megalinter supports special return code.
 DISABLE_ERRORS_LINTERS:
   - COPYPASTE_JSCPD
 

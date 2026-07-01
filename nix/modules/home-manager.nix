@@ -114,8 +114,8 @@ in
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config";
         ".ssh/config.d/github".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config.d/github";
-        ".ssh/config.d/hostinger".source =
-          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config.d/hostinger";
+        ".ssh/config.d/vps".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config.d/vps";
 
         # tmux
         ".config/tmux/tmux.conf".source =
@@ -170,10 +170,10 @@ in
       # batCache = "${pkgs.bat}/bin/bat cache --build";
 
       installDotnetTools = ''
-        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install csharpier --version 1.2.6 --global
-        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install GitVersion.Tool --version 6.7.0 --global
-        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install MarkdownSnippets.Tool --version 28.3.0 --global
-        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install Microsoft.Artifacts.CredentialProvider.NuGet.Tool --version 2.0.2 --global
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install csharpier --version 1.2.6 --global > /dev/null
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install GitVersion.Tool --version 6.7.0 --global > /dev/null
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install MarkdownSnippets.Tool --version 28.3.0 --global > /dev/null
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install Microsoft.Artifacts.CredentialProvider.NuGet.Tool --version 2.0.2 --global > /dev/null
       '';
 
       # yazi = "${pkgs.bat}/yazi/ya pkg add yazi-rs/flavors:catppuccin-mocha";

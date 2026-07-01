@@ -6,8 +6,8 @@
       autoUpdate = false;
     };
     onActivation = {
+      autoUpdate = false;
       cleanup = "zap";
-      upgrade = true;
     };
     casks = [
       "1password"

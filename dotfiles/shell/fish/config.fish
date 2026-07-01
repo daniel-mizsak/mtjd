@@ -3,10 +3,11 @@ if status is-interactive
     export EDITOR=nvim
     export SUDO_EDITOR=nvim
 
-    # Use github ssh key on macOS
+    # Use SSH keys on macOS
     # https://apple.stackexchange.com/questions/48502/how-can-i-permanently-add-my-ssh-private-key-to-keychain-so-it-is-automatically
     if test (uname) = Darwin
         ssh-add --apple-use-keychain ~/.ssh/id_github -q
+        ssh-add --apple-use-keychain ~/.ssh/id_vps -q
     end
 
     # Make complete-and-search the default tab behavior

@@ -16,7 +16,7 @@
   "editor.minimap.enabled": false,
   "editor.mouseWheelScrollSensitivity": 0.8,
   "explorer.sortOrderLexicographicOptions": "upper",
-  "extensions.autoUpdate": false,
+  "extensions.autoUpdateDelay": 48,
   "files.associations": {
     "**/ansible/**/*.yml": "ansible",
     "**/tasks/*.yml": "ansible",
@@ -43,7 +43,7 @@
   "terminal.integrated.enableKittyKeyboardProtocol": false,
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.initialHint": false,
-  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.scrollback": 20000,
   "terminal.integrated.suggest.enabled": false,
   "window.zoomLevel": -0.35,
   "workbench.colorTheme": "Dark+",
@@ -62,6 +62,7 @@
   autoDocstring - Python Docstring Generator
   Bash IDE
   Better Comments
+  Better Jinja
   Better JSON5
   C#
   C# Dev Kit

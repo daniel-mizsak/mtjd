@@ -1,17 +1,11 @@
-return { -- Ruff formatting
-{
+return {
+  -- Ruff formatting and import organization. Diagnostics come from the Ruff LSP.
+  {
     "stevearc/conform.nvim",
     opts = {
-        formatters_by_ft = {
-            python = {"ruff_format", "ruff_organize_imports"}
-        }
-    }
-}, -- Ruff linting
-{
-    "mfussenegger/nvim-lint",
-    opts = {
-        linters_by_ft = {
-            python = {"ruff"}
-        }
-    }
-}}
+      formatters_by_ft = {
+        python = { "ruff_organize_imports", "ruff_format" },
+      },
+    },
+  },
+}

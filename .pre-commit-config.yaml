@@ -24,15 +24,6 @@ repos:
         exclude: "dotfiles/config/karabiner/karabiner.json"
       - id: trailing-whitespace
 
-  # shellcheck
-  - repo: https://github.com/koalaman/shellcheck-precommit
-    rev: 99470f5e12208ff0fb17ab81c3c494f7620a1d8d # frozen: v0.11.0
-    hooks:
-      - id: shellcheck
-        types: [shell]
-        args: [--external-sources, --exclude=SC1091]
-        exclude: "dotfiles/shell/zsh/.zshrc"
-
   # actionlint
   - repo: https://github.com/rhysd/actionlint
     rev: 914e7df21a07ef503a81201c76d2b11c789d3fca # frozen: v1.7.12
@@ -54,7 +45,7 @@ repos:
 
   # betterleaks
   - repo: https://github.com/betterleaks/betterleaks
-    rev: 6381fa45ae946c588e2e1334d8396a15e5171ad6 # frozen: v1.7.0
+    rev: b9de7fd88f009e9f65f2421370f0d5fbd4b1be5e # frozen: v1.7.2
     hooks:
       - id: betterleaks
 

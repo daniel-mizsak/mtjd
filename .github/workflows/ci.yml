@@ -21,7 +21,7 @@ jobs:
       contents: read
     uses: daniel-mizsak/workflows/.github/workflows/prek.yml@9fc22b088e89dfacdd25003693d24b209b0d5768 # v2.3.1
     with:
-      skip: "shellcheck, run-nixfmt, run-prettier"
+      skip: "run-nixfmt, run-prettier"
 
   lint:
     permissions:

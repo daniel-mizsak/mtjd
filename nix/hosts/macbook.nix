@@ -62,6 +62,7 @@
         "com.apple.dock" = {
           contents-immutable = true;
           size-immutable = true;
+          enterMissionControlByTopWindowDrag = false;
         };
         "com.apple.finder" = {
           ShowRecentTags = false;
@@ -72,6 +73,7 @@
       ".GlobalPreferences" = {
         "com.apple.mouse.scaling" = 1.8;
       };
+      spaces.spans-displays = false;
       WindowManager.EnableStandardClickToShowDesktop = false;
     };
 

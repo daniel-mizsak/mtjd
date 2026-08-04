@@ -18,6 +18,7 @@
     systemPackages = with pkgs; [
       # Terminal
       _1password-cli
+      age
       atuin
       azure-cli
       bat
@@ -54,6 +55,7 @@
       just
       just-lsp
       kubectl
+      lazygit
       neovim
       ngrok
       nixfmt
@@ -72,6 +74,7 @@
       shellcheck
       shfmt
       stripe-cli
+      statix
       terraform
       texliveFull
       tlrc

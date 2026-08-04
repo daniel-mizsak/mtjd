@@ -24,15 +24,6 @@ repos:
         exclude: "dotfiles/config/karabiner/karabiner.json"
       - id: trailing-whitespace
 
-  # shellcheck
-  - repo: https://github.com/koalaman/shellcheck-precommit
-    rev: 99470f5e12208ff0fb17ab81c3c494f7620a1d8d # frozen: v0.11.0
-    hooks:
-      - id: shellcheck
-        types: [shell]
-        args: [--external-sources, --exclude=SC1091]
-        exclude: "dotfiles/shell/zsh/.zshrc"
-
   # actionlint
   - repo: https://github.com/rhysd/actionlint
     rev: 914e7df21a07ef503a81201c76d2b11c789d3fca # frozen: v1.7.12
@@ -41,7 +32,7 @@ repos:
 
   # zizmor
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
-    rev: e3eebf65325ccc992422292cb7a4baee967cf815 # frozen: v1.26.1
+    rev: 067260dc5fe6ea86b7551bfd6f8b3ba4e6c93129 # frozen: v1.28.0
     hooks:
       - id: zizmor
 
@@ -54,13 +45,13 @@ repos:
 
   # betterleaks
   - repo: https://github.com/betterleaks/betterleaks
-    rev: 28f08b4c8c4420a601f67ee9887c201697ff4568 # frozen: v1.6.1
+    rev: b9de7fd88f009e9f65f2421370f0d5fbd4b1be5e # frozen: v1.7.2
     hooks:
       - id: betterleaks
 
   # codespell
   - repo: https://github.com/codespell-project/codespell
-    rev: 2ccb47ff45ad361a21071a7eedda4c37e6ae8c5a # frozen: v2.4.2
+    rev: 57b21406f092110c18776e39b0bda50d37c945c8 # frozen: v2.4.3
     hooks:
       - id: codespell
         exclude: "dotfiles/config"

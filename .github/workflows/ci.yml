@@ -19,15 +19,15 @@ jobs:
   prek:
     permissions:
       contents: read
-    uses: daniel-mizsak/workflows/.github/workflows/prek.yml@31499185a34723e78c51d951b98941c07e139780 # v2.3.0
+    uses: daniel-mizsak/workflows/.github/workflows/prek.yml@9fc22b088e89dfacdd25003693d24b209b0d5768 # v2.3.1
     with:
-      skip: "shellcheck, run-nixfmt, run-prettier"
+      skip: "run-nixfmt, run-prettier"
 
   lint:
     permissions:
       contents: read
       pull-requests: write
-    uses: daniel-mizsak/workflows/.github/workflows/lint.yml@31499185a34723e78c51d951b98941c07e139780 # v2.3.0
+    uses: daniel-mizsak/workflows/.github/workflows/lint.yml@9fc22b088e89dfacdd25003693d24b209b0d5768 # v2.3.1
     with:
       megalinter-config: "./.github/linters/.megalinter.yml"
 
@@ -37,12 +37,12 @@ jobs:
       contents: read
     steps:
       - name: Check out the codebase
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
       - name: Nix install and format
-        uses: daniel-mizsak/workflows/.github/actions/nix-format@31499185a34723e78c51d951b98941c07e139780 # v2.3.0
+        uses: daniel-mizsak/workflows/.github/actions/nix-format@9fc22b088e89dfacdd25003693d24b209b0d5768 # v2.3.1
 
       - name: Create files to make the flake valid
         run: |

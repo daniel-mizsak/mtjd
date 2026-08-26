@@ -16,6 +16,18 @@
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    homebrew-core = {
+      url = "github:Homebrew/homebrew-core";
+      flake = false;
+    };
+    homebrew-cask = {
+      url = "github:Homebrew/homebrew-cask";
+      flake = false;
+    };
+    lzhgus-homebrew-tap = {
+      url = "github:lzhgus/homebrew-tap";
+      flake = false;
+    };
   };
 
   outputs =
@@ -25,6 +37,9 @@
       home-manager,
       nix-darwin,
       nix-homebrew,
+      homebrew-core,
+      homebrew-cask,
+      lzhgus-homebrew-tap,
     }:
     let
       mkSystem = import ./mksystem.nix {

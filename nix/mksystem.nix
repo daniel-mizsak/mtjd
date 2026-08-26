@@ -39,7 +39,7 @@ systemFunc rec {
     }
 
     inputs.nix-homebrew.darwinModules.nix-homebrew
-    (if is-darwin then import ./modules/nix-homebrew.nix { inherit user; } else { })
+    (if is-darwin then ./modules/nix-homebrew.nix else { })
 
     hostConfig
     nixConfig

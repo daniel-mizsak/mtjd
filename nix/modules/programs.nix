@@ -17,6 +17,7 @@
       "alacritty"
       "aldente"
       "boosteroid"
+      "lzhgus/tap/capso"
       "claude"
       "codex-app"
       "dbeaver-community"
@@ -51,6 +52,7 @@
       "vivaldi"
       "vnc-viewer"
       "wezterm"
+      "zcode"
       "zed"
     ];
     masApps = {

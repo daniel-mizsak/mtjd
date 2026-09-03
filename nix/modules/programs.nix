@@ -9,6 +9,9 @@
       autoUpdate = false;
       cleanup = "zap";
     };
+    brews = [
+      "podman"
+    ];
     casks = [
       "1password"
       "affinity-designer"
@@ -20,7 +23,6 @@
       "claude"
       "codex-app"
       "dbeaver-community"
-      "docker-desktop"
       "ghostty"
       "github"
       "hiddenbar"
@@ -37,6 +39,7 @@
       "obsidian"
       "openinterminal"
       "parallels@19"
+      "podman-desktop"
       "pomotroid"
       "postman"
       "raspberry-pi-imager"

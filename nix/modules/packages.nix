@@ -27,6 +27,7 @@
       curl
       devenv
       direnv
+      docker
       (dotnetCorePackages.combinePackages [
         dotnetCorePackages.sdk_8_0
         dotnetCorePackages.sdk_10_0

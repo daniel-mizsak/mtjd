@@ -148,6 +148,10 @@ in
         ".config/karabiner".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/karabiner";
 
+        # podman
+        ".config/containers/containers.conf".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/containers/containers.conf";
+
         # sublime
         "/Users/${user}/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/sublime/Preferences.sublime-settings";

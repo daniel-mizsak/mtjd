@@ -25,6 +25,7 @@
       btop
       bun
       curl
+      devenv
       direnv
       (dotnetCorePackages.combinePackages [
         dotnetCorePackages.sdk_8_0
@@ -71,6 +72,7 @@
       repomix
       ripgrep
       ruff
+      rustup
       shellcheck
       shfmt
       stripe-cli

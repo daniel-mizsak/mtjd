@@ -23,7 +23,6 @@
       azure-cli
       bat
       btop
-      bun
       curl
       devenv
       direnv
@@ -65,6 +64,7 @@
       oh-my-posh # Sometimes bugs out. To fix run: `rm -f ~/.cache/oh-my-posh/init.*`
       openssl
       pinact
+      pnpm
       powershell
       prek
       prettier

@@ -4,8 +4,6 @@
 
 DISABLE:
   - SPELL
-DISABLE_LINTERS:
-  - REPOSITORY_OSV_SCANNER # TODO: Remove this once megalinter supports special return code.
 DISABLE_ERRORS_LINTERS:
   - COPYPASTE_JSCPD
 
@@ -18,5 +16,4 @@ VALIDATE_ALL_CODEBASE: true
 BASH_SHELLCHECK_ARGUMENTS: --external-sources --exclude=SC1091 # not-following
 BASH_SHFMT_ARGUMENTS: --indent=4 --space-redirects
 JSON_FILTER_REGEX_EXCLUDE: (^dotfiles/vscode/settings\.json$)
-MARKDOWN_MARKDOWNLINT_FILTER_REGEX_EXCLUDE: (^\.github/PULL_REQUEST_TEMPLATE\.md$)
 YAML_YAMLLINT_ARGUMENTS: --strict

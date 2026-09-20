@@ -1,15 +1,15 @@
 # Project
-dotfiles/config/karabiner/automatic_backups
+dotfiles/config/karabiner/automatic_backups/
 
 # System
 .DS_Store
 
 # Development files
-megalinter-reports
+megalinter-reports/
 
 # Environments
 .env
-.venv
+.venv/
 
 # IDE
-.vscode
+.vscode/

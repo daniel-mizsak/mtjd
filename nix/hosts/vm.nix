@@ -38,8 +38,6 @@
   };
 
   services = {
-    xserver.enable = true;
-
     displayManager.sddm.enable = true;
     desktopManager.plasma6.enable = true;
 
@@ -53,6 +51,14 @@
       ports = [ 22 ];
     };
   };
+
+  environment.plasma6.excludePackages = [
+    pkgs.kdePackages.discover
+    pkgs.kdePackages.elisa
+    pkgs.kdePackages.khelpcenter
+    pkgs.kdePackages.kwin-x11
+    pkgs.kdePackages.spectacle
+  ];
 
   users.users.${currentSystemUser} = {
     isNormalUser = true;

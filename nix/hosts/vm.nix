@@ -54,7 +54,11 @@
     };
   };
 
-  virtualisation.docker.enable = true;
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true; # Creates a symlink from docker to podman
+    defaultNetwork.settings.dns_enabled = true; # Required for containers under podman-compose to be able to talk to each other.
+  };
 
   users.users."damz" = {
     isNormalUser = true;
@@ -66,7 +70,9 @@
     home = "/home/damz";
     shell = pkgs.fish;
     packages = with pkgs; [
+      docker-compose
       kdePackages.kate
+      podman-desktop
       vscode
     ];
   };

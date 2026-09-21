@@ -71,6 +71,7 @@
     shell = pkgs.fish;
     packages = with pkgs; [
       docker-compose
+      ghostty
       kdePackages.kate
       podman-desktop
       vscode

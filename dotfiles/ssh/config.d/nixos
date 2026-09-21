@@ -1,0 +1,4 @@
+Host nixos
+  HostName nixos.local
+  User damz
+  Port 2222

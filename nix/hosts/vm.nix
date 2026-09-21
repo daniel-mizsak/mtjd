@@ -18,6 +18,9 @@
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
+
+    networkmanager.connectionConfig."connection.mdns" = 2;
+    firewall.allowedUDPPorts = [ 5353 ];
   };
 
   time.timeZone = "Europe/Budapest";
@@ -48,8 +51,13 @@
 
     openssh = {
       enable = true;
-      ports = [ 22 ];
+      ports = [ 2222 ];
     };
+    resolved = {
+      enable = true;
+      settings.Resolve.MulticastDNS = true;
+    };
+
   };
 
   environment.plasma6.excludePackages = [

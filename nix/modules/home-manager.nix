@@ -114,6 +114,8 @@ in
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config";
         ".ssh/config.d/github".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config.d/github";
+        ".ssh/config.d/nixos".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config.d/nixos";
         ".ssh/config.d/vps".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/ssh/config.d/vps";
 

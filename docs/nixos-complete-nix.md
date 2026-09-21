@@ -3,7 +3,7 @@
 Download **NixOS** ([official documentation](https://nixos.org/download.html))\
 Be careful to choose the right CPU architecture.
 
-Create new virtual machine using **Parallel Desktop** or **VirtualBox**.
+Create new virtual machine using **Parallel Desktop** or **UTM**.
 
 Enable **Nix Flakes** in `~/.config/nix/nix.conf`:
 

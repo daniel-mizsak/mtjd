@@ -38,13 +38,15 @@
   };
 
   services = {
+    xserver.enable = true;
+
+    displayManager.sddm.enable = true;
+    desktopManager.plasma6.enable = true;
+
     xserver.xkb = {
       layout = "us";
       variant = "";
     };
-    xserver.enable = true;
-    displayManager.sddm.enable = true;
-    desktopManager.plasma6.enable = true;
 
     openssh = {
       enable = true;
@@ -54,14 +56,12 @@
 
   virtualisation.docker.enable = true;
 
-  users.mutableUsers = false;
-  users.users.damz = {
+  users.users."damz" = {
     isNormalUser = true;
     description = "Daniel Mizsak";
     extraGroups = [
       "wheel"
       "networkmanager"
-      "docker"
     ];
     home = "/home/damz";
     shell = pkgs.fish;
@@ -69,20 +69,7 @@
       kdePackages.kate
       vscode
     ];
-    hashedPassword = "$y$j9T$SLcpv.fvXbk2PqUEOuHVL0$VZUxN7P8EXwsXVxCvReON7tOrV/ARfd.oyCQ3trt5aA";
   };
-
-  security.sudo.extraRules = [
-    {
-      users = [ "damz" ];
-      commands = [
-        {
-          command = "ALL";
-          options = [ "NOPASSWD" ];
-        }
-      ];
-    }
-  ];
 
   programs = {
     _1password = {
@@ -96,5 +83,5 @@
 
   # Do not change stateVersion after installation!
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  system.stateVersion = "24.11";
+  system.stateVersion = "26.05";
 }

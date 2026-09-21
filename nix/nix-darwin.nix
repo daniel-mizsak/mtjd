@@ -6,6 +6,6 @@
 {
   imports = [
     ./modules/packages.nix
-    ./modules/programs.nix
+    ./modules/programs-darwin.nix
   ];
 }

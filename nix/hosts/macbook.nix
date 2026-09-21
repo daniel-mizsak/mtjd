@@ -81,7 +81,6 @@
   };
 
   time.timeZone = "Europe/Budapest";
-  programs.fish.enable = true;
 
   users = {
     knownUsers = [ currentSystemUser ];

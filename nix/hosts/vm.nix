@@ -15,6 +15,10 @@
     };
   };
 
+  security.sudo.extraConfig = ''
+    Defaults timestamp_timeout=0
+  '';
+
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;

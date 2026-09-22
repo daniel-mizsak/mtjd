@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  is-darwin,
+  ...
+}:
 {
   # Fonts
   fonts.packages = with pkgs; [
@@ -27,7 +31,7 @@
       curl
       devenv
       direnv
-      docker
+      (if is-darwin then docker else docker-client)
       (dotnetCorePackages.combinePackages [
         dotnetCorePackages.sdk_8_0
         dotnetCorePackages.sdk_10_0

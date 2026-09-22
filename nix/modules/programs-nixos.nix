@@ -16,9 +16,10 @@
 
   virtualisation.podman = {
     enable = true;
-    dockerCompat = true; # Creates a symlink from docker to podman
     defaultNetwork.settings.dns_enabled = true; # Required for containers under podman-compose to be able to talk to each other.
   };
+
+  environment.variables.DOCKER_HOST = "unix://\${XDG_RUNTIME_DIR}/podman/podman.sock";
 
   users.users.${currentSystemUser}.packages = with pkgs; [
     docker-compose

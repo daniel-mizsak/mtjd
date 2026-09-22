@@ -19,7 +19,6 @@
     hostName = "nixos";
     networkmanager.enable = true;
 
-    networkmanager.connectionConfig."connection.mdns" = 2;
     firewall.allowedUDPPorts = [ 5353 ];
   };
 

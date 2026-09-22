@@ -3,7 +3,7 @@
 Download **NixOS** ([official documentation](https://nixos.org/download.html))\
 Be careful to choose the right CPU architecture.
 
-Create new virtual machine using **Parallel Desktop** or **UTM**.
+Install NixOS on the target machine, whether it is a physical computer or a virtual machine such as **Parallels Desktop** or **UTM**.
 
 Enable **Nix Flakes** in `~/.config/nix/nix.conf`:
 
@@ -26,16 +26,10 @@ nix-shell --packages git
 git clone https://github.com/daniel-mizsak/mtjd.git ~/mtjd
 ```
 
-Run **NixOS** configuration based on CPU architecture:
+Run the **NixOS** configuration on the machine being configured:
 
 ```bash
-sudo nixos-rebuild switch --impure --flake ~/mtjd/nix#vm-arm
-```
-
-or
-
-```bash
-sudo nixos-rebuild switch --impure --flake ~/mtjd/nix#vm-amd
+sudo nixos-rebuild switch --impure --flake ~/mtjd/nix#nixos
 ```
 
 ## Additional commands
@@ -43,7 +37,7 @@ sudo nixos-rebuild switch --impure --flake ~/mtjd/nix#vm-amd
 Switch to the latest configuration:
 
 ```bash
-sudo nixos-rebuild switch --impure --flake ~/mtjd/nix#vm-arm
+sudo nixos-rebuild switch --impure --flake ~/mtjd/nix#nixos
 ```
 
 To update the system:
@@ -61,7 +55,7 @@ sudo nixos-rebuild list-generations
 Rollback to previous generation:
 
 ```bash
-sudo nixos-rebuild switch --impure --flake ~/mtjd/nix#vm-arm --rollback
+sudo nixos-rebuild switch --impure --flake ~/mtjd/nix#nixos --rollback
 ```
 
 Delete old generations:

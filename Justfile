@@ -21,12 +21,8 @@ flake-update:
 
 [group("run")]
 darwin-rebuild:
-    sudo darwin-rebuild switch --impure --flake "./nix#macbook"
+    sudo darwin-rebuild switch --impure --flake "./nix#macos"
 
 [group("run")]
-nixos-rebuild-amd:
-    sudo nixos-rebuild switch --impure --flake "./nix#vm-amd"
-
-[group("run")]
-nixos-rebuild-arm:
-    sudo nixos-rebuild switch --impure --flake "./nix#vm-arm"
+nixos-rebuild:
+    sudo nixos-rebuild switch --impure --flake "./nix#nixos"

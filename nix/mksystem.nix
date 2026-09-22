@@ -1,11 +1,11 @@
 # Documentation:
 #   - https://discourse.nixos.org/t/optimize-flake-nix-code/29687
-# This function creates a NixOS system based on our VM setup for a particular architecture.
+# This function creates a macOS or NixOS system from a shared OS profile.
 {
   nixpkgs,
   inputs,
 }:
-name:
+profile:
 {
   system,
   user,
@@ -13,7 +13,7 @@ name:
 }:
 let
   # The config files for this system.
-  hostConfig = ./hosts/${name}.nix;
+  profileConfig = ./profiles/${profile}.nix;
   nixConfig = ./${if is-darwin then "nix-darwin" else "nixos"}.nix;
 
   # NixOS vs nix-darwin functions
@@ -41,7 +41,7 @@ systemFunc rec {
     inputs.nix-homebrew.darwinModules.nix-homebrew
     (if is-darwin then ./modules/nix-homebrew.nix else { })
 
-    hostConfig
+    profileConfig
     nixConfig
 
     home-manager.home-manager
@@ -60,7 +60,7 @@ systemFunc rec {
     {
       config._module.args = {
         currentSystem = system;
-        currentSystemName = name;
+        currentSystemName = profile;
         currentSystemUser = user;
         inherit is-darwin inputs;
       };

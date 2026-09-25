@@ -15,10 +15,6 @@
     };
   };
 
-  security.sudo.extraConfig = ''
-    Defaults timestamp_timeout=0
-  '';
-
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
@@ -46,11 +42,6 @@
   services = {
     displayManager.sddm.enable = true;
     desktopManager.plasma6.enable = true;
-
-    xserver.xkb = {
-      layout = "us";
-      variant = "";
-    };
 
     openssh = {
       enable = true;
@@ -84,6 +75,10 @@
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIArEgeNCsIt8dFvyXKHKz1SYunldIoXXNAwTcRJTpbMc daniel@mizsak.com"
     ];
   };
+
+  security.sudo.extraConfig = ''
+    Defaults timestamp_timeout=0
+  '';
 
   # Do not change stateVersion after installation!
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion

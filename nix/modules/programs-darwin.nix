@@ -27,7 +27,7 @@
       "dbeaver-community"
       "ghostty"
       "github"
-      "hiddenbar"
+      # "hiddenbar"
       "iina"
       "karabiner-elements"
       "keyboardcleantool"

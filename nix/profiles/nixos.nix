@@ -18,6 +18,8 @@
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
+
+    firewall.allowedUDPPorts = [ 5353 ];
   };
 
   time.timeZone = "Europe/Budapest";
@@ -48,13 +50,17 @@
 
     openssh = {
       enable = true;
-      ports = [ 22 ];
+      ports = [ 2222 ];
     };
+    resolved = {
+      enable = true;
+      settings.Resolve.MulticastDNS = true;
+    };
+
   };
 
   virtualisation.docker.enable = true;
 
-  users.mutableUsers = false;
   users.users.${currentSystemUser} = {
     isNormalUser = true;
     description = "Daniel Mizsak";
@@ -65,20 +71,14 @@
     ];
     home = "/home/${currentSystemUser}";
     shell = pkgs.fish;
-    hashedPassword = "$y$j9T$SLcpv.fvXbk2PqUEOuHVL0$VZUxN7P8EXwsXVxCvReON7tOrV/ARfd.oyCQ3trt5aA";
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIArEgeNCsIt8dFvyXKHKz1SYunldIoXXNAwTcRJTpbMc daniel@mizsak.com"
+    ];
   };
 
-  security.sudo.extraRules = [
-    {
-      users = [ "damz" ];
-      commands = [
-        {
-          command = "ALL";
-          options = [ "NOPASSWD" ];
-        }
-      ];
-    }
-  ];
+  security.sudo.extraConfig = ''
+    Defaults timestamp_timeout=0
+  '';
 
   # Do not change stateVersion after installation!
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion

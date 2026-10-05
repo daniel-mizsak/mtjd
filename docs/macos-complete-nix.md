@@ -25,7 +25,7 @@ git clone https://github.com/daniel-mizsak/mtjd.git ~/mtjd
 Run [`nix-darwin`](https://github.com/nix-darwin/nix-darwin):
 
 ```bash
-sudo nix run nix-darwin --extra-experimental-features 'nix-command flakes' -- switch --impure --flake ~/mtjd/nix#macbook
+sudo nix run nix-darwin --extra-experimental-features 'nix-command flakes' -- switch --impure --flake ~/mtjd/nix#macos
 ```
 
 Sometimes it is necessary to move some existing files. Last time these were: `/etc/nix/nix.conf`, `/etc/bashrc`, and `/etc/zshrc`.
@@ -37,7 +37,7 @@ Sometimes it is necessary to move some existing files. Last time these were: `/e
 After the first run, switch to the latest configuration:
 
 ```bash
-sudo darwin-rebuild switch --impure --flake ~/mtjd/nix#macbook
+sudo darwin-rebuild switch --impure --flake ~/mtjd/nix#macos
 ```
 
 To update the system:
@@ -55,7 +55,7 @@ sudo nix-env --list-generations
 Rollback to previous generation:
 
 ```bash
-sudo darwin-rebuild switch --impure --flake ~/mtjd/nix#macbook --rollback
+sudo darwin-rebuild switch --impure --flake ~/mtjd/nix#macos --rollback
 ```
 
 Delete old generations (you may also want to run the command with `sudo`):

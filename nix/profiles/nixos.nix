@@ -1,6 +1,6 @@
 {
-  config,
   pkgs,
+  currentSystemUser,
   ...
 }:
 {
@@ -55,7 +55,7 @@
   virtualisation.docker.enable = true;
 
   users.mutableUsers = false;
-  users.users.damz = {
+  users.users.${currentSystemUser} = {
     isNormalUser = true;
     description = "Daniel Mizsak";
     extraGroups = [
@@ -63,12 +63,8 @@
       "networkmanager"
       "docker"
     ];
-    home = "/home/damz";
+    home = "/home/${currentSystemUser}";
     shell = pkgs.fish;
-    packages = with pkgs; [
-      kdePackages.kate
-      vscode
-    ];
     hashedPassword = "$y$j9T$SLcpv.fvXbk2PqUEOuHVL0$VZUxN7P8EXwsXVxCvReON7tOrV/ARfd.oyCQ3trt5aA";
   };
 
@@ -83,16 +79,6 @@
       ];
     }
   ];
-
-  programs = {
-    _1password = {
-      enable = true;
-    };
-    firefox.enable = true;
-    fish.enable = true;
-    nix-ld.enable = true;
-    zsh.enable = true;
-  };
 
   # Do not change stateVersion after installation!
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion

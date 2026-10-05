@@ -1,8 +1,15 @@
 {
   pkgs,
+  inputs,
   currentSystemUser,
   ...
 }:
+let
+  unstable = import inputs.nixpkgs-unstable {
+    system = pkgs.stdenv.hostPlatform.system;
+    config.allowUnfree = true;
+  };
+in
 {
   programs = {
     _1password = {
@@ -23,8 +30,12 @@
 
   users.users.${currentSystemUser}.packages = with pkgs; [
     docker-compose
+    flameshot
+    ghostty
     kdePackages.kate
     podman-desktop
     vscode
+
+    unstable.brave-origin
   ];
 }

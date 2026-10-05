@@ -27,6 +27,7 @@
       azure-cli
       bat
       btop
+      codex
       curl
       devenv
       direnv

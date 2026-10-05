@@ -10,7 +10,6 @@
 ## Overview
 
 More Than Just Dotfiles is a collection of tools, scripts and configurations that I use to set up my `Linux`, `macOS` and `Windows` machines.
-The most up-to-date solution uses `nix-darwin` for `macOS` with a `NixOS` virtual machine inside `Parallels Desktop`.
 
 > [!CAUTION]
 > Solutions should not be assumed to work for any arbitrary system.\

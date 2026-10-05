@@ -47,19 +47,14 @@
       };
     in
     {
-      darwinConfigurations.macbook = mkSystem "macbook" {
+      darwinConfigurations.macos = mkSystem "macos" {
         system = "aarch64-darwin";
         user = "damz";
         is-darwin = true;
       };
 
-      nixosConfigurations.vm-arm = mkSystem "vm" {
-        system = "aarch64-linux";
-        user = "damz";
-      };
-
-      nixosConfigurations.vm-amd = mkSystem "vm" {
-        system = "x86_64-linux";
+      nixosConfigurations.nixos = mkSystem "nixos" {
+        system = builtins.currentSystem;
         user = "damz";
       };
     };

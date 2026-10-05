@@ -1,5 +1,7 @@
 { ... }:
 {
+  programs.fish.enable = true;
+
   homebrew = {
     enable = true;
     global = {

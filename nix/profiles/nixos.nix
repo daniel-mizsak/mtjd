@@ -59,15 +59,12 @@
 
   };
 
-  virtualisation.docker.enable = true;
-
   users.users.${currentSystemUser} = {
     isNormalUser = true;
     description = "Daniel Mizsak";
     extraGroups = [
       "wheel"
       "networkmanager"
-      "docker"
     ];
     home = "/home/${currentSystemUser}";
     shell = pkgs.fish;

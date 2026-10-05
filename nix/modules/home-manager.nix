@@ -170,6 +170,12 @@ in
         ".config/zed/settings.json".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/zed/settings.jsonc";
       })
+
+      (mkIf (!is-darwin) {
+        # vscode
+        "${config.xdg.configHome}/Code/User/settings.json".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/vscode/settings.json";
+      })
     ];
     activation = {
       # These will run in alphabetical order!

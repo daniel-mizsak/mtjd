@@ -40,11 +40,6 @@
   };
 
   services = {
-    xserver.xkb = {
-      layout = "us";
-      variant = "";
-    };
-    xserver.enable = true;
     displayManager.sddm.enable = true;
     desktopManager.plasma6.enable = true;
 
@@ -58,6 +53,14 @@
     };
 
   };
+
+  environment.plasma6.excludePackages = [
+    pkgs.kdePackages.discover
+    pkgs.kdePackages.elisa
+    pkgs.kdePackages.khelpcenter
+    pkgs.kdePackages.kwin-x11
+    pkgs.kdePackages.spectacle
+  ];
 
   users.users.${currentSystemUser} = {
     isNormalUser = true;
@@ -79,5 +82,5 @@
 
   # Do not change stateVersion after installation!
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  system.stateVersion = "24.11";
+  system.stateVersion = "26.05";
 }

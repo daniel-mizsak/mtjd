@@ -7,36 +7,46 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "disable_ai": true,
-  "session": {
-    "trust_all_worktrees": true,
+  // Appearance
+  "buffer_font_family": "MesloLGS Nerd Font Mono",
+  "buffer_font_size": 14,
+  "theme": "GitHub Dark Dimmed",
+  "ui_font_size": 15,
+
+  // Editor
+  "base_keymap": "VSCode",
+  "vim_mode": true,
+
+  // Panels
+  "collaboration_panel": {
+    "button": false,
   },
-  "theme": {
-    "mode": "dark",
-    "light": "One Light",
-    "dark": "One Dark",
+  "git_panel": {
+    "group_by": "staging",
+    "tree_view": false,
   },
-  "edit_predictions": {
-    "provider": "copilot",
-  },
+
+  // AI
   "agent": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-sonnet-4.5",
-    },
     "favorite_models": [],
     "model_parameters": [],
   },
-  "base_keymap": "VSCode",
-  "buffer_font_family": "MesloLGS Nerd Font Mono",
+  "disable_ai": true,
+
+  // Session
+  "session": {
+    "trust_all_worktrees": true,
+  },
+
+  // Telemetry
   "telemetry": {
     "diagnostics": false,
     "metrics": false,
   },
-  "vim_mode": true,
-  "ui_font_size": 15,
-  "buffer_font_size": 14,
+
+  // Terminal
   "terminal": {
+    "detect_venv": "off",
     "font_family": "MesloLGS Nerd Font Mono",
   },
 }

@@ -1,5 +1,6 @@
 {
   pkgs,
+  unstable,
   is-darwin,
   ...
 }:
@@ -27,7 +28,7 @@
       azure-cli
       bat
       btop
-      codex
+      unstable.codex
       curl
       devenv
       direnv
@@ -71,11 +72,10 @@
       pinact
       pnpm
       powershell
-      prek
+      unstable.prek
       prettier
       pulumi-bin
       rclone
-      repomix
       ripgrep
       ruff
       rustup
@@ -91,7 +91,7 @@
       tree
       tree-sitter
       ty
-      uv
+      unstable.uv
       wget
       yazi
       yt-dlp

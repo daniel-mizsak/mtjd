@@ -67,6 +67,10 @@ in
     file = mkMerge [
       {
         ### Terminal
+        # agent-instructions
+        ".codex/AGENTS.md".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/agent-instructions/AGENTS.md";
+
         # atuin
         ".config/atuin/config.toml".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/atuin/config.toml";
@@ -167,6 +171,8 @@ in
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/wezterm/wezterm.lua";
 
         # zed
+        ".config/zed/keymap.json".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/zed/keymap.jsonc";
         ".config/zed/settings.json".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/zed/settings.jsonc";
       })

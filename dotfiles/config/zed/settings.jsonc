@@ -15,6 +15,13 @@
 
   // Editor
   "base_keymap": "VSCode",
+  "diff_view_style": "unified",
+  "file_scan_exclusions": ["__pycache__"],
+  "file_types": {
+    "Dockerfile": ["Dockerfile.*"],
+  },
+  "format_on_save": "on",
+  "formatter": "prettier",
   "vim_mode": true,
 
   // Panels

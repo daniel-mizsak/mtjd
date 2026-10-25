@@ -32,6 +32,7 @@
         persistent-apps = [
           "/Applications/Vivaldi.app"
           "/Applications/Signal.app"
+          "/Applications/Visual Studio Code.app"
           "/Applications/Zed.app"
           "/System/Applications/System Settings.app"
         ];

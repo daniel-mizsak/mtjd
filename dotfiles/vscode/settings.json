@@ -133,13 +133,11 @@
     "editor.tabSize": 4,
   },
   "docker.extension.enableComposeLanguageServer": true,
-  // Even Better TOML
+  // TOML
   "[toml]": {
-    "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.defaultFormatter": "tombi-toml.tombi",
     "editor.tabSize": 2,
   },
-  "evenBetterToml.formatter.indentEntries": true,
-  "evenBetterToml.formatter.indentTables": true,
   // Fish
   "[fish]": {
     "editor.defaultFormatter": "bmalehorn.vscode-fish",

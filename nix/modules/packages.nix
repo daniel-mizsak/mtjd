@@ -88,6 +88,7 @@
       tlrc
       tmux
       tokei
+      tombi
       tree
       tree-sitter
       ty

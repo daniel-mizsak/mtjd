@@ -19,7 +19,7 @@ jobs:
   prek:
     permissions:
       contents: read
-    uses: daniel-mizsak/workflows/.github/workflows/prek.yml@47072f8671741e664ef3f0a01dc6ec1c8adf9c29 # v3.0.0
+    uses: daniel-mizsak/workflows/.github/workflows/prek.yml@cf0f188aa237b6995b21cc0237897ff8bfe2da5b # v3.0.1
     with:
       skip: "run-nixfmt, run-prettier"
 
@@ -27,7 +27,7 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
-    uses: daniel-mizsak/workflows/.github/workflows/lint-ci-light.yml@47072f8671741e664ef3f0a01dc6ec1c8adf9c29 # v3.0.0
+    uses: daniel-mizsak/workflows/.github/workflows/lint-ci-light.yml@cf0f188aa237b6995b21cc0237897ff8bfe2da5b # v3.0.1
     with:
       megalinter-config: "./.github/linters/.megalinter.yml"
 
@@ -42,7 +42,7 @@ jobs:
           persist-credentials: false
 
       - name: Nix install and format
-        uses: daniel-mizsak/workflows/.github/actions/nix-format@47072f8671741e664ef3f0a01dc6ec1c8adf9c29 # v3.0.0
+        uses: daniel-mizsak/workflows/.github/actions/nix-format@cf0f188aa237b6995b21cc0237897ff8bfe2da5b # v3.0.1
 
       - name: Create files to make the flake valid
         run: |

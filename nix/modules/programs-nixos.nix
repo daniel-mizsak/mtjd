@@ -1,15 +1,9 @@
 {
   pkgs,
-  inputs,
+  unstable,
   currentSystemUser,
   ...
 }:
-let
-  unstable = import inputs.nixpkgs-unstable {
-    system = pkgs.stdenv.hostPlatform.system;
-    config.allowUnfree = true;
-  };
-in
 {
   programs = {
     _1password = {

@@ -57,13 +57,21 @@ systemFunc rec {
 
     # We expose some extra arguments so that our modules can parameterize
     # better based on these values.
-    {
-      config._module.args = {
-        currentSystem = system;
-        currentSystemName = profile;
-        currentSystemUser = user;
-        inherit is-darwin inputs;
-      };
-    }
+    (
+      { config, pkgs, ... }:
+      {
+        config._module.args = {
+          currentSystem = system;
+          currentSystemName = profile;
+          currentSystemUser = user;
+          inherit is-darwin inputs;
+
+          unstable = import inputs.nixpkgs-unstable {
+            system = pkgs.stdenv.hostPlatform.system;
+            config = config.nixpkgs.config;
+          };
+        };
+      }
+    )
   ];
 }

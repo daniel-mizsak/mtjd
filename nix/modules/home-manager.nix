@@ -67,6 +67,10 @@ in
     file = mkMerge [
       {
         ### Terminal
+        # agent-instructions
+        ".codex/AGENTS.md".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/agent-instructions/AGENTS.md";
+
         # atuin
         ".config/atuin/config.toml".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/atuin/config.toml";
@@ -129,6 +133,10 @@ in
           sha256 = "sha256-CeI9Wq6tHqV68woE11lIY4cLoNY8XWyXyMHTDmFKJKI=";
         };
 
+        # tombi
+        ".config/tombi/config.toml".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/tombi/config.toml";
+
         # yazi
         ".config/yazi".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/yazi";
@@ -167,6 +175,8 @@ in
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/wezterm/wezterm.lua";
 
         # zed
+        ".config/zed/keymap.json".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/zed/keymap.jsonc";
         ".config/zed/settings.json".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/zed/settings.jsonc";
       })

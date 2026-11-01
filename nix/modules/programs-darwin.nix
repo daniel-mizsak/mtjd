@@ -26,18 +26,15 @@
       "codex-app"
       "dbeaver-community"
       "ghostty"
-      "github"
       # "hiddenbar"
       "iina"
       "karabiner-elements"
       "keyboardcleantool"
-      "kimi"
       "lens"
       "libreoffice"
       "localsend"
       "lzhgus/tap/capso"
       "macpacker"
-      "mullvad-browser"
       "mullvad-vpn"
       "obs"
       "obsidian"
@@ -61,6 +58,7 @@
       "wezterm"
       "zcode"
       "zed"
+      "zen"
     ];
     masApps = {
       # General

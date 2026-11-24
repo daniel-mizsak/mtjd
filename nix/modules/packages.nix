@@ -28,6 +28,7 @@
       azure-cli
       bat
       btop
+      unstable.claude-code
       unstable.codex
       curl
       devenv

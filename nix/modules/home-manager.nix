@@ -68,6 +68,8 @@ in
       {
         ### Terminal
         # agent-instructions
+        ".claude/CLAUDE.md".source =
+          mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/agent-instructions/AGENTS.md";
         ".codex/AGENTS.md".source =
           mkOutOfStoreSymlink "${config.home.homeDirectory}/${repository}/dotfiles/config/agent-instructions/AGENTS.md";
 
@@ -192,10 +194,10 @@ in
       # batCache = "${pkgs.bat}/bin/bat cache --build";
 
       installDotnetTools = ''
-        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install csharpier --version 1.2.6 --global > /dev/null
-        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install GitVersion.Tool --version 6.7.0 --global > /dev/null
-        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install MarkdownSnippets.Tool --version 28.3.0 --global > /dev/null
-        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install Microsoft.Artifacts.CredentialProvider.NuGet.Tool --version 2.0.2 --global > /dev/null
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install csharpier --version 1.2.6 --global --ignore-failed-sources > /dev/null
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install GitVersion.Tool --version 6.7.0 --global --ignore-failed-sources > /dev/null
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install MarkdownSnippets.Tool --version 28.3.0 --global --ignore-failed-sources > /dev/null
+        ${pkgs.dotnet-sdk_10}/bin/dotnet tool install Microsoft.Artifacts.CredentialProvider.NuGet.Tool --version 2.0.2 --global --ignore-failed-sources > /dev/null
       '';
 
       # yazi = "${pkgs.bat}/yazi/ya pkg add yazi-rs/flavors:catppuccin-mocha";

@@ -2,3 +2,8 @@ Host kvm1
   HostName kvm1
   User ansible
   IdentityFile ~/.ssh/id_vps
+
+Host vps3869520
+  HostName vps3869520
+  User ansible
+  IdentityFile ~/.ssh/id_vps

@@ -1,6 +1,4 @@
 {
-  // Base settings
-  "chat.viewSessions.enabled": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.accessibilitySupport": "off",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
